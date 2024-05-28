@@ -17,7 +17,7 @@ export default defineConfig({
 			// nth-[]:class
 			name: ':nth-child()',
 			match: (matcher: string) => {
-				const match = matcher.match(/^nth-\[(.+?)\]:/)
+				const match = matcher.match(/^nth-\[(.+?):/)
 				if (!match)
 					return matcher
 				return {
@@ -60,5 +60,24 @@ export default defineConfig({
 			],
 		},
 	},
+	preflights: [
+		{
+			getCSS: () => `
+				:root {
+				    --vis-tooltip-background-color: none !important;
+				    --vis-tooltip-border-color: none !important;
+				    --vis-tooltip-text-color: none !important;
+				    --vis-tooltip-shadow-color: none !important;
+				    --vis-tooltip-backdrop-filter: none !important;
+				    --vis-tooltip-padding: none !important;
+				
+				    --vis-primary-color: var(--primary);
+				    /* change to any hsl value you want */
+				    --vis-secondary-color: 160 81% 40%;
+				    --vis-text-color: var(--muted-foreground);
+				}
+			`
+		}
+	],
 });
 
