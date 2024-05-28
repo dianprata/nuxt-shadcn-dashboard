@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import { CircleUser, Search } from 'lucide-vue-next'
+
+function handleLogout() {
+  navigateTo('/login')
+}
 </script>
 
 <template>
-  <header class="sticky top-0 h-57px flex items-center gap-4 border-b bg-background px-4 md:px-6">
+  <header class="sticky top-0 h-57px flex items-center gap-4 border-b bg-background px-6">
     <div class="w-full flex items-center gap-4">
       <form class="flex-1">
         <div class="relative">
@@ -24,13 +28,38 @@ import { CircleUser, Search } from 'lucide-vue-next'
               <span class="sr-only">Toggle user menu</span>
             </UIButton>
           </UIDropdownMenuTrigger>
-          <UIDropdownMenuContent align="end">
-            <UIDropdownMenuLabel>My Account</UIDropdownMenuLabel>
+          <UIDropdownMenuContent class="w-56" align="end">
+            <UIDropdownMenuLabel class="flex font-normal">
+              <div class="flex flex-col space-y-1">
+                <p class="text-sm font-medium leading-none">
+                  John Doe
+                </p>
+                <p class="text-xs text-muted-foreground leading-none">
+                  demo@gmail.com
+                </p>
+              </div>
+            </UIDropdownMenuLabel>
             <UIDropdownMenuSeparator />
-            <UIDropdownMenuItem>Settings</UIDropdownMenuItem>
-            <UIDropdownMenuItem>Support</UIDropdownMenuItem>
+            <UIDropdownMenuGroup>
+              <UIDropdownMenuItem>
+                Profile
+                <UIDropdownMenuShortcut>⇧⌘P</UIDropdownMenuShortcut>
+              </UIDropdownMenuItem>
+              <UIDropdownMenuItem>
+                Billing
+                <UIDropdownMenuShortcut>⌘B</UIDropdownMenuShortcut>
+              </UIDropdownMenuItem>
+              <UIDropdownMenuItem>
+                Settings
+                <UIDropdownMenuShortcut>⌘S</UIDropdownMenuShortcut>
+              </UIDropdownMenuItem>
+              <UIDropdownMenuItem>New Team</UIDropdownMenuItem>
+            </UIDropdownMenuGroup>
             <UIDropdownMenuSeparator />
-            <UIDropdownMenuItem>Logout</UIDropdownMenuItem>
+            <UIDropdownMenuItem @click="handleLogout">
+              Log out
+              <UIDropdownMenuShortcut>⇧⌘Q</UIDropdownMenuShortcut>
+            </UIDropdownMenuItem>
           </UIDropdownMenuContent>
         </UIDropdownMenu>
       </div>

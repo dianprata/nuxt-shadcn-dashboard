@@ -37,5 +37,10 @@
     "overrides": {
       "eslint": "9.2.0"
     }
+  },
+  "dependencies": {
+    "@internationalized/date": "^3.5.4",
+    "@unovis/ts": "^1.4.1",
+    "@unovis/vue": "^1.4.1"
   }
 }

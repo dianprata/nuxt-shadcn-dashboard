@@ -1,15 +1,15 @@
 export const useNavbar = defineStore('navbar', () => {
 	const isOpenCookie = useCookie<boolean>('isOpen', {
-		default: () => false,
+		default: () => true,
 	})
 	const isOpen = computed(() => isOpenCookie.value)
-	console.log('isOpen', isOpen.value)
 
 	function toggle () {
 		isOpenCookie.value = !isOpenCookie.value
 	}
 
 	return {
+		isOpenCookie,
 		isOpen,
 		toggle,
 	}

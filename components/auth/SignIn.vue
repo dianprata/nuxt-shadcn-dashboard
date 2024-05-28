@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Loader2 } from 'lucide-vue-next'
 
-const email = ref('example@gmail.com')
+const email = ref('demo@gmail.com')
 const password = ref('password')
 const isLoading = ref(false)
 
@@ -13,7 +13,7 @@ function onSubmit(event: Event) {
   isLoading.value = true
 
   setTimeout(() => {
-    if (email.value === 'example@gmail.com' && password.value === 'password') {
+    if (email.value === 'demo@gmail.com' && password.value === 'password') {
       console.log('Logged in')
       navigateTo('/')
     }

@@ -1,63 +1,22 @@
 <script setup lang="ts">
-import { Book, Bot, Code2, LifeBuoy, Settings2, SquareTerminal, SquareUser, Triangle } from 'lucide-vue-next'
-import { useNavbar } from '~/composables/useNavbar'
+import { Triangle } from 'lucide-vue-next'
+import { navMenu, navMenuBottom } from '~/constants/data'
 
 const store = useNavbar()
 const { toggle } = store
 
 const { isOpen } = storeToRefs(store)
 
-const navMenu = ref([
-  {
-    label: 'Playground',
-    icon: SquareTerminal,
-    link: '/',
-    ariaLabel: 'Playground',
-  },
-  {
-    label: 'Models',
-    icon: Bot,
-    link: '/models',
-    ariaLabel: 'Models',
-  },
-  {
-    label: 'API',
-    icon: Code2,
-    link: '/api',
-    ariaLabel: 'API',
-  },
-  {
-    label: 'Documentation',
-    icon: Book,
-    link: '/book',
-    ariaLabel: 'Documentation',
-  },
-  {
-    label: 'Settings',
-    icon: Settings2,
-    link: '/settings',
-    ariaLabel: 'Settings',
-  },
-])
+const { width } = useWindowSize()
 
-const navMenuBottom = ref([
-  {
-    label: 'Help',
-    icon: LifeBuoy,
-    link: '/help',
-    ariaLabel: 'Help',
-  },
-  {
-    label: 'Account',
-    icon: SquareUser,
-    link: '/account',
-    ariaLabel: 'Account',
-  },
-])
+watchEffect(() => {
+  if (width.value < 768 && isOpen.value)
+    toggle()
+})
 </script>
 
 <template>
-  <aside class="inset-y fixed left-0 z-20 h-full w-20 flex flex-col items-center border-r transition-all duration-150" :class="isOpen ? 'w-64' : 'w-20'">
+  <aside class="inset-y fixed left-0 z-20 h-full w-20 flex flex-col items-center border-r transition-width duration-300" :class="isOpen ? 'w-64' : 'w-20'">
     <div class="relative border-b px-3 py-2 text-center" :class="isOpen ? 'w-64' : 'w-20'">
       <div class="flex items-center gap-3" :class="isOpen ? 'justify-start' : 'justify-center'">
         <UIButton variant="outline" size="icon" aria-label="Home">
