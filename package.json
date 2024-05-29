@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.17.0",
@@ -27,11 +28,13 @@
     "radix-vue": "^1.7.4",
     "shadcn-nuxt": "^0.10.4",
     "tailwind-merge": "^2.3.0",
+    "typescript": "^5.4.5",
     "unocss": "^0.60.2",
     "unocss-preset-animations": "^1.0.2",
     "unocss-preset-shadcn": "^0.3.0",
     "vue": "^3.4.27",
-    "vue-router": "^4.3.2"
+    "vue-router": "^4.3.2",
+    "vue-tsc": "^2.0.19"
   },
   "pnpm": {
     "overrides": {
