@@ -21,7 +21,7 @@ const { showSidebar } = storeToRefs(store)
             <span class="sr-only">Toggle navigation menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="left" class="flex flex-col">
+        <SheetContent side="left" class="flex flex-col p-4">
           <SheetHeader>
             <SheetTitle class="flex items-center gap-3">
               <Triangle class="size-5 fill-foreground" />
@@ -29,6 +29,16 @@ const { showSidebar } = storeToRefs(store)
             </SheetTitle>
           </SheetHeader>
           <nav class="grid gap-2">
+            <form class="flex-1 pb-2">
+              <div class="relative">
+                <Search class="absolute left-2.5 top-3 h-4 w-4 text-muted-foreground" />
+                <Input
+                  type="search"
+                  placeholder="Search products..."
+                  class="w-full pl-8 sm:w-[300px]"
+                />
+              </div>
+            </form>
             <NuxtLink
               v-for="(nav, index) in navMenu" :key="index"
               :to="nav.link"
@@ -36,7 +46,7 @@ const { showSidebar } = storeToRefs(store)
                 { 'bg-muted text-foreground': nav.link === $route.path },
                 { 'text-muted-foreground': nav.link !== $route.path },
               ]"
-              class="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 font-normal hover:text-foreground"
+              class="flex items-center gap-4 rounded-lg px-3 py-2 font-normal hover:text-foreground"
             >
               <component :is="nav.icon" />
               {{ nav.label }}
@@ -51,7 +61,7 @@ const { showSidebar } = storeToRefs(store)
                   { 'bg-muted text-foreground': nav.link === $route.path },
                   { 'text-muted-foreground': nav.link !== $route.path },
                 ]"
-                class="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 font-normal hover:text-foreground"
+                class="flex items-center gap-4 rounded-lg px-3 py-2 font-normal hover:text-foreground"
               >
                 <component :is="nav.icon" />
                 {{ nav.label }}
