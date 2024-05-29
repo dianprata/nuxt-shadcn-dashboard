@@ -1,11 +1,29 @@
 <script setup lang="ts">
 const store = useNavbar()
 
-const { isOpen } = storeToRefs(store)
+const { isOpen, isOpenCookie, showSidebar, showSidebarCookie } = storeToRefs(store)
+
+const { width } = useWindowSize()
+
+function windowResized() {
+  showSidebarCookie.value = width.value >= 576
+
+  if (width.value < 768 && isOpen.value)
+    isOpenCookie.value = false
+}
+
+useEventListener('resize', () => {
+  windowResized()
+})
 </script>
 
 <template>
-  <div class="grid h-screen w-full transition-width duration-300" :class="isOpen ? 'pl-64' : 'pl-20'">
+  <div
+    class="grid w-full transition-width duration-300 min-h-dvh" :class="[
+      { 'pl-64': isOpen && showSidebar },
+      { 'pl-20': !isOpen && showSidebar },
+    ]"
+  >
     <LayoutSidebar />
     <div flex="~ col">
       <LayoutHeader />

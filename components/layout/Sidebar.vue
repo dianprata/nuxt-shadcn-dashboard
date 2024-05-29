@@ -5,18 +5,11 @@ import { navMenu, navMenuBottom } from '~/constants/data'
 const store = useNavbar()
 const { toggle } = store
 
-const { isOpen } = storeToRefs(store)
-
-const { width } = useWindowSize()
-
-watchEffect(() => {
-  if (width.value < 768 && isOpen.value)
-    toggle()
-})
+const { isOpen, showSidebar } = storeToRefs(store)
 </script>
 
 <template>
-  <aside class="inset-y fixed left-0 z-20 h-full w-20 flex flex-col items-center border-r transition-width duration-300" :class="isOpen ? 'w-64' : 'w-20'">
+  <aside v-show="showSidebar" class="inset-y fixed left-0 z-20 h-full w-20 flex flex-col items-center border-r transition-width duration-300" :class="isOpen ? 'w-64' : 'w-20'">
     <div class="relative border-b px-3 py-2 text-center" :class="isOpen ? 'w-64' : 'w-20'">
       <div class="flex items-center gap-3" :class="isOpen ? 'justify-start' : 'justify-center'">
         <Button variant="outline" size="icon" aria-label="Home">
