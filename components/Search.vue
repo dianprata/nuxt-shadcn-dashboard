@@ -1,0 +1,58 @@
+<script setup lang="ts">
+const { Meta_K, Ctrl_K } = useMagicKeys({
+  passive: false,
+  onEventFired(e) {
+    if (e.key === 'k' && (e.metaKey || e.ctrlKey))
+      e.preventDefault()
+  },
+})
+
+const openCommand = ref(false)
+watch([Meta_K, Ctrl_K], (v) => {
+  if (v[0] || v[1])
+    openCommand.value = !openCommand.value
+})
+</script>
+
+<template>
+  <Button variant="outline" size="sm" class="w-full flex-1 justify-between gap-1 font-normal md:w-56 md:flex-initial md:gap-3">
+    <span>Search documentation</span>
+    <kbd class="pointer-events-none h-5 inline-flex select-none items-center gap-1 border rounded bg-muted px-1.5 text-[10px] text-muted-foreground font-medium font-mono opacity-100">
+      <span class="text-xs">⌘</span>K
+    </kbd>
+  </Button>
+
+  <CommandDialog v-model:open="openCommand">
+    <CommandInput placeholder="Type a command or search..." />
+    <CommandList>
+      <CommandEmpty>No results found.</CommandEmpty>
+      <CommandGroup heading="Suggestions">
+        <CommandItem value="calendar">
+          Calendar
+        </CommandItem>
+        <CommandItem value="search-emoji">
+          Search Emoji
+        </CommandItem>
+        <CommandItem value="calculator">
+          Calculator
+        </CommandItem>
+      </CommandGroup>
+      <CommandSeparator />
+      <CommandGroup heading="Settings">
+        <CommandItem value="profile">
+          Profile
+        </CommandItem>
+        <CommandItem value="billing">
+          Billing
+        </CommandItem>
+        <CommandItem value="settings">
+          Settings
+        </CommandItem>
+      </CommandGroup>
+    </CommandList>
+  </CommandDialog>
+</template>
+
+<style scoped>
+
+</style>

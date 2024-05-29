@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CircleUser, Menu, Search, Triangle } from 'lucide-vue-next'
+import { CircleUser, Menu, Triangle } from 'lucide-vue-next'
 import { navMenu, navMenuBottom } from '~/constants/data'
 
 function handleLogout() {
@@ -29,24 +29,13 @@ const { showSidebar } = storeToRefs(store)
             </SheetTitle>
           </SheetHeader>
           <nav class="grid gap-2">
-            <form class="flex-1 pb-2">
-              <div class="relative">
-                <Search class="absolute left-2.5 top-3 h-4 w-4 text-muted-foreground" />
-                <Input
-                  type="search"
-                  placeholder="Search products..."
-                  class="w-full pl-8 sm:w-[300px]"
-                />
-              </div>
-            </form>
             <NuxtLink
               v-for="(nav, index) in navMenu" :key="index"
               :to="nav.link"
               :class="[
-                { 'bg-muted text-foreground': nav.link === $route.path },
-                { 'text-muted-foreground': nav.link !== $route.path },
+                { 'bg-muted': nav.link === $route.path },
               ]"
-              class="flex items-center gap-4 rounded-lg px-3 py-2 font-normal hover:text-foreground"
+              class="flex items-center gap-4 rounded-lg px-3 py-2 text-foreground font-normal hover:bg-muted"
             >
               <component :is="nav.icon" />
               {{ nav.label }}
@@ -58,10 +47,9 @@ const { showSidebar } = storeToRefs(store)
                 v-for="(nav, index) in navMenuBottom" :key="index"
                 :to="nav.link"
                 :class="[
-                  { 'bg-muted text-foreground': nav.link === $route.path },
-                  { 'text-muted-foreground': nav.link !== $route.path },
+                  { 'bg-muted': nav.link === $route.path },
                 ]"
-                class="flex items-center gap-4 rounded-lg px-3 py-2 font-normal hover:text-foreground"
+                class="flex items-center gap-4 rounded-lg px-3 py-2 text-foreground font-normal hover:bg-muted"
               >
                 <component :is="nav.icon" />
                 {{ nav.label }}
@@ -70,16 +58,9 @@ const { showSidebar } = storeToRefs(store)
           </div>
         </SheetContent>
       </Sheet>
-      <form v-else class="flex-1">
-        <div class="relative">
-          <Search class="absolute left-2.5 top-3 h-4 w-4 text-muted-foreground" />
-          <Input
-            type="search"
-            placeholder="Search products..."
-            class="w-full pl-8 sm:w-[300px]"
-          />
-        </div>
-      </form>
+
+      <Search />
+
       <div class="ml-auto flex items-center gap-4">
         <DarkToggle />
         <DropdownMenu>
