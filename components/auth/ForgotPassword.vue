@@ -16,10 +16,10 @@ async function onSubmit(event: Event) {
   <form @submit="onSubmit">
     <div class="grid gap-4">
       <div class="grid gap-2">
-        <UILabel for="email">
+        <Label for="email">
           Email
-        </UILabel>
-        <UIInput
+        </Label>
+        <Input
           id="email"
           placeholder="name@example.com"
           type="email"
@@ -29,10 +29,10 @@ async function onSubmit(event: Event) {
           :disabled="isLoading"
         />
       </div>
-      <UIButton :disabled="isLoading">
+      <Button :disabled="isLoading">
         <Loader2 v-if="isLoading" class="mr-2 h-4 w-4 animate-spin" />
         Submit
-      </UIButton>
+      </Button>
     </div>
   </form>
 </template>

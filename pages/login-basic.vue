@@ -6,18 +6,18 @@ definePageMeta({
 
 <template>
   <div class="w-full flex items-center justify-center px-4 h-dvh">
-    <UICard class="mx-auto max-w-sm">
-      <UICardHeader>
-        <UICardTitle class="text-2xl">
+    <Card class="mx-auto max-w-sm">
+      <CardHeader>
+        <CardTitle class="text-2xl">
           Login
-        </UICardTitle>
-        <UICardDescription>
+        </CardTitle>
+        <CardDescription>
           Enter your email below to login to your account
-        </UICardDescription>
-      </UICardHeader>
-      <UICardContent>
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
         <AuthSignIn />
-      </UICardContent>
-    </UICard>
+      </CardContent>
+    </Card>
   </div>
 </template>

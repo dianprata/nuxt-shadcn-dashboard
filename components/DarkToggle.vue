@@ -15,7 +15,7 @@ function toggleDark() {
 </script>
 
 <template>
-  <UIButton variant="ghost" size="icon" class="rounded-full" title="Toggle Color Scheme" aria-label="button dark toggle" @click="toggleDark">
+  <Button variant="ghost" size="icon" class="rounded-full" title="Toggle Color Scheme" aria-label="button dark toggle" @click="toggleDark">
     <div class="i-carbon-sun dark:i-carbon-moon" />
-  </UIButton>
+  </Button>
 </template>

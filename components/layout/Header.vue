@@ -12,7 +12,7 @@ function handleLogout() {
       <form class="flex-1">
         <div class="relative">
           <Search class="absolute left-2.5 top-3 h-4 w-4 text-muted-foreground" />
-          <UIInput
+          <Input
             type="search"
             placeholder="Search products..."
             class="w-full pl-8 sm:w-[300px]"
@@ -21,15 +21,15 @@ function handleLogout() {
       </form>
       <div class="ml-auto flex items-center gap-4">
         <DarkToggle />
-        <UIDropdownMenu>
-          <UIDropdownMenuTrigger as-child>
-            <UIButton variant="secondary" size="icon" class="rounded-full">
+        <DropdownMenu>
+          <DropdownMenuTrigger as-child>
+            <Button variant="secondary" size="icon" class="rounded-full">
               <CircleUser class="h-5 w-5" />
               <span class="sr-only">Toggle user menu</span>
-            </UIButton>
-          </UIDropdownMenuTrigger>
-          <UIDropdownMenuContent class="w-56" align="end">
-            <UIDropdownMenuLabel class="flex font-normal">
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent class="w-56" align="end">
+            <DropdownMenuLabel class="flex font-normal">
               <div class="flex flex-col space-y-1">
                 <p class="text-sm font-medium leading-none">
                   John Doe
@@ -38,30 +38,30 @@ function handleLogout() {
                   demo@gmail.com
                 </p>
               </div>
-            </UIDropdownMenuLabel>
-            <UIDropdownMenuSeparator />
-            <UIDropdownMenuGroup>
-              <UIDropdownMenuItem>
+            </DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuGroup>
+              <DropdownMenuItem>
                 Profile
-                <UIDropdownMenuShortcut>⇧⌘P</UIDropdownMenuShortcut>
-              </UIDropdownMenuItem>
-              <UIDropdownMenuItem>
+                <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
                 Billing
-                <UIDropdownMenuShortcut>⌘B</UIDropdownMenuShortcut>
-              </UIDropdownMenuItem>
-              <UIDropdownMenuItem>
+                <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
                 Settings
-                <UIDropdownMenuShortcut>⌘S</UIDropdownMenuShortcut>
-              </UIDropdownMenuItem>
-              <UIDropdownMenuItem>New Team</UIDropdownMenuItem>
-            </UIDropdownMenuGroup>
-            <UIDropdownMenuSeparator />
-            <UIDropdownMenuItem @click="handleLogout">
+                <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
+              </DropdownMenuItem>
+              <DropdownMenuItem>New Team</DropdownMenuItem>
+            </DropdownMenuGroup>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem @click="handleLogout">
               Log out
-              <UIDropdownMenuShortcut>⇧⌘Q</UIDropdownMenuShortcut>
-            </UIDropdownMenuItem>
-          </UIDropdownMenuContent>
-        </UIDropdownMenu>
+              <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </div>
   </header>

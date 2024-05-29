@@ -26,10 +26,10 @@ function onSubmit(event: Event) {
 <template>
   <form class="grid gap-4" @submit="onSubmit">
     <div class="grid gap-2">
-      <UILabel for="email">
+      <Label for="email">
         Email
-      </UILabel>
-      <UIInput
+      </Label>
+      <Input
         id="email"
         v-model="email"
         type="email"
@@ -42,9 +42,9 @@ function onSubmit(event: Event) {
     </div>
     <div class="grid gap-2">
       <div class="flex items-center">
-        <UILabel for="password">
+        <Label for="password">
           Password
-        </UILabel>
+        </Label>
         <NuxtLink
           to="/forgot-password"
           class="ml-auto inline-block text-sm underline"
@@ -52,15 +52,15 @@ function onSubmit(event: Event) {
           Forgot your password?
         </NuxtLink>
       </div>
-      <UIInput id="password" v-model="password" type="password" />
+      <Input id="password" v-model="password" type="password" />
     </div>
-    <UIButton type="submit" class="w-full" :disabled="isLoading">
+    <Button type="submit" class="w-full" :disabled="isLoading">
       <Loader2 v-if="isLoading" class="mr-2 h-4 w-4 animate-spin" />
       Login
-    </UIButton>
-    <UIButton variant="outline" class="w-full">
+    </Button>
+    <Button variant="outline" class="w-full">
       Login with Google
-    </UIButton>
+    </Button>
   </form>
   <div class="mt-4 text-center text-sm text-muted-foreground">
     Don't have an account?

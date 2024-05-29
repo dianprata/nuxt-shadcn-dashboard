@@ -16,5 +16,5 @@ const data = [
 </script>
 
 <template>
-  <UIBarChart :data="data" :categories="['total']" index="name" :rounded-corners="4" />
+  <BarChart :data="data" :categories="['total']" index="name" :rounded-corners="4" />
 </template>

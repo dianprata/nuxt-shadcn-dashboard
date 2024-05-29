@@ -10,10 +10,6 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
   ],
 
-  shadcn: {
-    prefix: 'UI',
-  },
-
   css: [
     '@unocss/reset/tailwind.css',
   ],

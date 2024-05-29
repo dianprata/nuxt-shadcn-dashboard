@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { Calendar as CalendarIcon } from 'lucide-vue-next'
-import { cn } from '@/lib/utils'
 import type { DateRange } from 'radix-vue'
 import { CalendarDate, DateFormatter, getLocalTimeZone } from '@internationalized/date'
 
-import { type Ref } from 'vue'
+import type { Ref } from 'vue'
+import { cn } from '@/lib/utils'
 
 const df = new DateFormatter('en-US', {
   dateStyle: 'medium',
@@ -20,12 +20,12 @@ const value = ref({
 
 <template>
   <div :class="cn('grid gap-2', $attrs.class ?? '')">
-    <UIPopover>
-      <UIPopoverTrigger as-child>
-        <UIButton
-            id="date"
-            :variant="'outline'"
-            :class="cn(
+    <Popover>
+      <PopoverTrigger as-child>
+        <Button
+          id="date"
+          variant="outline"
+          :class="cn(
             'w-[300px] justify-start text-left font-normal',
             !value && 'text-muted-foreground',
           )"
@@ -44,18 +44,18 @@ const value = ref({
           <template v-else>
             Pick a date
           </template>
-        </UIButton>
-      </UIPopoverTrigger>
-      <UIPopoverContent class="w-auto p-0" align="end">
-        <UIRangeCalendar
-            v-model="value"
-            weekday-format="short"
-            :number-of-months="2"
-            initial-focus
-            :placeholder="value.start"
-            @update:start-value="(startDate: any) => value.start = startDate"
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent class="w-auto p-0" align="end">
+        <RangeCalendar
+          v-model="value"
+          weekday-format="short"
+          :number-of-months="2"
+          initial-focus
+          :placeholder="value.start"
+          @update:start-value="(startDate: any) => value.start = startDate"
         />
-      </UIPopoverContent>
-    </UIPopover>
+      </PopoverContent>
+    </Popover>
   </div>
 </template>

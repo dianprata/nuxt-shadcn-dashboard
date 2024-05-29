@@ -10,94 +10,94 @@ import { Activity, CreditCard, DollarSign, Users } from 'lucide-vue-next'
       </h2>
       <div class="flex items-center space-x-2">
         <BaseDateRangePicker />
-        <UIButton>Download</UIButton>
+        <Button>Download</Button>
       </div>
     </div>
     <main class="flex flex-1 flex-col gap-4 md:gap-8">
       <div class="grid gap-4 lg:grid-cols-4 md:grid-cols-2 md:gap-8">
-        <UICard>
-          <UICardHeader class="flex flex-row items-center justify-between pb-2 space-y-0">
-            <UICardTitle class="text-sm font-medium">
+        <Card>
+          <CardHeader class="flex flex-row items-center justify-between pb-2 space-y-0">
+            <CardTitle class="text-sm font-medium">
               Total Revenue
-            </UICardTitle>
+            </CardTitle>
             <DollarSign class="h-4 w-4 text-muted-foreground" />
-          </UICardHeader>
-          <UICardContent>
+          </CardHeader>
+          <CardContent>
             <div class="text-2xl font-bold">
               $45,231.89
             </div>
             <p class="text-xs text-muted-foreground">
               +20.1% from last month
             </p>
-          </UICardContent>
-        </UICard>
-        <UICard>
-          <UICardHeader class="flex flex-row items-center justify-between pb-2 space-y-0">
-            <UICardTitle class="text-sm font-medium">
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader class="flex flex-row items-center justify-between pb-2 space-y-0">
+            <CardTitle class="text-sm font-medium">
               Subscriptions
-            </UICardTitle>
+            </CardTitle>
             <Users class="h-4 w-4 text-muted-foreground" />
-          </UICardHeader>
-          <UICardContent>
+          </CardHeader>
+          <CardContent>
             <div class="text-2xl font-bold">
               +2350
             </div>
             <p class="text-xs text-muted-foreground">
               +180.1% from last month
             </p>
-          </UICardContent>
-        </UICard>
-        <UICard>
-          <UICardHeader class="flex flex-row items-center justify-between pb-2 space-y-0">
-            <UICardTitle class="text-sm font-medium">
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader class="flex flex-row items-center justify-between pb-2 space-y-0">
+            <CardTitle class="text-sm font-medium">
               Sales
-            </UICardTitle>
+            </CardTitle>
             <CreditCard class="h-4 w-4 text-muted-foreground" />
-          </UICardHeader>
-          <UICardContent>
+          </CardHeader>
+          <CardContent>
             <div class="text-2xl font-bold">
               +12,234
             </div>
             <p class="text-xs text-muted-foreground">
               +19% from last month
             </p>
-          </UICardContent>
-        </UICard>
-        <UICard>
-          <UICardHeader class="flex flex-row items-center justify-between pb-2 space-y-0">
-            <UICardTitle class="text-sm font-medium">
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader class="flex flex-row items-center justify-between pb-2 space-y-0">
+            <CardTitle class="text-sm font-medium">
               Active Now
-            </UICardTitle>
+            </CardTitle>
             <Activity class="h-4 w-4 text-muted-foreground" />
-          </UICardHeader>
-          <UICardContent>
+          </CardHeader>
+          <CardContent>
             <div class="text-2xl font-bold">
               +573
             </div>
             <p class="text-xs text-muted-foreground">
               +201 since last hour
             </p>
-          </UICardContent>
-        </UICard>
+          </CardContent>
+        </Card>
       </div>
       <div class="grid gap-4 lg:grid-cols-2 xl:grid-cols-3 md:gap-8">
-        <UICard class="xl:col-span-2">
-          <UICardHeader class="flex flex-row items-center">
-            <UICardTitle>Overview</UICardTitle>
-          </UICardHeader>
-          <UICardContent>
+        <Card class="xl:col-span-2">
+          <CardHeader class="flex flex-row items-center">
+            <CardTitle>Overview</CardTitle>
+          </CardHeader>
+          <CardContent>
             <Overview />
-          </UICardContent>
-        </UICard>
-        <UICard>
-          <UICardHeader>
-            <UICardTitle>Recent Sales</UICardTitle>
-          </UICardHeader>
-          <UICardContent class="grid gap-8">
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Recent Sales</CardTitle>
+          </CardHeader>
+          <CardContent class="grid gap-8">
             <div class="flex items-center gap-4">
-              <UIAvatar class="hidden h-9 w-9 sm:flex">
-                <UIAvatarFallback>OM</UIAvatarFallback>
-              </UIAvatar>
+              <Avatar class="hidden h-9 w-9 sm:flex">
+                <AvatarFallback>OM</AvatarFallback>
+              </Avatar>
               <div class="grid gap-1">
                 <p class="text-sm font-medium leading-none">
                   Olivia Martin
@@ -111,9 +111,9 @@ import { Activity, CreditCard, DollarSign, Users } from 'lucide-vue-next'
               </div>
             </div>
             <div class="flex items-center gap-4">
-              <UIAvatar class="hidden h-9 w-9 sm:flex">
-                <UIAvatarFallback>JL</UIAvatarFallback>
-              </UIAvatar>
+              <Avatar class="hidden h-9 w-9 sm:flex">
+                <AvatarFallback>JL</AvatarFallback>
+              </Avatar>
               <div class="grid gap-1">
                 <p class="text-sm font-medium leading-none">
                   Jackson Lee
@@ -127,9 +127,9 @@ import { Activity, CreditCard, DollarSign, Users } from 'lucide-vue-next'
               </div>
             </div>
             <div class="flex items-center gap-4">
-              <UIAvatar class="hidden h-9 w-9 sm:flex">
-                <UIAvatarFallback>IN</UIAvatarFallback>
-              </UIAvatar>
+              <Avatar class="hidden h-9 w-9 sm:flex">
+                <AvatarFallback>IN</AvatarFallback>
+              </Avatar>
               <div class="grid gap-1">
                 <p class="text-sm font-medium leading-none">
                   Isabella Nguyen
@@ -143,9 +143,9 @@ import { Activity, CreditCard, DollarSign, Users } from 'lucide-vue-next'
               </div>
             </div>
             <div class="flex items-center gap-4">
-              <UIAvatar class="hidden h-9 w-9 sm:flex">
-                <UIAvatarFallback>WK</UIAvatarFallback>
-              </UIAvatar>
+              <Avatar class="hidden h-9 w-9 sm:flex">
+                <AvatarFallback>WK</AvatarFallback>
+              </Avatar>
               <div class="grid gap-1">
                 <p class="text-sm font-medium leading-none">
                   William Kim
@@ -159,9 +159,9 @@ import { Activity, CreditCard, DollarSign, Users } from 'lucide-vue-next'
               </div>
             </div>
             <div class="flex items-center gap-4">
-              <UIAvatar class="hidden h-9 w-9 sm:flex">
-                <UIAvatarFallback>SD</UIAvatarFallback>
-              </UIAvatar>
+              <Avatar class="hidden h-9 w-9 sm:flex">
+                <AvatarFallback>SD</AvatarFallback>
+              </Avatar>
               <div class="grid gap-1">
                 <p class="text-sm font-medium leading-none">
                   Sofia Davis
@@ -174,8 +174,8 @@ import { Activity, CreditCard, DollarSign, Users } from 'lucide-vue-next'
                 +$39.00
               </div>
             </div>
-          </UICardContent>
-        </UICard>
+          </CardContent>
+        </Card>
       </div>
     </main>
   </div>

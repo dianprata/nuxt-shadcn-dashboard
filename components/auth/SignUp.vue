@@ -18,10 +18,10 @@ async function onSubmit(event: Event) {
     <form @submit="onSubmit">
       <div class="grid gap-4">
         <div class="grid gap-2">
-          <UILabel for="email">
+          <Label for="email">
             Email
-          </UILabel>
-          <UIInput
+          </Label>
+          <Input
               id="email"
               placeholder="name@example.com"
               type="email"
@@ -31,10 +31,10 @@ async function onSubmit(event: Event) {
               :disabled="isLoading"
           />
         </div>
-        <UIButton :disabled="isLoading">
+        <Button :disabled="isLoading">
           <Loader2 v-if="isLoading" class="mr-2 h-4 w-4 animate-spin" />
           Sign In with Email
-        </UIButton>
+        </Button>
       </div>
     </form>
     <div class="relative">
@@ -47,10 +47,10 @@ async function onSubmit(event: Event) {
         </span>
       </div>
     </div>
-    <UIButton variant="outline" type="button" :disabled="isLoading">
+    <Button variant="outline" type="button" :disabled="isLoading">
       <Loader2 v-if="isLoading" class="mr-2 h-4 w-4 animate-spin" />
       <div v-else class="i-radix-icons-github-logo mr-2 h-4 w-4" />
       GitHub
-    </UIButton>
+    </Button>
   </div>
 </template>
