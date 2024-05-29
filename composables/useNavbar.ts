@@ -3,7 +3,7 @@ export const useNavbar = defineStore('navbar', () => {
     default: () => true,
   })
   const showSidebarCookie = useCookie<boolean>('showSidebar', {
-    default: () => false,
+    default: () => true,
   })
   const isOpen = computed(() => isOpenCookie.value)
   const showSidebar = computed(() => showSidebarCookie.value)
