@@ -12,6 +12,10 @@ function windowResized() {
     isOpenCookie.value = false
 }
 
+onMounted(() => {
+  windowResized()
+})
+
 useEventListener('resize', () => {
   windowResized()
 })

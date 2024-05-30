@@ -16,6 +16,6 @@ function toggleDark() {
 
 <template>
   <Button variant="ghost" size="icon" class="rounded-full" title="Toggle Color Scheme" aria-label="button dark toggle" @click="toggleDark">
-    <div class="i-carbon-sun dark:i-carbon-moon" />
+    <div class="i-ph-sun-dim-duotone dark:i-ph-moon-stars-duotone" />
   </Button>
 </template>
