@@ -2,11 +2,7 @@ export const useNavbar = defineStore('navbar', () => {
   const isOpenCookie = useCookie<boolean>('isOpen', {
     default: () => true,
   })
-  const showSidebarCookie = useCookie<boolean>('showSidebar', {
-    default: () => true,
-  })
   const isOpen = computed(() => isOpenCookie.value)
-  const showSidebar = computed(() => showSidebarCookie.value)
 
   function toggle() {
     isOpenCookie.value = !isOpenCookie.value
@@ -15,8 +11,6 @@ export const useNavbar = defineStore('navbar', () => {
   return {
     isOpenCookie,
     isOpen,
-    showSidebarCookie,
-    showSidebar,
     toggle,
   }
 })

@@ -1,32 +1,15 @@
 <script setup lang="ts">
+import { cn } from '@/lib/utils'
+
 const store = useNavbar()
 
-const { isOpen, isOpenCookie, showSidebar, showSidebarCookie } = storeToRefs(store)
-
-const { width } = useWindowSize()
-
-function windowResized() {
-  showSidebarCookie.value = width.value >= 576
-
-  if (width.value < 768 && isOpen.value)
-    isOpenCookie.value = false
-}
-
-onMounted(() => {
-  windowResized()
-})
-
-useEventListener('resize', () => {
-  windowResized()
-})
+const { isOpen } = storeToRefs(store)
 </script>
 
 <template>
   <div
-    class="grid w-full transition-width duration-300 min-h-dvh" :class="[
-      { 'pl-64': isOpen && showSidebar },
-      { 'pl-20': !isOpen && showSidebar },
-    ]"
+    class="grid w-full transition-width duration-300 min-h-dvh"
+    :class="cn('pl-0 lg:pl-64 sm:pl-20', isOpen ? 'lg:pl-64 sm:pl-20' : 'lg:pl-20')"
   >
     <LayoutSidebar />
     <div flex="~ col">

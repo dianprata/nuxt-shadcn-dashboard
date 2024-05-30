@@ -5,18 +5,14 @@ import { navMenu, navMenuBottom } from '~/constants/data'
 function handleLogout() {
   navigateTo('/login')
 }
-
-const store = useNavbar()
-
-const { showSidebar } = storeToRefs(store)
 </script>
 
 <template>
   <header class="sticky top-0 z-10 h-57px flex items-center gap-4 border-b bg-background px-4 md:px-6">
     <div class="w-full flex items-center gap-4">
-      <Sheet v-if="!showSidebar">
+      <Sheet>
         <SheetTrigger as-child>
-          <Button size="icon" variant="outline">
+          <Button size="icon" variant="outline" class="sm:hidden">
             <Menu />
             <span class="sr-only">Toggle navigation menu</span>
           </Button>
