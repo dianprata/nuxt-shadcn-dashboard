@@ -1,12 +1,20 @@
 <script setup lang="ts">
 import { Triangle } from 'lucide-vue-next'
-import { navMenu, navMenuBottom } from '~/constants/data'
+import { navMenu, navMenuBottom } from '~/constants/menus'
 import { cn } from '@/lib/utils'
+import type { NavLink, NavSectionTitle } from '~/types/nav'
 
 const store = useNavbar()
 const { toggle } = store
 
 const { isOpen } = storeToRefs(store)
+
+function resolveNavItemComponent(item: NavLink | NavSectionTitle) {
+  if ('heading' in item)
+    return resolveComponent('LayoutNavHeading')
+
+  return resolveComponent('LayoutNavLink')
+}
 </script>
 
 <template>
@@ -33,60 +41,10 @@ const { isOpen } = storeToRefs(store)
       </Button>
     </div>
     <nav class="grid w-full gap-1 p-2">
-      <TooltipProvider v-for="(nav, index) in navMenu" :key="index">
-        <Tooltip>
-          <TooltipTrigger as-child>
-            <NuxtLink :to="nav.link">
-              <Button
-                variant="ghost"
-                size="icon"
-                class="w-full gap-3 rounded-lg px-4 font-normal"
-                :class="[
-                  { 'bg-muted': nav.link === $route.path },
-                  cn('justify-center lg:justify-start', isOpen ? 'lg:justify-start' : 'lg:justify-center'),
-                ]"
-                :aria-label="nav.ariaLabel"
-              >
-                <component :is="nav.icon" class="size-5" />
-                <span v-if="isOpen" class="hidden lg:inline-block">
-                  {{ nav.label }}
-                </span>
-              </Button>
-            </NuxtLink>
-          </TooltipTrigger>
-          <TooltipContent side="right" :side-offset="5">
-            {{ nav.label }}
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
+      <component :is="resolveNavItemComponent(item)" v-for="(item, index) in navMenu" :key="index" :item="item" />
     </nav>
     <nav class="grid mt-auto w-full gap-1 p-2">
-      <TooltipProvider v-for="(nav, index) in navMenuBottom" :key="index">
-        <Tooltip>
-          <TooltipTrigger as-child>
-            <NuxtLink :to="nav.link">
-              <Button
-                variant="ghost"
-                size="icon"
-                class="w-full gap-3 rounded-lg px-4 font-normal"
-                :class="[
-                  { 'bg-muted': nav.link === $route.path },
-                  cn('justify-center lg:justify-start', isOpen ? 'lg:justify-start' : 'lg:justify-center'),
-                ]"
-                :aria-label="nav.ariaLabel"
-              >
-                <component :is="nav.icon" class="size-5" />
-                <span v-if="isOpen" class="hidden lg:inline-block">
-                  {{ nav.label }}
-                </span>
-              </Button>
-            </NuxtLink>
-          </TooltipTrigger>
-          <TooltipContent side="right" :side-offset="5">
-            {{ nav.label }}
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
+      <component :is="resolveNavItemComponent(item)" v-for="(item, index) in navMenuBottom" :key="index" :item="item" />
     </nav>
   </aside>
 </template>

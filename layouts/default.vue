@@ -4,6 +4,8 @@ import { cn } from '@/lib/utils'
 const store = useNavbar()
 
 const { isOpen } = storeToRefs(store)
+
+const { backgroundApp } = storeToRefs(useAppConf())
 </script>
 
 <template>
@@ -14,7 +16,7 @@ const { isOpen } = storeToRefs(store)
     <LayoutSidebar />
     <div flex="~ col">
       <LayoutHeader />
-      <main class="flex-1 bg-muted/50 p-4 lg:p-6">
+      <main class="flex-1 p-4 lg:p-6" :class="backgroundApp">
         <slot />
       </main>
     </div>
