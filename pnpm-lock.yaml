@@ -28,6 +28,9 @@ devDependencies:
   '@antfu/eslint-config':
     specifier: ^2.17.0
     version: 2.18.0(@unocss/eslint-plugin@0.60.2)(@vue/compiler-sfc@3.4.27)(eslint-plugin-format@0.1.1)(eslint@9.2.0)(typescript@5.4.5)
+  '@iconify/vue':
+    specifier: ^4.1.2
+    version: 4.1.2(vue@3.4.27)
   '@nuxt/eslint':
     specifier: ^0.3.12
     version: 0.3.12(eslint@9.2.0)(nuxt@3.11.2)(typescript@5.4.5)(vite@5.2.11)
@@ -55,6 +58,9 @@ devDependencies:
   clsx:
     specifier: ^2.1.1
     version: 2.1.1
+  date-fns:
+    specifier: ^3.6.0
+    version: 3.6.0
   eslint:
     specifier: 9.2.0
     version: 9.2.0
@@ -1083,6 +1089,15 @@ packages:
       mlly: 1.7.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@iconify/vue@4.1.2(vue@3.4.27):
+    resolution: {integrity: sha512-CQnYqLiQD5LOAaXhBrmj1mdL2/NCJvwcC4jtW2Z8ukhThiFkLDkutarTOV2trfc9EXqUqRs0KqXOL9pZ/IyysA==}
+    peerDependencies:
+      vue: '>=3'
+    dependencies:
+      '@iconify/types': 2.0.0
+      vue: 3.4.27(typescript@5.4.5)
     dev: true
 
   /@internationalized/date@3.5.4:
@@ -5024,6 +5039,10 @@ packages:
       d3-transition: 3.0.1(d3-selection@3.0.0)
       d3-zoom: 3.0.0
     dev: false
+
+  /date-fns@3.6.0:
+    resolution: {integrity: sha512-fRHTG8g/Gif+kSh50gaGEdToemgfj74aRX3swtiouboip5JDLAyDE9F11nHMIcvOaXeOC6D7SpNhi7uFyB7Uww==}
+    dev: true
 
   /db0@0.1.4:
     resolution: {integrity: sha512-Ft6eCwONYxlwLjBXSJxw0t0RYtA5gW9mq8JfBXn9TtC0nDPlqePAhpv9v4g9aONBi6JI1OXHTKKkUYGd+BOrCA==}
