@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { accounts, mails } from '@/components/mail/data/mails'
 
-const { changeBackground, resetBackground } = useAppConf()
-changeBackground('bg-white')
+const { backgroundIsWhite } = useAppConf()
+backgroundIsWhite()
 
-onUnmounted(() => resetBackground())
+onUnmounted(() => backgroundIsWhite(false))
 </script>
 
 <template>

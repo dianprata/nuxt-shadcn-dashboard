@@ -1,16 +1,12 @@
 export const useAppConf = defineStore('appConf', () => {
-  const bgAppCookie = useCookie<string>('bgApp', {
-    default: () => 'bg-muted/50',
+  const isBgWhiteCookie = useCookie<boolean>('isBgWhite', {
+    default: () => false,
   })
-  const backgroundApp = computed(() => bgAppCookie.value)
+  const isBgWhite = computed(() => isBgWhiteCookie.value)
 
-  function changeBackground(value: string) {
-    bgAppCookie.value = value
+  function backgroundIsWhite(value: boolean = true) {
+    isBgWhiteCookie.value = value
   }
 
-  function resetBackground() {
-    bgAppCookie.value = 'bg-muted/50'
-  }
-
-  return { backgroundApp, changeBackground, resetBackground }
+  return { isBgWhite, backgroundIsWhite }
 })

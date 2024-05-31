@@ -5,7 +5,7 @@ const store = useNavbar()
 
 const { isOpen } = storeToRefs(store)
 
-const { backgroundApp } = storeToRefs(useAppConf())
+const { isBgWhite } = storeToRefs(useAppConf())
 </script>
 
 <template>
@@ -16,7 +16,7 @@ const { backgroundApp } = storeToRefs(useAppConf())
     <LayoutSidebar />
     <div flex="~ col">
       <LayoutHeader />
-      <main class="flex-1 p-4 lg:p-6" :class="backgroundApp">
+      <main class="flex-1 p-4 lg:p-6" :class="isBgWhite ? 'bg-white' : 'bg-muted/50'">
         <slot />
       </main>
     </div>
