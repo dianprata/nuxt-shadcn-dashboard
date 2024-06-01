@@ -33,6 +33,27 @@ export const navMenu: NavMenuItems = [
     link: '/components/alert',
     ariaLabel: 'Alert',
   },
+  {
+    title: 'Alert Dialog',
+    label: 'Alert Dialog',
+    icon: Component,
+    link: '/components/alert-dialog',
+    ariaLabel: 'Alert Dialog',
+  },
+  {
+    title: 'Aspect Ratio',
+    label: 'Aspect Ratio',
+    icon: Component,
+    link: '/components/aspect-ratio',
+    ariaLabel: 'Aspect Ratio',
+  },
+  {
+    title: 'Avatar',
+    label: 'Avatar',
+    icon: Component,
+    link: '/components/avatar',
+    ariaLabel: 'Avatar',
+  },
 ]
 
 export const navMenuBottom: NavMenuItems = [
