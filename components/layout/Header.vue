@@ -29,29 +29,8 @@ function handleLogout() {
               <div v-if="'heading' in nav" :key="`heading-${index}`" class="mx-3 mb-1 mt-3 leading-4.5">
                 <span class="text-xs text-muted-foreground uppercase">{{ nav.heading }}</span>
               </div>
-              <NuxtLink
-                v-else
-                :key="`link-${index}`"
-                :to="nav.link"
-                :class="[
-                  { 'bg-muted': nav.link === $route.path },
-                ]"
-                class="flex items-center gap-4 rounded-lg px-3 py-2 text-foreground font-normal hover:bg-muted"
-              >
-                <component :is="nav.icon" />
-                {{ nav.label }}
-              </NuxtLink>
-            </template>
-          </nav>
-          <div class="mt-auto">
-            <nav class="grid gap-2">
-              <template v-for="(nav, index) in navMenuBottom">
-                <div v-if="'heading' in nav" :key="`heading-${index}`" class="mx-3 mb-1 mt-3 leading-4.5">
-                  <span class="text-xs text-muted-foreground uppercase">{{ nav.heading }}</span>
-                </div>
+              <SheetClose v-else :key="`link-${index}`" as-child>
                 <NuxtLink
-                  v-else
-                  :key="`link-${index}`"
                   :to="nav.link"
                   :class="[
                     { 'bg-muted': nav.link === $route.path },
@@ -61,6 +40,27 @@ function handleLogout() {
                   <component :is="nav.icon" />
                   {{ nav.label }}
                 </NuxtLink>
+              </SheetClose>
+            </template>
+          </nav>
+          <div class="mt-auto">
+            <nav class="grid gap-2">
+              <template v-for="(nav, index) in navMenuBottom">
+                <div v-if="'heading' in nav" :key="`heading-bottom-${index}`" class="mx-3 mb-1 mt-3 leading-4.5">
+                  <span class="text-xs text-muted-foreground uppercase">{{ nav.heading }}</span>
+                </div>
+                <SheetClose v-else :key="`link-bottom-${index}`" as-child>
+                  <NuxtLink
+                    :to="nav.link"
+                    :class="[
+                      { 'bg-muted': nav.link === $route.path },
+                    ]"
+                    class="flex items-center gap-4 rounded-lg px-3 py-2 text-foreground font-normal hover:bg-muted"
+                  >
+                    <component :is="nav.icon" />
+                    {{ nav.label }}
+                  </NuxtLink>
+                </SheetClose>
               </template>
             </nav>
           </div>
