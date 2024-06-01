@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Archive, ArchiveX, Clock, Forward, MoreVertical, Reply, ReplyAll, Trash2 } from 'lucide-vue-next'
+import { Archive, ArchiveX, ArrowLeft, Clock, Forward, MoreVertical, Reply, ReplyAll, Trash2 } from 'lucide-vue-next'
 import { computed } from 'vue'
 import { addDays, addHours, format, nextSaturday } from 'date-fns'
 import type { Mail } from './data/mails'
@@ -9,6 +9,8 @@ interface MailDisplayProps {
 }
 
 const props = defineProps<MailDisplayProps>()
+
+const emit = defineEmits(['close'])
 
 const mailFallbackName = computed(() => {
   return props.mail?.name
@@ -26,7 +28,16 @@ const today = new Date()
       <div class="flex items-center gap-2">
         <Tooltip>
           <TooltipTrigger as-child>
-            <Button variant="ghost" size="icon" :disabled="!mail">
+            <Button variant="ghost" size="icon" :disabled="!mail" class="rounded-full" @click="emit('close')">
+              <ArrowLeft class="size-4" />
+              <span class="sr-only">Back</span>
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent>Back</TooltipContent>
+        </Tooltip>
+        <Tooltip>
+          <TooltipTrigger as-child>
+            <Button variant="ghost" size="icon" :disabled="!mail" class="rounded-full">
               <Archive class="size-4" />
               <span class="sr-only">Archive</span>
             </Button>
@@ -35,7 +46,7 @@ const today = new Date()
         </Tooltip>
         <Tooltip>
           <TooltipTrigger as-child>
-            <Button variant="ghost" size="icon" :disabled="!mail">
+            <Button variant="ghost" size="icon" :disabled="!mail" class="rounded-full">
               <ArchiveX class="size-4" />
               <span class="sr-only">Move to junk</span>
             </Button>
@@ -44,7 +55,7 @@ const today = new Date()
         </Tooltip>
         <Tooltip>
           <TooltipTrigger as-child>
-            <Button variant="ghost" size="icon" :disabled="!mail">
+            <Button variant="ghost" size="icon" :disabled="!mail" class="rounded-full">
               <Trash2 class="size-4" />
               <span class="sr-only">Move to trash</span>
             </Button>
@@ -56,13 +67,13 @@ const today = new Date()
           <Popover>
             <PopoverTrigger as-child>
               <TooltipTrigger as-child>
-                <Button variant="ghost" size="icon" :disabled="!mail">
+                <Button variant="ghost" size="icon" :disabled="!mail" class="rounded-full">
                   <Clock class="size-4" />
                   <span class="sr-only">Snooze</span>
                 </Button>
               </TooltipTrigger>
             </PopoverTrigger>
-            <PopoverContent class="w-[535px] flex p-0">
+            <PopoverContent class="flex p-0">
               <div class="flex flex-col gap-2 border-r px-2 py-4">
                 <div class="px-4 text-sm font-medium">
                   Snooze until
@@ -117,7 +128,7 @@ const today = new Date()
       <div class="ml-auto flex items-center gap-2">
         <Tooltip>
           <TooltipTrigger as-child>
-            <Button variant="ghost" size="icon" :disabled="!mail">
+            <Button variant="ghost" size="icon" :disabled="!mail" class="rounded-full">
               <Reply class="size-4" />
               <span class="sr-only">Reply</span>
             </Button>
@@ -126,7 +137,7 @@ const today = new Date()
         </Tooltip>
         <Tooltip>
           <TooltipTrigger as-child>
-            <Button variant="ghost" size="icon" :disabled="!mail">
+            <Button variant="ghost" size="icon" :disabled="!mail" class="rounded-full">
               <ReplyAll class="size-4" />
               <span class="sr-only">Reply all</span>
             </Button>
@@ -135,7 +146,7 @@ const today = new Date()
         </Tooltip>
         <Tooltip>
           <TooltipTrigger as-child>
-            <Button variant="ghost" size="icon" :disabled="!mail">
+            <Button variant="ghost" size="icon" :disabled="!mail" class="rounded-full">
               <Forward class="size-4" />
               <span class="sr-only">Forward</span>
             </Button>
@@ -146,7 +157,7 @@ const today = new Date()
       <Separator orientation="vertical" class="mx-2 h-6" />
       <DropdownMenu>
         <DropdownMenuTrigger as-child>
-          <Button variant="ghost" size="icon" :disabled="!mail">
+          <Button variant="ghost" size="icon" :disabled="!mail" class="rounded-full">
             <MoreVertical class="size-4" />
             <span class="sr-only">More</span>
           </Button>

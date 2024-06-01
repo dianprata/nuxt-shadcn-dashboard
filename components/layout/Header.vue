@@ -25,12 +25,13 @@ function handleLogout() {
             </SheetTitle>
           </SheetHeader>
           <nav class="grid gap-2">
-            <template v-for="(nav, index) in navMenu" :key="index">
-              <div v-if="'heading' in nav" class="mx-3 mb-1 mt-3 leading-4.5">
+            <template v-for="(nav, index) in navMenu">
+              <div v-if="'heading' in nav" :key="`heading-${index}`" class="mx-3 mb-1 mt-3 leading-4.5">
                 <span class="text-xs text-muted-foreground uppercase">{{ nav.heading }}</span>
               </div>
               <NuxtLink
                 v-else
+                :key="`link-${index}`"
                 :to="nav.link"
                 :class="[
                   { 'bg-muted': nav.link === $route.path },
@@ -44,12 +45,13 @@ function handleLogout() {
           </nav>
           <div class="mt-auto">
             <nav class="grid gap-2">
-              <template v-for="(nav, index) in navMenuBottom" :key="index">
-                <div v-if="'heading' in nav" class="mx-3 mb-1 mt-3 leading-4.5">
+              <template v-for="(nav, index) in navMenuBottom">
+                <div v-if="'heading' in nav" :key="`heading-${index}`" class="mx-3 mb-1 mt-3 leading-4.5">
                   <span class="text-xs text-muted-foreground uppercase">{{ nav.heading }}</span>
                 </div>
                 <NuxtLink
                   v-else
+                  :key="`link-${index}`"
                   :to="nav.link"
                   :class="[
                     { 'bg-muted': nav.link === $route.path },
@@ -71,7 +73,7 @@ function handleLogout() {
         <DarkToggle />
         <DropdownMenu>
           <DropdownMenuTrigger as-child>
-            <Button variant="secondary" size="icon" class="rounded-full">
+            <Button id="radix-vue-dropdown-menu-trigger-1" variant="secondary" size="icon" class="rounded-full">
               <CircleUser class="h-5 w-5" />
               <span class="sr-only">Toggle user menu</span>
             </Button>
