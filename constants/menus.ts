@@ -26,6 +26,13 @@ export const navMenu: NavMenuItems = [
     link: '/components/accordion',
     ariaLabel: 'Accordion',
   },
+  {
+    title: 'Alert',
+    label: 'Alert',
+    icon: Component,
+    link: '/components/alert',
+    ariaLabel: 'Alert',
+  },
 ]
 
 export const navMenuBottom: NavMenuItems = [

@@ -1,0 +1,76 @@
+<script setup lang="ts">
+import { Icon } from '@iconify/vue'
+import { Terminal } from 'lucide-vue-next'
+import { cn } from '~/lib/utils'
+import { buttonVariants } from '~/components/ui/button'
+
+const breadcrumbLinks = ref([
+  {
+    title: 'Components',
+    href: '#',
+  },
+  {
+    title: 'Alert',
+    href: '/components/alert',
+  },
+])
+</script>
+
+<template>
+  <div class="flex flex-col gap-4">
+    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
+    <div class="grid gap-2">
+      <h2 class="text-3xl font-bold tracking-tight">
+        Alert
+      </h2>
+      <p class="text-muted-foreground">
+        Displays a callout for user attention.
+      </p>
+      <div class="flex gap-2">
+        <NuxtLink
+          to="https://www.shadcn-vue.com/docs/components/alert"
+          external
+          target="_blank"
+          :class="cn(buttonVariants({ variant: 'outline', size: 'xs' }), 'text-xs')"
+        >
+          <span class="i-radix-icons-code mr-2" />
+          Component Source
+        </NuxtLink>
+      </div>
+    </div>
+    <div class="flex flex-col gap-4 md:flex-row">
+      <Card class="flex-1">
+        <CardHeader>
+          <CardTitle>Basic</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <Alert>
+            <Terminal class="h-4 w-4" />
+            <AlertTitle>Heads up!</AlertTitle>
+            <AlertDescription>
+              You can add components to your app using the cli.
+            </AlertDescription>
+          </Alert>
+        </CardContent>
+      </Card>
+      <Card class="flex-1">
+        <CardHeader>
+          <CardTitle>Destructive</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <Alert variant="destructive">
+            <Icon icon="radix-icons:exclamation-triangle" />
+            <AlertTitle>Error</AlertTitle>
+            <AlertDescription>
+              Your session has expired. Please log in again.
+            </AlertDescription>
+          </Alert>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+
+</style>

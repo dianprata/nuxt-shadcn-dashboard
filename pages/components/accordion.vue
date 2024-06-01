@@ -31,11 +31,20 @@ const useIdFunction = () => useId()
         </p>
         <div class="flex gap-2">
           <NuxtLink
-            to="https://www.radix-vue.com/components/accordion" external
+            to="https://www.shadcn-vue.com/docs/components/accordion"
+            external
             target="_blank"
             :class="cn(buttonVariants({ variant: 'outline', size: 'xs' }), 'text-xs')"
           >
             <span class="i-radix-icons-code mr-2" />
+            Component Source
+          </NuxtLink>
+          <NuxtLink
+            to="https://www.radix-vue.com/components/accordion"
+            external
+            target="_blank"
+            :class="cn(buttonVariants({ variant: 'outline', size: 'xs' }), 'text-xs')"
+          >
             Primitive API Reference
           </NuxtLink>
         </div>
