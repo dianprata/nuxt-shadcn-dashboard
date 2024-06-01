@@ -40,7 +40,7 @@ const useIdFunction = () => useId()
           </NuxtLink>
         </div>
       </div>
-      <div class="flex gap-4">
+      <div class="flex flex-col gap-4 md:flex-row">
         <Card class="flex-1">
           <CardHeader>
             <CardTitle>Basic</CardTitle>
