@@ -20,11 +20,11 @@ export const navMenu: NavMenuItems = [
     heading: 'Components',
   },
   {
-    title: 'Components',
-    label: 'Components',
+    title: 'Accordion',
+    label: 'Accordion',
     icon: Component,
-    link: '/components',
-    ariaLabel: 'Components',
+    link: '/components/accordion',
+    ariaLabel: 'Accordion',
   },
 ]
 
