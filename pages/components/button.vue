@@ -40,7 +40,7 @@ const breadcrumbLinks = ref([
         </Button>
       </div>
     </div>
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+    <div class="grid gap-4 md:grid-cols-3">
       <Card class="w-full">
         <CardHeader>
           <CardTitle>Default</CardTitle>

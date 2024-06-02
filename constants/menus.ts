@@ -131,6 +131,13 @@ export const navMenu: NavMenuItems = [
     link: '/components/context-menu',
     ariaLabel: 'Context Menu',
   },
+  {
+    title: 'Dialog',
+    label: 'Dialog',
+    icon: Component,
+    link: '/components/dialog',
+    ariaLabel: 'Dialog',
+  },
 ]
 
 export const navMenuBottom: NavMenuItems = [
