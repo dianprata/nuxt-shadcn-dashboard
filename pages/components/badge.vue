@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { cn } from '~/lib/utils'
-import { buttonVariants } from '~/components/ui/button'
-
 const breadcrumbLinks = ref([
   {
     title: 'Home',
@@ -29,15 +26,16 @@ const breadcrumbLinks = ref([
         Displays a badge or a component that looks like a badge.
       </p>
       <div class="flex gap-2">
-        <NuxtLink
-          to="https://www.shadcn-vue.com/docs/components/badge"
-          external
-          target="_blank"
-          :class="cn(buttonVariants({ variant: 'outline', size: 'xs' }), 'text-xs')"
-        >
-          <span class="i-radix-icons-code mr-2" />
-          Component Source
-        </NuxtLink>
+        <Button size="xs" variant="outline" class="text-xs" as-child>
+          <NuxtLink
+            to="https://www.shadcn-vue.com/docs/components/badge"
+            external
+            target="_blank"
+          >
+            <span class="i-radix-icons-code mr-2" />
+            Component Source
+          </NuxtLink>
+        </Button>
       </div>
     </div>
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">

@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
 import { Terminal } from 'lucide-vue-next'
-import { cn } from '~/lib/utils'
-import { buttonVariants } from '~/components/ui/button'
 
 const breadcrumbLinks = ref([
   {
@@ -31,15 +29,16 @@ const breadcrumbLinks = ref([
         Displays a callout for user attention.
       </p>
       <div class="flex gap-2">
-        <NuxtLink
-          to="https://www.shadcn-vue.com/docs/components/alert"
-          external
-          target="_blank"
-          :class="cn(buttonVariants({ variant: 'outline', size: 'xs' }), 'text-xs')"
-        >
-          <span class="i-radix-icons-code mr-2" />
-          Component Source
-        </NuxtLink>
+        <Button size="xs" variant="outline" class="text-xs" as-child>
+          <NuxtLink
+            to="https://www.shadcn-vue.com/docs/components/alert"
+            external
+            target="_blank"
+          >
+            <span class="i-radix-icons-code mr-2" />
+            Component Source
+          </NuxtLink>
+        </Button>
       </div>
     </div>
     <div class="flex flex-col gap-4 md:flex-row">

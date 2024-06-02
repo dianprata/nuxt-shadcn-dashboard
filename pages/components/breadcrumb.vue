@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { ChevronDown, Slash } from 'lucide-vue-next'
-import { cn } from '~/lib/utils'
-import { buttonVariants } from '~/components/ui/button'
 
 const breadcrumbLinks = ref([
   {
@@ -30,15 +28,16 @@ const breadcrumbLinks = ref([
         Displays the path to the current resource using a hierarchy of links.
       </p>
       <div class="flex gap-2">
-        <NuxtLink
-          to="https://www.shadcn-vue.com/docs/components/breadcrumb"
-          external
-          target="_blank"
-          :class="cn(buttonVariants({ variant: 'outline', size: 'xs' }), 'text-xs')"
-        >
-          <span class="i-radix-icons-code mr-2" />
-          Component Source
-        </NuxtLink>
+        <Button size="xs" variant="outline" class="text-xs" as-child>
+          <NuxtLink
+            to="https://www.shadcn-vue.com/docs/components/breadcrumb"
+            external
+            target="_blank"
+          >
+            <span class="i-radix-icons-code mr-2" />
+            Component Source
+          </NuxtLink>
+        </Button>
       </div>
     </div>
     <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
