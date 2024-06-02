@@ -17,9 +17,6 @@ const breadcrumbLinks = ref([
   },
 ])
 
-// Solving Hydration Nuxt
-const useIdFunction = () => useId()
-
 const frameworks = [
   { value: 'next.js', label: 'Next.js' },
   { value: 'sveltekit', label: 'SvelteKit' },
@@ -33,7 +30,6 @@ const value = ref('')
 </script>
 
 <template>
-  <!--  <ConfigProvider :use-id="useIdFunction"> -->
   <div class="flex flex-col gap-4">
     <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
@@ -113,7 +109,6 @@ const value = ref('')
       </Card>
     </div>
   </div>
-<!--  </ConfigProvider> -->
 </template>
 
 <style scoped>
