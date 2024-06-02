@@ -110,6 +110,27 @@ export const navMenu: NavMenuItems = [
     link: '/components/collapsible',
     ariaLabel: 'Collapsible',
   },
+  {
+    title: 'Combobox',
+    label: 'Combobox',
+    icon: Component,
+    link: '/components/combobox',
+    ariaLabel: 'Combobox',
+  },
+  {
+    title: 'Command',
+    label: 'Command',
+    icon: Component,
+    link: '/components/command',
+    ariaLabel: 'Command',
+  },
+  {
+    title: 'Context Menu',
+    label: 'Context Menu',
+    icon: Component,
+    link: '/components/context-menu',
+    ariaLabel: 'Context Menu',
+  },
 ]
 
 export const navMenuBottom: NavMenuItems = [
