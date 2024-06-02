@@ -118,19 +118,25 @@ const useIdFunction = () => useId()
         </Card>
         <Card class="w-full">
           <CardHeader>
-            <CardTitle>Basic</CardTitle>
+            <CardTitle>With Dialog</CardTitle>
           </CardHeader>
           <CardContent>
             <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
               <div>
-                <p class="text-sm text-muted-foreground">
-                  Press
-                  <kbd
-                    class="pointer-events-none h-5 inline-flex select-none items-center gap-1 border rounded bg-muted px-1.5 text-[10px] text-muted-foreground font-medium font-mono opacity-100"
-                  >
-                    <span class="text-xs">⌘</span>J
-                  </kbd>
-                </p>
+                <div class="flex flex-col items-center gap-4">
+                  <p class="text-sm text-muted-foreground">
+                    Press
+                    <kbd
+                      class="pointer-events-none h-5 inline-flex select-none items-center gap-1 border rounded bg-muted px-1.5 text-[10px] text-muted-foreground font-medium font-mono opacity-100"
+                    >
+                      <span class="text-xs">⌘</span>J
+                    </kbd>
+                  </p>
+                  <span class="text-sm text-muted-foreground">or</span>
+                  <Button size="sm" @click="handleOpenChange">
+                    Click Here
+                  </Button>
+                </div>
                 <CommandDialog :open="open" @update:open="handleOpenChange">
                   <CommandInput placeholder="Type a command or search..." />
                   <CommandList>
