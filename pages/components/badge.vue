@@ -1,0 +1,92 @@
+<script setup lang="ts">
+import { cn } from '~/lib/utils'
+import { buttonVariants } from '~/components/ui/button'
+
+const breadcrumbLinks = ref([
+  {
+    title: 'Components',
+    href: '#',
+  },
+  {
+    title: 'Avatar',
+    href: '/components/avatar',
+  },
+])
+</script>
+
+<template>
+  <div class="flex flex-col gap-4">
+    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
+    <div class="grid gap-2">
+      <h2 class="text-3xl font-bold tracking-tight">
+        Badge
+      </h2>
+      <p class="text-muted-foreground">
+        Displays a badge or a component that looks like a badge.
+      </p>
+      <div class="flex gap-2">
+        <NuxtLink
+          to="https://www.shadcn-vue.com/docs/components/badge"
+          external
+          target="_blank"
+          :class="cn(buttonVariants({ variant: 'outline', size: 'xs' }), 'text-xs')"
+        >
+          <span class="i-radix-icons-code mr-2" />
+          Component Source
+        </NuxtLink>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <Card class="w-full">
+        <CardHeader>
+          <CardTitle>Default</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
+            <Badge>Badge</Badge>
+          </div>
+        </CardContent>
+      </Card>
+      <Card class="w-full">
+        <CardHeader>
+          <CardTitle>Secondary</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
+            <Badge variant="secondary">
+              Badge
+            </Badge>
+          </div>
+        </CardContent>
+      </Card>
+      <Card class="w-full">
+        <CardHeader>
+          <CardTitle>Outline</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
+            <Badge variant="outline">
+              Badge
+            </Badge>
+          </div>
+        </CardContent>
+      </Card>
+      <Card class="w-full">
+        <CardHeader>
+          <CardTitle>Destructive</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
+            <Badge variant="destructive">
+              Badge
+            </Badge>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+
+</style>

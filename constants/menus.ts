@@ -54,6 +54,27 @@ export const navMenu: NavMenuItems = [
     link: '/components/avatar',
     ariaLabel: 'Avatar',
   },
+  {
+    title: 'Badge',
+    label: 'Badge',
+    icon: Component,
+    link: '/components/badge',
+    ariaLabel: 'Badge',
+  },
+  {
+    title: 'Breadcrumb',
+    label: 'Breadcrumb',
+    icon: Component,
+    link: '/components/breadcrumb',
+    ariaLabel: 'Breadcrumb',
+  },
+  {
+    title: 'Button',
+    label: 'Button',
+    icon: Component,
+    link: '/components/button',
+    ariaLabel: 'Button',
+  },
 ]
 
 export const navMenuBottom: NavMenuItems = [
