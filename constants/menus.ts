@@ -138,6 +138,13 @@ export const navMenu: NavMenuItems = [
     link: '/components/dialog',
     ariaLabel: 'Dialog',
   },
+  {
+    title: 'Drawer',
+    label: 'Drawer',
+    icon: Component,
+    link: '/components/drawer',
+    ariaLabel: 'Drawer',
+  },
 ]
 
 export const navMenuBottom: NavMenuItems = [

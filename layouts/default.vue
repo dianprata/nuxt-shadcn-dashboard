@@ -16,7 +16,7 @@ const { isBgWhite } = storeToRefs(useAppConf())
     <LayoutSidebar />
     <div flex="~ col">
       <LayoutHeader />
-      <main class="flex-1 p-4 lg:p-6" :class="isBgWhite ? 'bg-background' : 'bg-muted/50'">
+      <main class="flex-1 p-4 lg:p-6" :class="isBgWhite ? 'bg-background' : 'bg-muted dark:bg-muted/50'">
         <slot />
       </main>
     </div>

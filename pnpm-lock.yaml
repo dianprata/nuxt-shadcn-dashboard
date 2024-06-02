@@ -94,6 +94,9 @@ devDependencies:
   unocss-preset-shadcn:
     specifier: ^0.3.0
     version: 0.3.0(unocss-preset-animations@1.0.2)(unocss@0.60.2)
+  vaul-vue:
+    specifier: ^0.1.2
+    version: 0.1.2(typescript@5.4.5)
   vue:
     specifier: ^3.4.27
     version: 3.4.27(typescript@5.4.5)
@@ -9909,6 +9912,17 @@ packages:
   /validate-npm-package-name@5.0.1:
     resolution: {integrity: sha512-OljLrQ9SQdOUqTaQxqL5dEfZWrXExyyWsozYlAWFawPVNuD83igl7uJD2RTkNMbniIYgt8l81eCJGIdQF7avLQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
+    dev: true
+
+  /vaul-vue@0.1.2(typescript@5.4.5):
+    resolution: {integrity: sha512-E9e0qmHXScnYXDXYuBM0xFjW5DaRcUhj9fkFlv12omd7K/RzXpM+prU+EfHS3sjtDJuy1lBdOlPPYXJeQuT/Qw==}
+    dependencies:
+      '@vueuse/core': 10.10.0(vue@3.4.27)
+      radix-vue: 1.7.4(vue@3.4.27)
+      vue: 3.4.27(typescript@5.4.5)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - typescript
     dev: true
 
   /vite-hot-client@0.2.3(vite@5.2.11):
