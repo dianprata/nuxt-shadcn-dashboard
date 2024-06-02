@@ -75,6 +75,13 @@ export const navMenu: NavMenuItems = [
     link: '/components/button',
     ariaLabel: 'Button',
   },
+  {
+    title: 'Calendar',
+    label: 'Calendar',
+    icon: Component,
+    link: '/components/calendar',
+    ariaLabel: 'Calendar',
+  },
 ]
 
 export const navMenuBottom: NavMenuItems = [

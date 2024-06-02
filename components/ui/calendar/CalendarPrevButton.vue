@@ -1,9 +1,9 @@
 <script lang="ts" setup>
+import { Icon } from '@iconify/vue'
 import { type HTMLAttributes, computed } from 'vue'
 import { CalendarPrev, type CalendarPrevProps, useForwardProps } from 'radix-vue'
-import { ChevronLeft } from 'lucide-vue-next'
+import { buttonVariants } from '../button'
 import { cn } from '@/lib/utils'
-import { buttonVariants } from '@/components/ui/button'
 
 const props = defineProps<CalendarPrevProps & { class?: HTMLAttributes['class'] }>()
 
@@ -26,7 +26,7 @@ const forwardedProps = useForwardProps(delegatedProps)
     v-bind="forwardedProps"
   >
     <slot>
-      <ChevronLeft class="h-4 w-4" />
+      <Icon icon="radix-icons:chevron-left" class="h-4 w-4" />
     </slot>
   </CalendarPrev>
 </template>
