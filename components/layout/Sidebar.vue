@@ -40,9 +40,11 @@ function resolveNavItemComponent(item: NavLink | NavSectionTitle) {
         <div :class="isOpen ? 'i-radix-icons-chevron-left' : 'i-radix-icons-chevron-right'" />
       </Button>
     </div>
-    <nav class="grid w-full gap-1 p-2">
-      <component :is="resolveNavItemComponent(item)" v-for="(item, index) in navMenu" :key="index" :item="item" />
-    </nav>
+    <ScrollArea class="w-full">
+      <nav class="grid w-full gap-1 p-2">
+        <component :is="resolveNavItemComponent(item)" v-for="(item, index) in navMenu" :key="index" :item="item" />
+      </nav>
+    </ScrollArea>
     <nav class="grid mt-auto w-full gap-1 p-2">
       <component :is="resolveNavItemComponent(item)" v-for="(item, index) in navMenuBottom" :key="index" :item="item" />
     </nav>
