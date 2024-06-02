@@ -82,6 +82,34 @@ export const navMenu: NavMenuItems = [
     link: '/components/calendar',
     ariaLabel: 'Calendar',
   },
+  {
+    title: 'Card',
+    label: 'Card',
+    icon: Component,
+    link: '/components/card',
+    ariaLabel: 'Card',
+  },
+  {
+    title: 'Carousel',
+    label: 'Carousel',
+    icon: Component,
+    link: '/components/carousel',
+    ariaLabel: 'Carousel',
+  },
+  {
+    title: 'Checkbox',
+    label: 'Checkbox',
+    icon: Component,
+    link: '/components/checkbox',
+    ariaLabel: 'Checkbox',
+  },
+  {
+    title: 'Collapsible',
+    label: 'Collapsible',
+    icon: Component,
+    link: '/components/collapsible',
+    ariaLabel: 'Collapsible',
+  },
 ]
 
 export const navMenuBottom: NavMenuItems = [
