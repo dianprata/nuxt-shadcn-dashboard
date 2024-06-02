@@ -36,9 +36,9 @@ function handleLogout() {
                     :class="[
                       { 'bg-muted': nav.link === $route.path },
                     ]"
-                    class="flex items-center gap-4 rounded-lg px-3 py-2 text-foreground font-normal hover:bg-muted"
+                    class="flex items-center gap-4 rounded-lg px-3 py-2 text-sm text-foreground font-normal hover:bg-muted"
                   >
-                    <component :is="nav.icon" />
+                    <component :is="nav.icon" size-4.5 />
                     {{ nav.label }}
                   </NuxtLink>
                 </SheetClose>
@@ -57,9 +57,9 @@ function handleLogout() {
                     :class="[
                       { 'bg-muted': nav.link === $route.path },
                     ]"
-                    class="flex items-center gap-4 rounded-lg px-3 py-2 text-foreground font-normal hover:bg-muted"
+                    class="flex items-center gap-4 rounded-lg px-3 py-2 text-sm text-foreground font-normal hover:bg-muted"
                   >
-                    <component :is="nav.icon" />
+                    <component :is="nav.icon" size-4.5 />
                     {{ nav.label }}
                   </NuxtLink>
                 </SheetClose>
