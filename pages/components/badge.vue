@@ -4,12 +4,16 @@ import { buttonVariants } from '~/components/ui/button'
 
 const breadcrumbLinks = ref([
   {
+    title: 'Home',
+    href: '/',
+  },
+  {
     title: 'Components',
     href: '#',
   },
   {
-    title: 'Avatar',
-    href: '/components/avatar',
+    title: 'Badge',
+    href: '/components/badge',
   },
 ])
 </script>

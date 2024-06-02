@@ -4,6 +4,10 @@ import { buttonVariants } from '~/components/ui/button'
 
 const breadcrumbLinks = ref([
   {
+    title: 'Home',
+    href: '/',
+  },
+  {
     title: 'Components',
     href: '#',
   },
@@ -50,7 +54,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="h-200px w-full flex items-center justify-center gap-4 overflow-hidden">
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Avatar>
               <AvatarImage src="https://github.com/radix-vue.png" alt="@radix-vue" />
               <AvatarFallback>RV</AvatarFallback>

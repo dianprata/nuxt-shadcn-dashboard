@@ -18,9 +18,14 @@ withDefaults(defineProps<{
     <BreadcrumbList>
       <template v-for="(link, index) in links" :key="index">
         <BreadcrumbItem>
-          <BreadcrumbLink :href="link.href">
-            {{ link.title }}
+          <BreadcrumbLink v-if="index !== links.length - 1" as-child>
+            <NuxtLink :to="link.href">
+              {{ link.title }}
+            </NuxtLink>
           </BreadcrumbLink>
+          <BreadcrumbPage v-else>
+            {{ link.title }}
+          </BreadcrumbPage>
         </BreadcrumbItem>
         <BreadcrumbSeparator v-if="index < links.length - 1">
           <Icon :icon="separator" />
