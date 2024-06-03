@@ -6,12 +6,17 @@ defineProps<{
 }>()
 
 const { isOpen } = storeToRefs(useNavbar())
+
+const isDesktop = useMediaQuery('(min-width: 1024px)')
+console.log(isDesktop.value)
 </script>
 
 <template>
-  <div class="mx-3 mb-1 mt-4 hidden leading-4.5 lg:inline-block">
-    <span v-if="isOpen" class="text-xs text-muted-foreground uppercase">{{ item.heading }}</span>
-    <Separator v-else />
+  <div v-if="isOpen && isDesktop" class="mx-3 mb-1 mt-4 leading-4.5">
+    <span class="text-xs text-muted-foreground uppercase">{{ item.heading }}</span>
+  </div>
+  <div v-else class="mx-3 my-1">
+    <Separator />
   </div>
 </template>
 
