@@ -1,165 +1,127 @@
-import { Component, LayoutDashboard, LifeBuoy, LucideMail, SquareUser } from 'lucide-vue-next'
+import { Circle, Component, LayoutDashboard, LifeBuoy, LucideMail, SquareUser } from 'lucide-vue-next'
 import type { NavMenuItems } from '~/types/nav'
 
 export const navMenu: NavMenuItems = [
   {
     title: 'Dashboard',
-    label: 'Dashboard',
     icon: LayoutDashboard,
     link: '/',
-    ariaLabel: 'Dashboard',
   },
   {
     title: 'Email',
-    label: 'Email',
     icon: LucideMail,
     link: '/email',
-    ariaLabel: 'Email',
   },
   {
     heading: 'Components',
   },
   {
-    title: 'Accordion',
-    label: 'Accordion',
+    title: 'Components',
     icon: Component,
-    link: '/components/accordion',
-    ariaLabel: 'Accordion',
-  },
-  {
-    title: 'Alert',
-    label: 'Alert',
-    icon: Component,
-    link: '/components/alert',
-    ariaLabel: 'Alert',
-  },
-  {
-    title: 'Alert Dialog',
-    label: 'Alert Dialog',
-    icon: Component,
-    link: '/components/alert-dialog',
-    ariaLabel: 'Alert Dialog',
-  },
-  {
-    title: 'Aspect Ratio',
-    label: 'Aspect Ratio',
-    icon: Component,
-    link: '/components/aspect-ratio',
-    ariaLabel: 'Aspect Ratio',
-  },
-  {
-    title: 'Avatar',
-    label: 'Avatar',
-    icon: Component,
-    link: '/components/avatar',
-    ariaLabel: 'Avatar',
-  },
-  {
-    title: 'Badge',
-    label: 'Badge',
-    icon: Component,
-    link: '/components/badge',
-    ariaLabel: 'Badge',
-  },
-  {
-    title: 'Breadcrumb',
-    label: 'Breadcrumb',
-    icon: Component,
-    link: '/components/breadcrumb',
-    ariaLabel: 'Breadcrumb',
-  },
-  {
-    title: 'Button',
-    label: 'Button',
-    icon: Component,
-    link: '/components/button',
-    ariaLabel: 'Button',
-  },
-  {
-    title: 'Calendar',
-    label: 'Calendar',
-    icon: Component,
-    link: '/components/calendar',
-    ariaLabel: 'Calendar',
-  },
-  {
-    title: 'Card',
-    label: 'Card',
-    icon: Component,
-    link: '/components/card',
-    ariaLabel: 'Card',
-  },
-  {
-    title: 'Carousel',
-    label: 'Carousel',
-    icon: Component,
-    link: '/components/carousel',
-    ariaLabel: 'Carousel',
-  },
-  {
-    title: 'Checkbox',
-    label: 'Checkbox',
-    icon: Component,
-    link: '/components/checkbox',
-    ariaLabel: 'Checkbox',
-  },
-  {
-    title: 'Collapsible',
-    label: 'Collapsible',
-    icon: Component,
-    link: '/components/collapsible',
-    ariaLabel: 'Collapsible',
-  },
-  {
-    title: 'Combobox',
-    label: 'Combobox',
-    icon: Component,
-    link: '/components/combobox',
-    ariaLabel: 'Combobox',
-  },
-  {
-    title: 'Command',
-    label: 'Command',
-    icon: Component,
-    link: '/components/command',
-    ariaLabel: 'Command',
-  },
-  {
-    title: 'Context Menu',
-    label: 'Context Menu',
-    icon: Component,
-    link: '/components/context-menu',
-    ariaLabel: 'Context Menu',
-  },
-  {
-    title: 'Dialog',
-    label: 'Dialog',
-    icon: Component,
-    link: '/components/dialog',
-    ariaLabel: 'Dialog',
-  },
-  {
-    title: 'Drawer',
-    label: 'Drawer',
-    icon: Component,
-    link: '/components/drawer',
-    ariaLabel: 'Drawer',
+    children: [
+      {
+        title: 'Accordion',
+        icon: Circle,
+        link: '/components/accordion',
+      },
+      {
+        title: 'Alert',
+        icon: Circle,
+        link: '/components/alert',
+      },
+      {
+        title: 'Alert Dialog',
+        icon: Circle,
+        link: '/components/alert-dialog',
+      },
+      {
+        title: 'Aspect Ratio',
+        icon: Circle,
+        link: '/components/aspect-ratio',
+      },
+      {
+        title: 'Avatar',
+        icon: Circle,
+        link: '/components/avatar',
+      },
+      {
+        title: 'Badge',
+        icon: Circle,
+        link: '/components/badge',
+      },
+      {
+        title: 'Breadcrumb',
+        icon: Circle,
+        link: '/components/breadcrumb',
+      },
+      {
+        title: 'Button',
+        icon: Circle,
+        link: '/components/button',
+      },
+      {
+        title: 'Calendar',
+        icon: Circle,
+        link: '/components/calendar',
+      },
+      {
+        title: 'Card',
+        icon: Circle,
+        link: '/components/card',
+      },
+      {
+        title: 'Carousel',
+        icon: Circle,
+        link: '/components/carousel',
+      },
+      {
+        title: 'Checkbox',
+        icon: Circle,
+        link: '/components/checkbox',
+      },
+      {
+        title: 'Collapsible',
+        icon: Circle,
+        link: '/components/collapsible',
+      },
+      {
+        title: 'Combobox',
+        icon: Circle,
+        link: '/components/combobox',
+      },
+      {
+        title: 'Command',
+        icon: Circle,
+        link: '/components/command',
+      },
+      {
+        title: 'Context Menu',
+        icon: Circle,
+        link: '/components/context-menu',
+      },
+      {
+        title: 'Dialog',
+        icon: Circle,
+        link: '/components/dialog',
+      },
+      {
+        title: 'Drawer',
+        icon: Circle,
+        link: '/components/drawer',
+      },
+    ],
   },
 ]
 
 export const navMenuBottom: NavMenuItems = [
   {
     title: 'Help',
-    label: 'Help',
     icon: LifeBuoy,
     link: '/help',
-    ariaLabel: 'Help',
   },
   {
     title: 'Account',
-    label: 'Account',
     icon: SquareUser,
     link: '/account',
-    ariaLabel: 'Account',
   },
 ]

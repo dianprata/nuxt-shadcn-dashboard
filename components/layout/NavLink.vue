@@ -22,17 +22,17 @@ const { isOpen } = storeToRefs(useNavbar())
               { 'bg-muted': item.link === $route.path },
               cn('justify-center lg:justify-start', isOpen ? 'lg:justify-start' : 'lg:justify-center'),
             ]"
-            :aria-label="item.ariaLabel"
+            :aria-label="item.title"
           >
-            <component :is="item.icon" class="size-5" />
+            <component v-if="item.icon" :is="item.icon" class="size-5" />
             <span v-if="isOpen" class="hidden lg:inline-block">
-              {{ item.label }}
+              {{ item.title }}
             </span>
           </Button>
         </NuxtLink>
       </TooltipTrigger>
       <TooltipContent side="right" :side-offset="5">
-        {{ item.label }}
+        {{ item.title }}
       </TooltipContent>
     </Tooltip>
   </TooltipProvider>

@@ -28,4 +28,8 @@ export default defineNuxtConfig({
       standalone: false,
     },
   },
+
+  routeRules: {
+    '/components': { redirect: '/components/accordion' },
+  },
 })

@@ -2,14 +2,18 @@ import type { Component } from 'vue'
 
 export interface NavLink {
   title: string
-  label: string
-  icon: Component
   link: string
-  ariaLabel: string
+  icon?: Component
 }
 
 export interface NavSectionTitle {
   heading: string
 }
 
-export declare type NavMenuItems = (NavLink | NavSectionTitle)[]
+export interface NavGroup {
+  title: string
+  icon?: Component
+  children: NavLink[]
+}
+
+export declare type NavMenuItems = (NavLink | NavGroup | NavSectionTitle)[]

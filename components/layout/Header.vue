@@ -1,9 +1,19 @@
 <script setup lang="ts">
 import { CircleUser, Menu, Triangle } from 'lucide-vue-next'
 import { navMenu, navMenuBottom } from '~/constants/menus'
+import type { NavGroup, NavLink, NavSectionTitle } from '~/types/nav'
 
 function handleLogout() {
   navigateTo('/login')
+}
+
+function resolveNavItemComponent(item: NavLink | NavGroup | NavSectionTitle) {
+  if ('heading' in item)
+    return resolveComponent('LayoutNavHeadingMobile')
+  else if ('children' in item)
+    return resolveComponent('LayoutNavGroupMobile')
+
+  return resolveComponent('LayoutNavLinkMobile')
 }
 </script>
 
@@ -26,44 +36,12 @@ function handleLogout() {
           </SheetHeader>
           <ScrollArea class="w-full">
             <nav class="grid gap-2">
-              <template v-for="(nav, index) in navMenu">
-                <div v-if="'heading' in nav" :key="`heading-${index}`" class="mx-3 mb-1 mt-3 leading-4.5">
-                  <span class="text-xs text-muted-foreground uppercase">{{ nav.heading }}</span>
-                </div>
-                <SheetClose v-else :key="`link-${index}`" as-child>
-                  <NuxtLink
-                    :to="nav.link"
-                    :class="[
-                      { 'bg-muted': nav.link === $route.path },
-                    ]"
-                    class="flex items-center gap-4 rounded-lg px-3 py-2 text-sm text-foreground font-normal hover:bg-muted"
-                  >
-                    <component :is="nav.icon" size-4.5 />
-                    {{ nav.label }}
-                  </NuxtLink>
-                </SheetClose>
-              </template>
+              <component :is="resolveNavItemComponent(item)" v-for="(item, index) in navMenu" :key="index" :item="item" />
             </nav>
           </ScrollArea>
           <div class="mt-auto">
             <nav class="grid gap-2">
-              <template v-for="(nav, index) in navMenuBottom">
-                <div v-if="'heading' in nav" :key="`heading-bottom-${index}`" class="mx-3 mb-1 mt-3 leading-4.5">
-                  <span class="text-xs text-muted-foreground uppercase">{{ nav.heading }}</span>
-                </div>
-                <SheetClose v-else :key="`link-bottom-${index}`" as-child>
-                  <NuxtLink
-                    :to="nav.link"
-                    :class="[
-                      { 'bg-muted': nav.link === $route.path },
-                    ]"
-                    class="flex items-center gap-4 rounded-lg px-3 py-2 text-sm text-foreground font-normal hover:bg-muted"
-                  >
-                    <component :is="nav.icon" size-4.5 />
-                    {{ nav.label }}
-                  </NuxtLink>
-                </SheetClose>
-              </template>
+              <component :is="resolveNavItemComponent(item)" v-for="(item, index) in navMenuBottom" :key="index" :item="item" />
             </nav>
           </div>
         </SheetContent>

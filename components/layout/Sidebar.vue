@@ -2,16 +2,18 @@
 import { Triangle } from 'lucide-vue-next'
 import { navMenu, navMenuBottom } from '~/constants/menus'
 import { cn } from '@/lib/utils'
-import type { NavLink, NavSectionTitle } from '~/types/nav'
+import type { NavGroup, NavLink, NavSectionTitle } from '~/types/nav'
 
 const store = useNavbar()
 const { toggle } = store
 
 const { isOpen } = storeToRefs(store)
 
-function resolveNavItemComponent(item: NavLink | NavSectionTitle) {
+function resolveNavItemComponent(item: NavLink | NavGroup | NavSectionTitle) {
   if ('heading' in item)
     return resolveComponent('LayoutNavHeading')
+  else if ('children' in item)
+    return resolveComponent('LayoutNavGroup')
 
   return resolveComponent('LayoutNavLink')
 }
