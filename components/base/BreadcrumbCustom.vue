@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
-
 interface Links {
   title: string
   href: string
@@ -28,7 +26,7 @@ withDefaults(defineProps<{
           </BreadcrumbPage>
         </BreadcrumbItem>
         <BreadcrumbSeparator v-if="index < links.length - 1">
-          <Icon :icon="separator" />
+          <Icon :name="separator" />
         </BreadcrumbSeparator>
       </template>
     </BreadcrumbList>

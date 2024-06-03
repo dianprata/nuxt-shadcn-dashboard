@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
 import { ConfigProvider } from 'radix-vue'
-import { cn } from '~/lib/utils'
 import type { NavGroup } from '~/types/nav'
 
 defineProps<{
@@ -35,11 +33,15 @@ const useIdFunction = () => useId()
                 ]"
                 :aria-label="item.title"
               >
-                <component :is="item.icon" v-if="item.icon" class="size-5" />
-                <span v-if="isOpen" class="hidden lg:inline-block">
+                <Icon v-if="item.icon" :name="item.icon" class="size-5" />
+                <span v-show="isOpen" class="hidden lg:inline-block">
                   {{ item.title }}
                 </span>
-                <Icon v-if="isOpen" :icon="isOpenCollapsible ? 'radix-icons:chevron-up' : 'radix-icons:chevron-down'" class="ml-auto hidden h-4 w-4 lg:inline-block" />
+                <Icon
+                  v-show="isOpen"
+                  :name="isOpenCollapsible ? 'radix-icons:chevron-up' : 'radix-icons:chevron-down'"
+                  class="ml-auto h-4 w-4 !hidden !lg:inline-block"
+                />
               </Button>
             </CollapsibleTrigger>
             <CollapsibleContent class="space-y-2">
@@ -57,7 +59,7 @@ const useIdFunction = () => useId()
                         ]"
                         :aria-label="nav.title"
                       >
-                        <component :is="nav.icon" v-if="nav.icon" class="size-3.5" />
+                        <Icon v-if="nav.icon" :name="nav.icon" class="size-3.5" />
                         <span v-if="isOpen" class="hidden lg:inline-block">
                           {{ nav.title }}
                         </span>

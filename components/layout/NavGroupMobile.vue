@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
-
 import type { NavGroup } from '~/types/nav'
 
 defineProps<{
@@ -22,9 +20,9 @@ const isOpenCollapsible = ref(false)
         class="w-full gap-3 rounded-lg px-4 font-normal"
         :aria-label="item.title"
       >
-        <component :is="item.icon" v-if="item.icon" class="size-5" />
+        <Icon v-if="item.icon" :name="item.icon" class="size-5" />
         <span>{{ item.title }}</span>
-        <Icon :icon="isOpenCollapsible ? 'radix-icons:chevron-up' : 'radix-icons:chevron-down'" class="ml-auto h-4 w-4" />
+        <Icon :name="isOpenCollapsible ? 'radix-icons:chevron-up' : 'radix-icons:chevron-down'" class="ml-auto h-4 w-4" />
       </Button>
     </CollapsibleTrigger>
     <CollapsibleContent class="space-y-2">
@@ -37,7 +35,7 @@ const isOpenCollapsible = ref(false)
             ]"
             class="flex items-center gap-4 rounded-lg px-5 py-2 text-sm text-foreground font-normal hover:bg-muted"
           >
-            <component :is="nav.icon" size-3 />
+            <Icon v-if="nav.icon" :name="nav.icon" size-3 />
             {{ nav.title }}
           </NuxtLink>
         </SheetClose>

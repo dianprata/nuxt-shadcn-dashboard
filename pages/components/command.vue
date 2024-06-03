@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
 import { ConfigProvider } from 'radix-vue'
 
 const breadcrumbLinks = ref([
@@ -81,32 +80,32 @@ const useIdFunction = () => useId()
                   <CommandEmpty>No results found.</CommandEmpty>
                   <CommandGroup heading="Suggestions">
                     <CommandItem value="Calendar">
-                      <Icon icon="radix-icons:calendar" class="mr-2 h-4 w-4" />
+                      <Icon name="radix-icons:calendar" class="mr-2 h-4 w-4" />
                       <span>Calendar</span>
                     </CommandItem>
                     <CommandItem value="Search Emoji">
-                      <Icon icon="radix-icons:face" class="mr-2 h-4 w-4" />
+                      <Icon name="radix-icons:face" class="mr-2 h-4 w-4" />
                       <span>Search Emoji</span>
                     </CommandItem>
                     <CommandItem value="Launch">
-                      <Icon icon="radix-icons:rocket" class="mr-2 h-4 w-4" />
+                      <Icon name="radix-icons:rocket" class="mr-2 h-4 w-4" />
                       <span>Launch</span>
                     </CommandItem>
                   </CommandGroup>
                   <CommandSeparator />
                   <CommandGroup heading="Settings">
                     <CommandItem value="Profile">
-                      <Icon icon="radix-icons:person" class="mr-2 h-4 w-4" />
+                      <Icon name="radix-icons:person" class="mr-2 h-4 w-4" />
                       <span>Profile</span>
                       <CommandShortcut>⌘P</CommandShortcut>
                     </CommandItem>
                     <CommandItem value="Mail">
-                      <Icon icon="radix-icons:envelope-closed" class="mr-2 h-4 w-4" />
+                      <Icon name="radix-icons:envelope-closed" class="mr-2 h-4 w-4" />
                       <span>Mail</span>
                       <CommandShortcut>⌘B</CommandShortcut>
                     </CommandItem>
                     <CommandItem value="Settings">
-                      <Icon icon="radix-icons:gear" class="mr-2 h-4 w-4" />
+                      <Icon name="radix-icons:gear" class="mr-2 h-4 w-4" />
                       <span>Settings</span>
                       <CommandShortcut>⌘S</CommandShortcut>
                     </CommandItem>

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
 import { ConfigProvider } from 'radix-vue'
 
 const breadcrumbLinks = ref([
@@ -73,7 +72,7 @@ const isOpen = ref(false)
                       @peduarte starred 3 repositories
                     </h4>
                     <Button variant="ghost" size="sm" class="w-9 p-0">
-                      <Icon icon="radix-icons:caret-sort" class="h-4 w-4" />
+                      <Icon name="radix-icons:caret-sort" class="h-4 w-4" />
                       <span class="sr-only">Toggle</span>
                     </Button>
                   </div>

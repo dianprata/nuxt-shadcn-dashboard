@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { Icon } from '@iconify/vue'
-import { cn } from '@/lib/utils'
 import { buttonVariants } from '~/components/ui/button'
 
 export interface LinkProp {
@@ -36,7 +34,7 @@ defineProps<NavProps>()
                   && 'dark:bg-muted dark:text-muted-foreground dark:hover:bg-muted dark:hover:text-white',
               )"
             >
-              <Icon :icon="link.icon" class="size-4" />
+              <Icon :name="link.icon" class="size-4" />
               <span class="sr-only">{{ link.title }}</span>
             </a>
           </TooltipTrigger>
@@ -59,7 +57,7 @@ defineProps<NavProps>()
             'justify-start',
           )"
         >
-          <Icon :icon="link.icon" class="mr-2 size-4" />
+          <Icon :name="link.icon" class="mr-2 size-4" />
           {{ link.title }}
           <span
             v-if="link.label"

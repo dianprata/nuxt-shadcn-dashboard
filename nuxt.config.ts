@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
+    'nuxt-icon',
   ],
 
   css: [
@@ -31,5 +32,11 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/components': { redirect: '/components/accordion' },
+  },
+
+  imports: {
+    dirs: [
+      './lib',
+    ],
   },
 })

@@ -1,15 +1,14 @@
-import { Circle, Component, LayoutDashboard, LifeBuoy, LucideMail, SquareUser } from 'lucide-vue-next'
 import type { NavMenuItems } from '~/types/nav'
 
 export const navMenu: NavMenuItems = [
   {
     title: 'Dashboard',
-    icon: LayoutDashboard,
+    icon: 'lucide:layout-dashboard',
     link: '/',
   },
   {
     title: 'Email',
-    icon: LucideMail,
+    icon: 'lucide:mail',
     link: '/email',
   },
   {
@@ -17,102 +16,107 @@ export const navMenu: NavMenuItems = [
   },
   {
     title: 'Components',
-    icon: Component,
+    icon: 'lucide:component',
     children: [
       {
         title: 'Accordion',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/accordion',
       },
       {
         title: 'Alert',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/alert',
       },
       {
         title: 'Alert Dialog',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/alert-dialog',
       },
       {
         title: 'Aspect Ratio',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/aspect-ratio',
       },
       {
         title: 'Avatar',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/avatar',
       },
       {
         title: 'Badge',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/badge',
       },
       {
         title: 'Breadcrumb',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/breadcrumb',
       },
       {
         title: 'Button',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/button',
       },
       {
         title: 'Calendar',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/calendar',
       },
       {
         title: 'Card',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/card',
       },
       {
         title: 'Carousel',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/carousel',
       },
       {
         title: 'Checkbox',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/checkbox',
       },
       {
         title: 'Collapsible',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/collapsible',
       },
       {
         title: 'Combobox',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/combobox',
       },
       {
         title: 'Command',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/command',
       },
       {
         title: 'Context Menu',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/context-menu',
       },
       {
         title: 'Dialog',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/dialog',
       },
       {
         title: 'Drawer',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/drawer',
       },
       {
         title: 'Dropdown Menu',
-        icon: Circle,
+        icon: 'lucide:circle',
         link: '/components/dropdown-menu',
+      },
+      {
+        title: 'Hover Card',
+        icon: 'lucide:circle',
+        link: '/components/hover-card',
       },
     ],
   },
@@ -121,12 +125,12 @@ export const navMenu: NavMenuItems = [
 export const navMenuBottom: NavMenuItems = [
   {
     title: 'Help',
-    icon: LifeBuoy,
+    icon: 'lucide:life-buoy',
     link: '/help',
   },
   {
     title: 'Account',
-    icon: SquareUser,
+    icon: 'lucide:square-user',
     link: '/account',
   },
 ]

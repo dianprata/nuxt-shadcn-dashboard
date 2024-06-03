@@ -24,7 +24,7 @@ const { isOpen } = storeToRefs(useNavbar())
             ]"
             :aria-label="item.title"
           >
-            <component :is="item.icon" v-if="item.icon" class="size-5" />
+            <Icon v-if="item.icon" :name="item.icon" class="size-5" />
             <span v-if="isOpen" class="hidden lg:inline-block">
               {{ item.title }}
             </span>

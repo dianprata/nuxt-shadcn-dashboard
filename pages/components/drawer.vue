@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
 import { VisStackedBar, VisXYContainer } from '@unovis/vue'
 
 const breadcrumbLinks = ref([
@@ -97,7 +96,7 @@ const data = [
                         :disabled="goal <= 200"
                         @click="goal -= 10"
                       >
-                        <Icon icon="radix-icons:minus" class="h-4 w-4" />
+                        <Icon name="radix-icons:minus" class="h-4 w-4" />
                         <span class="sr-only">Decrease</span>
                       </Button>
                       <div class="flex-1 text-center">
@@ -115,7 +114,7 @@ const data = [
                         :disabled="goal >= 400"
                         @click="goal += 10"
                       >
-                        <Icon icon="radix-icons:plus" class="h-4 w-4" />
+                        <Icon name="radix-icons:plus" class="h-4 w-4" />
                         <span class="sr-only">Increase</span>
                       </Button>
                     </div>

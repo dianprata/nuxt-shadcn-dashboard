@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
 import { useToast } from '~/components/ui/toast'
 
 const breadcrumbLinks = ref([
@@ -147,7 +146,7 @@ async function handleCopyLink() {
                   </div>
                   <Button type="submit" size="sm" class="px-3" @click="handleCopyLink">
                     <span class="sr-only">Copy</span>
-                    <Icon icon="radix-icons:copy" class="h-4 w-4" />
+                    <Icon name="radix-icons:copy" class="h-4 w-4" />
                   </Button>
                 </div>
                 <DialogFooter class="sm:justify-start">

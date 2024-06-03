@@ -1,9 +1,7 @@
-import type { Component } from 'vue'
-
 export interface NavLink {
   title: string
   link: string
-  icon?: Component
+  icon?: string
 }
 
 export interface NavSectionTitle {
@@ -12,7 +10,7 @@ export interface NavSectionTitle {
 
 export interface NavGroup {
   title: string
-  icon?: Component
+  icon?: string
   children: NavLink[]
 }
 

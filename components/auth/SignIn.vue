@@ -13,10 +13,8 @@ function onSubmit(event: Event) {
   isLoading.value = true
 
   setTimeout(() => {
-    if (email.value === 'demo@gmail.com' && password.value === 'password') {
-      console.log('Logged in')
+    if (email.value === 'demo@gmail.com' && password.value === 'password')
       navigateTo('/')
-    }
 
     isLoading.value = false
   }, 3000)

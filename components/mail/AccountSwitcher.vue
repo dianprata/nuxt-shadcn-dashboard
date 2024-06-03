@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { Icon } from '@iconify/vue'
+
 import { cn } from '@/lib/utils'
 
 interface AccountSwitcherProps {
@@ -29,7 +29,7 @@ const selectedEmailData = computed(() => props.accounts.find(item => item.email 
     >
       <SelectValue placeholder="Select an account">
         <div class="flex items-center gap-3">
-          <Icon class="size-4" :icon="selectedEmailData!.icon" />
+          <Icon class="size-4" :name="selectedEmailData!.icon" />
           <span v-if="!isCollapsed">
             {{ selectedEmailData!.label }}
           </span>
@@ -39,7 +39,7 @@ const selectedEmailData = computed(() => props.accounts.find(item => item.email 
     <SelectContent>
       <SelectItem v-for="account of accounts" :key="account.email" :value="account.email">
         <div class="flex items-center gap-3 [&_svg]:size-4 [&_svg]:shrink-0 [&_svg]:text-foreground">
-          <Icon class="size-4" :icon="account.icon" />
+          <Icon class="size-4" :name="account.icon" />
           {{ account.email }}
         </div>
       </SelectItem>

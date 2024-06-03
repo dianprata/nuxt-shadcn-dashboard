@@ -30,9 +30,9 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       props.class,
     )"
   >
-    <span class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+    <span class="absolute left-2 h-3.5 w-3.5 flex items-center justify-center">
       <DropdownMenuItemIndicator>
-        <Check class="w-4 h-4" />
+        <Check class="h-4 w-4" />
       </DropdownMenuItemIndicator>
     </span>
     <slot />

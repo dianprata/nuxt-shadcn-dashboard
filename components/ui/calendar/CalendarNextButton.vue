@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { Icon } from '@iconify/vue'
 import { type HTMLAttributes, computed } from 'vue'
 import { CalendarNext, type CalendarNextProps, useForwardProps } from 'radix-vue'
 import { buttonVariants } from '../button'
@@ -26,7 +25,7 @@ const forwardedProps = useForwardProps(delegatedProps)
     v-bind="forwardedProps"
   >
     <slot>
-      <Icon icon="radix-icons:chevron-right" class="h-4 w-4" />
+      <Icon name="radix-icons:chevron-right" class="h-4 w-4" />
     </slot>
   </CalendarNext>
 </template>

@@ -1,6 +1,6 @@
-export { default as AreaChart } from './AreaChart.vue'
-
 import type { Spacing } from '@unovis/ts'
+
+export { default as AreaChart } from './AreaChart.vue'
 
 type KeyOf<T extends Record<string, any>> = Extract<keyof T, string>
 

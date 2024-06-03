@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Icon } from '@iconify/vue'
 import { Terminal } from 'lucide-vue-next'
 
 const breadcrumbLinks = ref([
@@ -62,7 +61,7 @@ const breadcrumbLinks = ref([
         </CardHeader>
         <CardContent>
           <Alert variant="destructive">
-            <Icon icon="radix-icons:exclamation-triangle" />
+            <Icon name="radix-icons:exclamation-triangle" />
             <AlertTitle>Error</AlertTitle>
             <AlertDescription>
               Your session has expired. Please log in again.

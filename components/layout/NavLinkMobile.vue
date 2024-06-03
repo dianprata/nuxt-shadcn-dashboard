@@ -15,7 +15,7 @@ defineProps<{
       ]"
       class="flex items-center gap-4 rounded-lg px-3 py-2 text-sm text-foreground font-normal hover:bg-muted"
     >
-      <component :is="item.icon" size-4.5 />
+      <Icon v-if="item.icon" :name="item.icon" size-4.5 />
       {{ item.title }}
     </NuxtLink>
   </SheetClose>

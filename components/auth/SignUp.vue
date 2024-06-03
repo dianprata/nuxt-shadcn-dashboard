@@ -22,13 +22,13 @@ async function onSubmit(event: Event) {
             Email
           </Label>
           <Input
-              id="email"
-              placeholder="name@example.com"
-              type="email"
-              auto-capitalize="none"
-              auto-complete="email"
-              auto-correct="off"
-              :disabled="isLoading"
+            id="email"
+            placeholder="name@example.com"
+            type="email"
+            auto-capitalize="none"
+            auto-complete="email"
+            auto-correct="off"
+            :disabled="isLoading"
           />
         </div>
         <Button :disabled="isLoading">
