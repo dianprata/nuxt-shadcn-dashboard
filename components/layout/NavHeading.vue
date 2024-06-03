@@ -8,7 +8,6 @@ defineProps<{
 const { isOpen } = storeToRefs(useNavbar())
 
 const isDesktop = useMediaQuery('(min-width: 1024px)')
-console.log(isDesktop.value)
 </script>
 
 <template>
