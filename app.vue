@@ -1,6 +1,7 @@
 <template>
-  <Toaster />
   <NuxtLayout vaul-drawer-wrapper>
     <NuxtPage />
   </NuxtLayout>
+
+  <Toaster />
 </template>

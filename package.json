@@ -27,6 +27,7 @@
     "@unocss/eslint-plugin": "^0.60.1",
     "@unocss/nuxt": "^0.60.2",
     "@vueuse/core": "^10.10.0",
+    "@vueuse/math": "^10.10.0",
     "@vueuse/nuxt": "^10.10.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",

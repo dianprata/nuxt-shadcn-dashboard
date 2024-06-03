@@ -6,6 +6,10 @@ const store = useNavbar()
 const { isOpen } = storeToRefs(store)
 
 const { isBgWhite } = storeToRefs(useAppConf())
+
+defineShortcuts({
+  Meta_B: () => store.toggle(),
+})
 </script>
 
 <template>

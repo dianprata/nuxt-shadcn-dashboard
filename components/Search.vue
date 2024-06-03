@@ -1,16 +1,8 @@
 <script setup lang="ts">
-const { Meta_K, Ctrl_K } = useMagicKeys({
-  passive: false,
-  onEventFired(e) {
-    if (e.key === 'k' && (e.metaKey || e.ctrlKey))
-      e.preventDefault()
-  },
-})
-
 const openCommand = ref(false)
-watch([Meta_K, Ctrl_K], (v) => {
-  if (v[0] || v[1])
-    openCommand.value = !openCommand.value
+
+defineShortcuts({
+  Meta_K: () => openCommand.value = !openCommand.value,
 })
 </script>
 

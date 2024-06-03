@@ -46,6 +46,9 @@ devDependencies:
   '@vueuse/core':
     specifier: ^10.10.0
     version: 10.10.0(vue@3.4.27)
+  '@vueuse/math':
+    specifier: ^10.10.0
+    version: 10.10.0(vue@3.4.27)
   '@vueuse/nuxt':
     specifier: ^10.10.0
     version: 10.10.0(nuxt@3.11.2)(vue@3.4.27)
@@ -3875,6 +3878,16 @@ packages:
       '@vueuse/core': 10.10.0(vue@3.4.27)
       '@vueuse/shared': 10.10.0(vue@3.4.27)
       focus-trap: 7.5.4
+      vue-demi: 0.14.8(vue@3.4.27)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: true
+
+  /@vueuse/math@10.10.0(vue@3.4.27):
+    resolution: {integrity: sha512-+jAA7wla5T400VcMLLRMMozAkoL/3LGJE8qNoteX1YHsvpDSN0UR0DkgCmu9UakhK3JWpX4SURXtwd98rDtMyA==}
+    dependencies:
+      '@vueuse/shared': 10.10.0(vue@3.4.27)
       vue-demi: 0.14.8(vue@3.4.27)
     transitivePeerDependencies:
       - '@vue/composition-api'
