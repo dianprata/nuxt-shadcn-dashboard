@@ -109,6 +109,11 @@ export const navMenu: NavMenuItems = [
         icon: Circle,
         link: '/components/drawer',
       },
+      {
+        title: 'Dropdown Menu',
+        icon: Circle,
+        link: '/components/dropdown-menu',
+      },
     ],
   },
 ]
