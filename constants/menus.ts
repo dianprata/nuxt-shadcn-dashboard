@@ -148,6 +148,26 @@ export const navMenu: NavMenuItems = [
         icon: 'i-lucide-circle',
         link: '/components/pagination',
       },
+      {
+        title: 'PIN Input',
+        icon: 'i-lucide-circle',
+        link: '/components/pin-input',
+      },
+      {
+        title: 'Popover',
+        icon: 'i-lucide-circle',
+        link: '/components/popover',
+      },
+      {
+        title: 'Progress',
+        icon: 'i-lucide-circle',
+        link: '/components/progress',
+      },
+      {
+        title: 'Radio Group',
+        icon: 'i-lucide-circle',
+        link: '/components/radio-group',
+      },
     ],
   },
 ]
