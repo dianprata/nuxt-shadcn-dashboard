@@ -198,6 +198,36 @@ export const navMenu: NavMenuItems = [
         icon: 'i-lucide-circle',
         link: '/components/sheet',
       },
+      {
+        title: 'Skeleton',
+        icon: 'i-lucide-circle',
+        link: '/components/skeleton',
+      },
+      {
+        title: 'Slider',
+        icon: 'i-lucide-circle',
+        link: '/components/slider',
+      },
+      {
+        title: 'Sonner',
+        icon: 'i-lucide-circle',
+        link: '/components/sonner',
+      },
+      {
+        title: 'Switch',
+        icon: 'i-lucide-circle',
+        link: '/components/switch',
+      },
+      {
+        title: 'Table',
+        icon: 'i-lucide-circle',
+        link: '/components/table',
+      },
+      {
+        title: 'Tabs',
+        icon: 'i-lucide-circle',
+        link: '/components/tabs',
+      },
     ],
   },
 ]
