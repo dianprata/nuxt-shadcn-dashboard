@@ -3,12 +3,12 @@ import type { NavMenuItems } from '~/types/nav'
 export const navMenu: NavMenuItems = [
   {
     title: 'Dashboard',
-    icon: 'lucide:layout-dashboard',
+    icon: 'i-lucide-layout-dashboard',
     link: '/',
   },
   {
     title: 'Email',
-    icon: 'lucide:mail',
+    icon: 'i-lucide-mail',
     link: '/email',
   },
   {
@@ -16,106 +16,106 @@ export const navMenu: NavMenuItems = [
   },
   {
     title: 'Components',
-    icon: 'lucide:component',
+    icon: 'i-lucide-component',
     children: [
       {
         title: 'Accordion',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/accordion',
       },
       {
         title: 'Alert',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/alert',
       },
       {
         title: 'Alert Dialog',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/alert-dialog',
       },
       {
         title: 'Aspect Ratio',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/aspect-ratio',
       },
       {
         title: 'Avatar',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/avatar',
       },
       {
         title: 'Badge',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/badge',
       },
       {
         title: 'Breadcrumb',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/breadcrumb',
       },
       {
         title: 'Button',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/button',
       },
       {
         title: 'Calendar',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/calendar',
       },
       {
         title: 'Card',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/card',
       },
       {
         title: 'Carousel',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/carousel',
       },
       {
         title: 'Checkbox',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/checkbox',
       },
       {
         title: 'Collapsible',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/collapsible',
       },
       {
         title: 'Combobox',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/combobox',
       },
       {
         title: 'Command',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/command',
       },
       {
         title: 'Context Menu',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/context-menu',
       },
       {
         title: 'Dialog',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/dialog',
       },
       {
         title: 'Drawer',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/drawer',
       },
       {
         title: 'Dropdown Menu',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/dropdown-menu',
       },
       {
         title: 'Hover Card',
-        icon: 'lucide:circle',
+        icon: 'i-lucide-circle',
         link: '/components/hover-card',
       },
     ],
@@ -125,12 +125,12 @@ export const navMenu: NavMenuItems = [
 export const navMenuBottom: NavMenuItems = [
   {
     title: 'Help',
-    icon: 'lucide:life-buoy',
+    icon: 'i-lucide-life-buoy',
     link: '/help',
   },
   {
     title: 'Account',
-    icon: 'lucide:square-user',
+    icon: 'i-lucide-square-user',
     link: '/account',
   },
 ]

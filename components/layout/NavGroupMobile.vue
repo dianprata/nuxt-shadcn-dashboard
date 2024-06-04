@@ -22,7 +22,7 @@ const isOpenCollapsible = ref(false)
       >
         <Icon v-if="item.icon" :name="item.icon" class="size-5" />
         <span>{{ item.title }}</span>
-        <Icon :name="isOpenCollapsible ? 'radix-icons:chevron-up' : 'radix-icons:chevron-down'" class="ml-auto h-4 w-4" />
+        <Icon :name="isOpenCollapsible ? 'radix-icons:chevron-down' : 'radix-icons:chevron-right'" class="ml-auto h-4 w-4" />
       </Button>
     </CollapsibleTrigger>
     <CollapsibleContent class="space-y-2">

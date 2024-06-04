@@ -39,7 +39,7 @@ const useIdFunction = () => useId()
                 </span>
                 <Icon
                   v-if="isOpen"
-                  :name="isOpenCollapsible ? 'radix-icons:chevron-up' : 'radix-icons:chevron-down'"
+                  :name="isOpenCollapsible ? 'radix-icons:chevron-down' : 'radix-icons:chevron-right'"
                   class="ml-auto h-4 w-4 !hidden !lg:inline-block"
                 />
               </Button>
