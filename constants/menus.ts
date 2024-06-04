@@ -168,6 +168,36 @@ export const navMenu: NavMenuItems = [
         icon: 'i-lucide-circle',
         link: '/components/radio-group',
       },
+      {
+        title: 'Range Calendar',
+        icon: 'i-lucide-circle',
+        link: '/components/range-calendar',
+      },
+      {
+        title: 'Resizable',
+        icon: 'i-lucide-circle',
+        link: '/components/resizable',
+      },
+      {
+        title: 'Scroll Area',
+        icon: 'i-lucide-circle',
+        link: '/components/scroll-area',
+      },
+      {
+        title: 'Select',
+        icon: 'i-lucide-circle',
+        link: '/components/select',
+      },
+      {
+        title: 'Separator',
+        icon: 'i-lucide-circle',
+        link: '/components/separator',
+      },
+      {
+        title: 'Sheet',
+        icon: 'i-lucide-circle',
+        link: '/components/sheet',
+      },
     ],
   },
 ]
