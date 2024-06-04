@@ -123,6 +123,11 @@ export const navMenu: NavMenuItems = [
         icon: 'i-lucide-circle',
         link: '/components/input',
       },
+      {
+        title: 'Label',
+        icon: 'i-lucide-circle',
+        link: '/components/label',
+      },
     ],
   },
 ]
