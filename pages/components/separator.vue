@@ -9,8 +9,8 @@ const breadcrumbLinks = ref([
     href: '#',
   },
   {
-    title: 'Select',
-    href: '/components/select',
+    title: 'Separator',
+    href: '/components/separator',
   },
 ])
 </script>
@@ -20,15 +20,15 @@ const breadcrumbLinks = ref([
     <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
-        Select
+        Separator
       </h2>
       <p class="text-muted-foreground">
-        Displays a list of options for the user to pick from—triggered by a button.
+        Visually or semantically separates content.
       </p>
       <div class="flex gap-2">
         <Button size="xs" variant="outline" class="text-xs" as-child>
           <NuxtLink
-            to="https://www.shadcn-vue.com/docs/components/select"
+            to="https://www.shadcn-vue.com/docs/components/separator"
             external
             target="_blank"
           >
@@ -38,7 +38,7 @@ const breadcrumbLinks = ref([
         </Button>
         <Button size="xs" variant="outline" class="text-xs" as-child>
           <NuxtLink
-            to="https://www.radix-vue.com/components/select"
+            to="https://www.radix-vue.com/components/separator"
             external
             target="_blank"
           >
@@ -54,31 +54,24 @@ const breadcrumbLinks = ref([
         </CardHeader>
         <CardContent>
           <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
-            <Select>
-              <SelectTrigger class="w-[180px]">
-                <SelectValue placeholder="Select a fruit" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectLabel>Fruits</SelectLabel>
-                  <SelectItem value="apple">
-                    Apple
-                  </SelectItem>
-                  <SelectItem value="banana">
-                    Banana
-                  </SelectItem>
-                  <SelectItem value="blueberry">
-                    Blueberry
-                  </SelectItem>
-                  <SelectItem value="grapes">
-                    Grapes
-                  </SelectItem>
-                  <SelectItem value="pineapple">
-                    Pineapple
-                  </SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
+            <div>
+              <div class="space-y-1">
+                <h4 class="text-sm font-medium leading-none">
+                  Radix Primitives
+                </h4>
+                <p class="text-sm text-muted-foreground">
+                  An open-source UI component library.
+                </p>
+              </div>
+              <Separator class="my-4" />
+              <div class="h-5 flex items-center text-sm space-x-4">
+                <div>Blog</div>
+                <Separator orientation="vertical" />
+                <div>Docs</div>
+                <Separator orientation="vertical" />
+                <div>Source</div>
+              </div>
+            </div>
           </div>
         </CardContent>
       </Card>
