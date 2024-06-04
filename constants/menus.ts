@@ -128,6 +128,26 @@ export const navMenu: NavMenuItems = [
         icon: 'i-lucide-circle',
         link: '/components/label',
       },
+      {
+        title: 'Menubar',
+        icon: 'i-lucide-circle',
+        link: '/components/menubar',
+      },
+      {
+        title: 'Navigation Menu',
+        icon: 'i-lucide-circle',
+        link: '/components/navigation-menu',
+      },
+      {
+        title: 'Number Field',
+        icon: 'i-lucide-circle',
+        link: '/components/number-field',
+      },
+      {
+        title: 'Pagination',
+        icon: 'i-lucide-circle',
+        link: '/components/pagination',
+      },
     ],
   },
 ]
