@@ -118,6 +118,11 @@ export const navMenu: NavMenuItems = [
         icon: 'i-lucide-circle',
         link: '/components/hover-card',
       },
+      {
+        title: 'Input',
+        icon: 'i-lucide-circle',
+        link: '/components/input',
+      },
     ],
   },
 ]
