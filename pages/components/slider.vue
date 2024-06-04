@@ -9,10 +9,12 @@ const breadcrumbLinks = ref([
     href: '#',
   },
   {
-    title: 'Skeleton',
-    href: '/components/skeleton',
+    title: 'Slider',
+    href: '/components/slider',
   },
 ])
+
+const modelValue = ref([50])
 </script>
 
 <template>
@@ -20,20 +22,29 @@ const breadcrumbLinks = ref([
     <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
-        Skeleton
+        Slider
       </h2>
       <p class="text-muted-foreground">
-        Use to show a placeholder while content is loading.
+        An input where the user selects a value from within a given range.
       </p>
       <div class="flex gap-2">
         <Button size="xs" variant="outline" class="text-xs" as-child>
           <NuxtLink
-            to="https://www.shadcn-vue.com/docs/components/skeleton"
+            to="https://www.shadcn-vue.com/docs/components/slider"
             external
             target="_blank"
           >
             <span class="i-radix-icons-code mr-2" />
             Component Source
+          </NuxtLink>
+        </Button>
+        <Button size="xs" variant="outline" class="text-xs" as-child>
+          <NuxtLink
+            to="https://www.radix-vue.com/components/slider"
+            external
+            target="_blank"
+          >
+            Primitive API Reference
           </NuxtLink>
         </Button>
       </div>
@@ -45,13 +56,12 @@ const breadcrumbLinks = ref([
         </CardHeader>
         <CardContent>
           <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
-            <div class="flex items-center space-x-4">
-              <Skeleton class="h-12 w-12 rounded-full" />
-              <div class="space-y-2">
-                <Skeleton class="h-4 w-[250px]" />
-                <Skeleton class="h-4 w-[200px]" />
-              </div>
-            </div>
+            <Slider
+              v-model="modelValue"
+              :max="100"
+              :step="1"
+              :class="cn('w-3/5', $attrs.class ?? '')"
+            />
           </div>
         </CardContent>
       </Card>
