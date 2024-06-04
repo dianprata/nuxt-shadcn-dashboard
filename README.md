@@ -1,6 +1,15 @@
-# Nuxt 3 Minimal Starter
+# Nuxt Shadcn UnoCSS - Dashboard
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+- [Live demo](https://nuxt-shadcn-dashboard.vercel.app)
+- [Documentation](https://shadcn-vue.com/docs/introduction)
+
+## Quick Start
+
+```bash [Terminal]
+npx degit dianprata/nuxt-shadcn-dashboard my-dashboard-app
+cd my-dashboard-app
+pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
+```
 
 ## Setup
 
@@ -72,4 +81,7 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Credits
+- [Nuxt.js](https://nuxtjs.org/)
+- [Shadcn Vue](https://shadcn-vue.com/)
+- [UnoCSS](https://unocss.com/)
