@@ -228,6 +228,36 @@ export const navMenu: NavMenuItems = [
         icon: 'i-lucide-circle',
         link: '/components/tabs',
       },
+      {
+        title: 'Tags Input',
+        icon: 'i-lucide-circle',
+        link: '/components/tags-input',
+      },
+      {
+        title: 'Textarea',
+        icon: 'i-lucide-circle',
+        link: '/components/textarea',
+      },
+      {
+        title: 'Toast',
+        icon: 'i-lucide-circle',
+        link: '/components/toast',
+      },
+      {
+        title: 'Toggle',
+        icon: 'i-lucide-circle',
+        link: '/components/toggle',
+      },
+      {
+        title: 'Toggle Group',
+        icon: 'i-lucide-circle',
+        link: '/components/toggle-group',
+      },
+      {
+        title: 'Tooltip',
+        icon: 'i-lucide-circle',
+        link: '/components/tooltip',
+      },
     ],
   },
 ]
