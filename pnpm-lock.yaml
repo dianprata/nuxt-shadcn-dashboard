@@ -106,6 +106,9 @@ devDependencies:
   vue-router:
     specifier: ^4.3.2
     version: 4.3.2(vue@3.4.27)
+  vue-sonner:
+    specifier: ^1.1.2
+    version: 1.1.2
   vue-tsc:
     specifier: ^2.0.19
     version: 2.0.19(typescript@5.4.5)
@@ -10364,6 +10367,10 @@ packages:
     dependencies:
       '@vue/devtools-api': 6.6.2
       vue: 3.4.27(typescript@5.4.5)
+    dev: true
+
+  /vue-sonner@1.1.2:
+    resolution: {integrity: sha512-yg4f5s0a3oiiI7cNvO0Dajux1Y7s04lxww3vnQtnwQawJ3KqaKA9RIRMdI9wGTosRGIOwgYFniFRGl4+IuKPZw==}
     dev: true
 
   /vue-template-compiler@2.7.16:

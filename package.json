@@ -47,6 +47,7 @@
     "vaul-vue": "^0.1.2",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2",
+    "vue-sonner": "^1.1.2",
     "vue-tsc": "^2.0.19"
   },
   "pnpm": {
