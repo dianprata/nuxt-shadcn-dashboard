@@ -15,6 +15,8 @@ function resolveNavItemComponent(item: NavLink | NavGroup | NavSectionTitle) {
 
   return resolveComponent('LayoutNavLinkMobile')
 }
+
+const color = useColorMode()
 </script>
 
 <template>
@@ -50,7 +52,7 @@ function resolveNavItemComponent(item: NavLink | NavGroup | NavSectionTitle) {
       <Search />
 
       <div class="ml-auto flex items-center gap-4">
-        <DarkToggle />
+        <ThemePopover />
         <DropdownMenu>
           <DropdownMenuTrigger as-child>
             <Button id="radix-vue-dropdown-menu-trigger-1" variant="secondary" size="icon" class="rounded-full">
@@ -83,7 +85,30 @@ function resolveNavItemComponent(item: NavLink | NavGroup | NavSectionTitle) {
                 Settings
                 <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
               </DropdownMenuItem>
-              <DropdownMenuItem>New Team</DropdownMenuItem>
+              <DropdownMenuSub>
+                <DropdownMenuSubTrigger>
+                  <span>Theme</span>
+                </DropdownMenuSubTrigger>
+                <DropdownMenuPortal>
+                  <DropdownMenuSubContent>
+                    <DropdownMenuItem @click="color.preference = 'light'">
+                      <Icon name="i-ph-sun-dim-duotone" size="16" />
+                      <span class="ml-2">Light</span>
+                      <Icon v-if="color.preference === 'light'" name="i-radix-icons-check" size="16" class="ml-auto" />
+                    </DropdownMenuItem>
+                    <DropdownMenuItem @click="color.preference = 'dark'">
+                      <Icon name="i-ph-moon-stars-duotone" size="16" />
+                      <span class="ml-2">Dark</span>
+                      <Icon v-if="color.preference === 'dark'" name="i-radix-icons-check" size="16" class="ml-auto" />
+                    </DropdownMenuItem>
+                    <DropdownMenuItem @click="color.preference = 'system'">
+                      <Icon name="i-lucide-monitor" size="16" />
+                      <span class="ml-2">System</span>
+                      <Icon v-if="color.preference === 'system'" name="i-radix-icons-check" size="16" class="ml-auto" />
+                    </DropdownMenuItem>
+                  </DropdownMenuSubContent>
+                </DropdownMenuPortal>
+              </DropdownMenuSub>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem @click="handleLogout">

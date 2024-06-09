@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import { cn } from '@/lib/utils'
-
 const store = useNavbar()
-
 const { isOpen } = storeToRefs(store)
-
 const { isBgWhite } = storeToRefs(useAppConf())
+const { theme, radius } = useCustomize()
+
+useServerHead({
+  bodyAttrs: {
+    class: `theme-${theme.value}`,
+    style: `--radius: ${radius.value}rem;`,
+  },
+})
 
 defineShortcuts({
   Meta_B: () => store.toggle(),
@@ -20,7 +24,7 @@ defineShortcuts({
     <LayoutSidebar />
     <div flex="~ col">
       <LayoutHeader />
-      <main class="flex-1 p-4 lg:p-6" :class="isBgWhite ? 'bg-background' : 'bg-muted dark:bg-muted/50'">
+      <main class="flex-1 p-4 lg:p-6" :class="isBgWhite ? 'bg-background' : 'bg-muted dark:bg-muted/20'">
         <slot />
       </main>
     </div>

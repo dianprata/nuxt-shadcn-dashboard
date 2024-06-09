@@ -9,7 +9,7 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 import presetAnimations from 'unocss-preset-animations'
-import { presetShadcn } from 'unocss-preset-shadcn'
+import { builtinColors, presetShadcn } from 'unocss-preset-shadcn'
 
 export default defineConfig({
   variants: [
@@ -44,7 +44,7 @@ export default defineConfig({
       },
     }),
     presetAnimations(),
-    presetShadcn(),
+    presetShadcn(builtinColors.map(c => ({ color: c }))),
   ],
   transformers: [
     transformerDirectives(),

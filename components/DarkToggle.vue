@@ -13,7 +13,7 @@ useHead({
 <template>
   <DropdownMenu>
     <DropdownMenuTrigger as-child>
-      <Button variant="ghost" size="icon" class="rounded-full" title="Toggle Color Scheme" aria-label="button dark toggle">
+      <Button variant="ghost" size="icon" title="Toggle Color Scheme" aria-label="button dark toggle">
         <div class="i-ph-sun-dim-duotone dark:i-ph-moon-stars-duotone" />
       </Button>
     </DropdownMenuTrigger>
