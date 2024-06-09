@@ -17,6 +17,8 @@ function resolveNavItemComponent(item: NavLink | NavGroup | NavSectionTitle) {
 }
 
 const color = useColorMode()
+
+const isMediumScreen = useMediaQuery('(min-width: 768px)')
 </script>
 
 <template>
@@ -52,7 +54,8 @@ const color = useColorMode()
       <Search />
 
       <div class="ml-auto flex items-center gap-4">
-        <ThemePopover />
+        <ThemePopover v-if="isMediumScreen" />
+        <ThemeDrawer v-else />
         <DropdownMenu>
           <DropdownMenuTrigger as-child>
             <Button id="radix-vue-dropdown-menu-trigger-1" variant="secondary" size="icon" class="rounded-full">
