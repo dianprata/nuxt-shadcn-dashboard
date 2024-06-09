@@ -17,7 +17,7 @@ const isOpenCollapsible = ref(false)
       <Button
         variant="ghost"
         size="icon"
-        class="w-full gap-3 rounded-lg px-4 font-normal"
+        class="w-full gap-3 rounded-lg px-3 font-normal"
         :aria-label="item.title"
       >
         <Icon v-if="item.icon" :name="item.icon" class="size-5" />
@@ -33,7 +33,7 @@ const isOpenCollapsible = ref(false)
             :class="[
               { 'bg-muted': nav.link === $route.path },
             ]"
-            class="flex items-center gap-4 rounded-lg px-5 py-2 text-sm text-foreground font-normal hover:bg-muted"
+            class="flex items-center gap-4 rounded-lg px-4 py-2 text-sm text-foreground font-normal hover:bg-muted"
           >
             <Icon v-if="nav.icon" :name="nav.icon" size-3 />
             {{ nav.title }}
