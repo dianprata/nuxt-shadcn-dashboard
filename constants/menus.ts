@@ -114,6 +114,11 @@ export const navMenu: NavMenuItems = [
         link: '/components/dropdown-menu',
       },
       {
+        title: 'Form',
+        icon: 'i-lucide-circle',
+        link: '/components/form',
+      },
+      {
         title: 'Hover Card',
         icon: 'i-lucide-circle',
         link: '/components/hover-card',
