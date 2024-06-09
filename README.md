@@ -1,3 +1,5 @@
+![nuxt-shadcn-dashboard-social-card](https://nuxt-shadcn-dashboard.vercel.app/social-card.png)
+
 # Nuxt Shadcn UnoCSS - Dashboard
 
 - [Live demo](https://nuxt-shadcn-dashboard.vercel.app)
