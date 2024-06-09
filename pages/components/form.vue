@@ -21,9 +21,9 @@ const breadcrumbLinks = ref([
 
 const formSchema = toTypedSchema(z.object({
   username: z
-    .string({ required_error: 'Harus diisi!' })
-    .min(2, { message: 'Minimal 2 huruf' })
-    .max(50, { message: 'Maksimal 50 huruf' }),
+    .string()
+    .min(2)
+    .max(50),
   email: z
     .string({ required_error: 'Please select an email to display.' })
     .email(),
