@@ -11,8 +11,12 @@ useServerHead({
   },
 })
 
+const router = useRouter()
+
 defineShortcuts({
-  Meta_B: () => store.toggle(),
+  'Meta_B': () => store.toggle(),
+  'G-H': () => router.push('/'),
+  'G-E': () => router.push('/email'),
 })
 </script>
 

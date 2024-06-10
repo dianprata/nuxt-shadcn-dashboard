@@ -1,18 +1,33 @@
 <script setup lang="ts">
+import { navMenu } from '@/constants/menus'
+import type { NavGroup } from '~/types/nav'
+
+const { metaSymbol } = useShortcuts()
+
 const openCommand = ref(false)
+const router = useRouter()
 
 defineShortcuts({
-  Meta_K: () => openCommand.value = !openCommand.value,
+  Meta_K: () => openCommand.value = true,
 })
+
+const componentsNav = computed<NavGroup>(() => {
+  return navMenu.find((nav: any) => nav.title === 'Components') as NavGroup
+})
+
+function handleSelectLink(link: string) {
+  router.push(link)
+  openCommand.value = false
+}
 </script>
 
 <template>
   <Button variant="outline" size="sm" class="w-full flex-1 justify-between gap-1 font-normal md:w-56 md:flex-initial md:gap-3" @click="openCommand = !openCommand">
     <span class="hidden sm:inline-flex">Search documentation</span>
     <span class="sm:hidden">Search...</span>
-    <kbd class="pointer-events-none hidden h-5 select-none items-center gap-1 border rounded bg-muted px-1.5 text-[10px] text-muted-foreground font-medium font-mono opacity-100 sm:inline-flex">
-      <span class="text-xs">⌘</span>K
-    </kbd>
+    <BaseKbd>
+      <span class="text-xs">{{ metaSymbol }}</span>K
+    </BaseKbd>
   </Button>
 
   <CommandDialog v-model:open="openCommand">
@@ -20,26 +35,31 @@ defineShortcuts({
     <CommandList>
       <CommandEmpty>No results found.</CommandEmpty>
       <CommandGroup heading="Suggestions">
-        <CommandItem value="calendar">
-          Calendar
+        <CommandItem value="Home" @select="handleSelectLink('/')">
+          Home
+          <CommandShortcut>
+            <BaseKbd>G</BaseKbd>
+            <BaseKbd>H</BaseKbd>
+          </CommandShortcut>
         </CommandItem>
-        <CommandItem value="search-emoji">
-          Search Emoji
-        </CommandItem>
-        <CommandItem value="calculator">
-          Calculator
+        <CommandItem value="email" @select="handleSelectLink('/email')">
+          Email
+          <CommandShortcut>
+            <BaseKbd>G</BaseKbd>
+            <BaseKbd>E</BaseKbd>
+          </CommandShortcut>
         </CommandItem>
       </CommandGroup>
       <CommandSeparator />
-      <CommandGroup heading="Settings">
-        <CommandItem value="profile">
-          Profile
-        </CommandItem>
-        <CommandItem value="billing">
-          Billing
-        </CommandItem>
-        <CommandItem value="settings">
-          Settings
+      <CommandGroup heading="Components">
+        <CommandItem
+          v-for="nav in componentsNav?.children"
+          :key="nav.title"
+          :value="nav.title"
+          @select="handleSelectLink(nav.link)"
+        >
+          <Icon name="i-radix-icons-circle" pr-2 />
+          {{ nav.title }}
         </CommandItem>
       </CommandGroup>
     </CommandList>

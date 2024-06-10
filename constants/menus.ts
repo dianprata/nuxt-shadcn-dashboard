@@ -2,8 +2,8 @@ import type { NavMenuItems } from '~/types/nav'
 
 export const navMenu: NavMenuItems = [
   {
-    title: 'Dashboard',
-    icon: 'i-lucide-layout-dashboard',
+    title: 'Home',
+    icon: 'i-lucide-home',
     link: '/',
   },
   {
