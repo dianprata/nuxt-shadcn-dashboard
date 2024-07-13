@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { Terminal } from 'lucide-vue-next'
-
 const breadcrumbLinks = ref([
   {
     title: 'Home',
@@ -47,7 +45,7 @@ const breadcrumbLinks = ref([
         </CardHeader>
         <CardContent>
           <Alert>
-            <Terminal class="h-4 w-4" />
+            <Icon name="i-radix-icons-rocket" class="h-4 w-4" />
             <AlertTitle>Heads up!</AlertTitle>
             <AlertDescription>
               You can add components to your app using the cli.
@@ -61,7 +59,7 @@ const breadcrumbLinks = ref([
         </CardHeader>
         <CardContent>
           <Alert variant="destructive">
-            <Icon name="radix-icons:exclamation-triangle" />
+            <Icon name="i-radix-icons-exclamation-triangle" />
             <AlertTitle>Error</AlertTitle>
             <AlertDescription>
               Your session has expired. Please log in again.
