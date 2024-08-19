@@ -26,7 +26,7 @@ defineShortcuts({
     :class="cn('pl-0 lg:pl-64 sm:pl-20', isOpen ? 'lg:pl-64 sm:pl-20' : 'lg:pl-20')"
   >
     <LayoutSidebar />
-    <div flex="~ col">
+    <div flex="~ col" of-hidden>
       <LayoutHeader />
       <main class="flex-1 p-4 lg:p-6" :class="isBgWhite ? 'bg-background' : 'bg-muted dark:bg-muted/20'">
         <slot />
