@@ -13,6 +13,9 @@ const breadcrumbLinks = ref([
     href: '/components/alert',
   },
 ])
+
+const { setBreadcrumb } = useBreadcrumb()
+setBreadcrumb(breadcrumbLinks.value)
 </script>
 
 <template>

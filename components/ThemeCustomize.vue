@@ -66,13 +66,6 @@ const colorMode = useColorMode()
 
 <template>
   <div class="grid gap-6">
-    <div class="grid space-y-1">
-      <h1 class="text-md text-foreground font-semibold">
-        Customize
-      </h1><p class="text-xs text-muted-foreground">
-        Pick a style and color for your components.
-      </p>
-    </div>
     <div class="space-y-1.5">
       <Label>Color</Label>
       <div class="grid grid-cols-3 gap-2">

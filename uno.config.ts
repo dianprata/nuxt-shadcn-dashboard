@@ -29,12 +29,23 @@ export default defineConfig({
       multiPass: true,
     },
   ],
+  theme: {
+    colors: {
+      'sidebar': 'hsl(var(--sidebar-background))',
+      'sidebar-foreground': 'hsl(var(--sidebar-foreground))',
+      'sidebar-primary': 'hsl(var(--sidebar-primary))',
+      'sidebar-primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+      'sidebar-accent': 'hsl(var(--sidebar-accent))',
+      'sidebar-accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+      'sidebar-border': 'hsl(var(--sidebar-border))',
+      'sidebar-ring': 'hsl(var(--sidebar-ring))',
+    },
+  },
   presets: [
     presetUno(),
     presetAttributify(),
     presetIcons({
       scale: 1.2,
-      cdn: 'https://esm.sh/',
     }),
     presetTypography(),
     presetWebFonts({
@@ -74,6 +85,26 @@ export default defineConfig({
           --vis-primary-color: var(--primary);
           --vis-secondary-color: 160 81% 40%;
           --vis-text-color: var(--muted-foreground);
+          
+          --sidebar-background: 0 0% 98%;
+          --sidebar-foreground: 240 5.3% 26.1%;
+          --sidebar-primary: 240 5.9% 10%;
+          --sidebar-primary-foreground: 0 0% 98%;
+          --sidebar-accent: 240 4.8% 95.9%;
+          --sidebar-accent-foreground: 240 5.9% 10%;
+          --sidebar-border: 220 13% 91%;
+          --sidebar-ring: 217.2 91.2% 59.8%;
+        }
+        
+        .dark {
+          --sidebar-background: 240 5.9% 10%;
+          --sidebar-foreground: 240 4.8% 95.9%;
+          --sidebar-primary: 224.3 76.3% 48%;
+          --sidebar-primary-foreground: 0 0% 100%;
+          --sidebar-accent: 240 3.7% 15.9%;
+          --sidebar-accent-foreground: 240 4.8% 95.9%;
+          --sidebar-border: 240 3.7% 15.9%;
+          --sidebar-ring: 217.2 91.2% 59.8%;
         }
       `,
     },

@@ -12,9 +12,6 @@ export const navMenu: NavMenuItems = [
     link: '/email',
   },
   {
-    heading: 'Components',
-  },
-  {
     title: 'Components',
     icon: 'i-lucide-component',
     children: [

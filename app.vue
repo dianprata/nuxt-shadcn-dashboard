@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ConfigProvider } from 'radix-vue'
 import { Sonner } from '@/components/ui/sonner'
 
 const colorMode = useColorMode()
@@ -31,13 +32,19 @@ useSeoMeta({
   twitterImage: 'https://nuxt-shadcn-dashboard.vercel.app/social-card.png',
   twitterCard: 'summary_large_image',
 })
+
+const useIdFunction = () => useId()
 </script>
 
 <template>
-  <NuxtLayout vaul-drawer-wrapper>
-    <NuxtPage />
-  </NuxtLayout>
+  <ConfigProvider :use-id="useIdFunction">
+    <div vaul-drawer-wrapper>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </div>
 
-  <Toaster />
-  <Sonner class="pointer-events-auto" />
+    <Toaster />
+    <Sonner class="pointer-events-auto" />
+  </ConfigProvider>
 </template>
