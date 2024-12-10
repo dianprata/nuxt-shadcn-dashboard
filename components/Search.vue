@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { navMenu } from '@/constants/menus'
-import type { NavGroup } from '~/types/nav'
+import type { NavGroup, NavMenu } from '~/types/nav'
 
 const { metaSymbol } = useShortcuts()
 
@@ -11,8 +11,11 @@ defineShortcuts({
   Meta_K: () => openCommand.value = true,
 })
 
-const componentsNav = computed<NavGroup>(() => {
-  return navMenu.find((nav: any) => nav.title === 'Components') as NavGroup
+const componentsNav = computed<NavGroup | undefined>(() => {
+  return navMenu
+    .flatMap((nav: NavMenu) => nav.items)
+    // @ts-expect-error - We know that the title is unique
+    .find((item: NavGroup) => item.title === 'Components')
 })
 
 function handleSelectLink(link: string) {
