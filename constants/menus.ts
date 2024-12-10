@@ -2,7 +2,7 @@ import type { NavMenu, NavMenuItems } from '~/types/nav'
 
 export const navMenu: NavMenu[] = [
   {
-    heading: 'Dashboard',
+    heading: 'General',
     items: [
       {
         title: 'Home',
@@ -13,6 +13,47 @@ export const navMenu: NavMenu[] = [
         title: 'Email',
         icon: 'i-lucide-mail',
         link: '/email',
+      },
+    ],
+  },
+  {
+    heading: 'Pages',
+    items: [
+      {
+        title: 'Authentication',
+        icon: 'i-lucide-lock-keyhole-open',
+        children: [
+          {
+            title: 'Login',
+            icon: 'i-lucide-circle',
+            link: '/login',
+          },
+          {
+            title: 'Login Basic',
+            icon: 'i-lucide-circle',
+            link: '/login-basic',
+          },
+          {
+            title: 'Register',
+            icon: 'i-lucide-circle',
+            link: '/register',
+          },
+          {
+            title: 'Forgot Password',
+            icon: 'i-lucide-circle',
+            link: '/forgot-password',
+          },
+          {
+            title: 'Reset Password',
+            icon: 'i-lucide-circle',
+            link: '/reset-password',
+          },
+          {
+            title: 'Lock Screen',
+            icon: 'i-lucide-circle',
+            link: '/lock-screen',
+          },
+        ],
       },
     ],
   },

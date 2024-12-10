@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Loader2 } from 'lucide-vue-next'
 import { cn } from '@/lib/utils'
+import PasswordInput from '~/components/PasswordInput.vue'
 
 const isLoading = ref(false)
 async function onSubmit(event: Event) {
@@ -30,6 +31,18 @@ async function onSubmit(event: Event) {
             auto-correct="off"
             :disabled="isLoading"
           />
+        </div>
+        <div class="grid gap-2">
+          <Label for="password">
+            Password
+          </Label>
+          <PasswordInput id="password" />
+        </div>
+        <div class="grid gap-2">
+          <Label for="confirm-password">
+            Confirm Password
+          </Label>
+          <PasswordInput id="confirm-password" />
         </div>
         <Button :disabled="isLoading">
           <Loader2 v-if="isLoading" class="mr-2 h-4 w-4 animate-spin" />

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Loader2 } from 'lucide-vue-next'
+import PasswordInput from '~/components/PasswordInput.vue'
 
 const email = ref('demo@gmail.com')
 const password = ref('password')
@@ -50,7 +51,7 @@ function onSubmit(event: Event) {
           Forgot your password?
         </NuxtLink>
       </div>
-      <Input id="password" v-model="password" type="password" />
+      <PasswordInput id="password" v-model="password" />
     </div>
     <Button type="submit" class="w-full" :disabled="isLoading">
       <Loader2 v-if="isLoading" class="mr-2 h-4 w-4 animate-spin" />
