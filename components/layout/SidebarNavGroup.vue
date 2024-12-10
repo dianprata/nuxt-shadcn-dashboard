@@ -8,20 +8,24 @@ withDefaults(defineProps<{
 }>(), {
   size: 'default',
 })
+
+const openCollapsible = ref(false)
 </script>
 
 <template>
   <SidebarMenu>
     <Collapsible
+      :key="item.title"
+      v-model:open="openCollapsible"
       as-child
-      class="group/collapsible"
+      class="group"
     >
       <SidebarMenuItem>
         <CollapsibleTrigger as-child>
           <SidebarMenuButton :tooltip="item.title" :size="size">
             <Icon :name="item.icon || ''" />
             <span>{{ item.title }}</span>
-            <Icon name="i-lucide-chevron-right" class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
+            <Icon name="i-lucide-chevron-right" class="ml-auto transition-transform duration-200 group-data-[state=open]:rotate-90" />
           </SidebarMenuButton>
         </CollapsibleTrigger>
         <CollapsibleContent>

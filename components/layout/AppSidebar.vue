@@ -38,7 +38,7 @@ const user: {
 } = {
   name: 'shadcn',
   email: 'm@example.com',
-  avatar: '/avatars/shadcn.jpg',
+  avatar: '/avatars/shadcn.png',
 }
 </script>
 
@@ -53,7 +53,7 @@ const user: {
         <SidebarGroupLabel v-if="nav.heading">
           {{ nav.heading }}
         </SidebarGroupLabel>
-        <component :is="resolveNavItemComponent(item)" v-for="(item, index) in nav.items" :key="index" :item="item"/>
+        <component :is="resolveNavItemComponent(item)" v-for="(item, index) in nav.items" :key="index" :item="item" />
       </SidebarGroup>
       <SidebarGroup class="mt-auto">
         <component :is="resolveNavItemComponent(item)" v-for="(item, index) in navMenuBottom" :key="index" :item="item" size="sm" />
