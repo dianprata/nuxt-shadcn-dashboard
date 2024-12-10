@@ -26,9 +26,10 @@ function handleSelectLink(link: string) {
     <Button variant="outline" size="sm" @click="openCommand = !openCommand">
       <Icon name="i-lucide-search" />
       <span class="font-normal group-data-[collapsible=icon]:hidden">Search documentation</span>
-      <BaseKbd class="ml-auto group-data-[collapsible=icon]:hidden">
-        <span class="text-xs">{{ metaSymbol }}</span>K
-      </BaseKbd>
+      <div class="ml-auto space-x-0.5 group-data-[collapsible=icon]:hidden">
+        <BaseKbd>{{ metaSymbol }}</BaseKbd>
+        <BaseKbd>K</BaseKbd>
+      </div>
     </Button>
   </SidebarMenuButton>
 

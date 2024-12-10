@@ -18,17 +18,15 @@ const breadcrumbLinks = ref([
 
 const open = ref(false)
 
-const keys = useMagicKeys()
-const CmdJ = keys['Cmd+J']
+const { metaSymbol } = useShortcuts()
+
+defineShortcuts({
+  Meta_J: () => handleOpenChange(),
+})
 
 function handleOpenChange() {
   open.value = !open.value
 }
-
-watch(CmdJ, (v) => {
-  if (v)
-    handleOpenChange()
-})
 
 // Solving Hydration Nuxt
 const useIdFunction = () => useId()
@@ -125,11 +123,7 @@ const useIdFunction = () => useId()
                 <div class="flex flex-col items-center gap-4">
                   <p class="text-sm text-muted-foreground">
                     Press
-                    <kbd
-                      class="pointer-events-none h-5 inline-flex select-none items-center gap-1 border rounded bg-muted px-1.5 text-[10px] text-muted-foreground font-medium font-mono opacity-100"
-                    >
-                      <span class="text-xs">⌘</span>J
-                    </kbd>
+                    <BaseKbd>{{ metaSymbol }}J</BaseKbd>
                   </p>
                   <span class="text-sm text-muted-foreground">or</span>
                   <Button size="sm" @click="handleOpenChange">
