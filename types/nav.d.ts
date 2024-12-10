@@ -14,4 +14,9 @@ export interface NavGroup {
   children: NavLink[]
 }
 
+export interface NavMenu {
+  heading: string
+  items: NavMenuItems
+}
+
 export declare type NavMenuItems = (NavLink | NavGroup | NavSectionTitle)[]
