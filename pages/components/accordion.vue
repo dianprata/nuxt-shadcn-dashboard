@@ -1,28 +1,8 @@
 <script setup lang="ts">
-import { ConfigProvider } from 'radix-vue'
-
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Accordion',
-    href: '/components/accordion',
-  },
-])
-
-// Solving Hydration Nuxt
-const useIdFunction = () => useId()
 </script>
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Accordion
@@ -53,38 +33,36 @@ const useIdFunction = () => useId()
       </div>
     </div>
     <div class="flex flex-col gap-4 md:flex-row">
-      <ConfigProvider :use-id="useIdFunction">
-        <Card class="flex-1">
-          <CardHeader>
-            <CardTitle>Basic</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Accordion type="single" collapsible>
-              <AccordionItem v-for="i in 4" :key="i" :value="`item-${i}`">
-                <AccordionTrigger>Item {{ i }}</AccordionTrigger>
-                <AccordionContent>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at aut cum dolorem mollitia praesentium quis quo! Id officia, veniam.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </CardContent>
-        </Card>
-        <Card class="flex-1">
-          <CardHeader>
-            <CardTitle>Expand Multiple</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Accordion type="multiple" collapsible>
-              <AccordionItem v-for="i in 4" :key="i" :value="`item-${i}`">
-                <AccordionTrigger>Item {{ i }}</AccordionTrigger>
-                <AccordionContent>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at aut cum dolorem mollitia praesentium quis quo! Id officia, veniam.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </CardContent>
-        </Card>
-      </ConfigProvider>
+      <Card class="flex-1">
+        <CardHeader>
+          <CardTitle>Basic</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <Accordion type="single" collapsible>
+            <AccordionItem v-for="i in 4" :key="i" :value="`item-${i}`">
+              <AccordionTrigger>Item {{ i }}</AccordionTrigger>
+              <AccordionContent>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at aut cum dolorem mollitia praesentium quis quo! Id officia, veniam.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </CardContent>
+      </Card>
+      <Card class="flex-1">
+        <CardHeader>
+          <CardTitle>Expand Multiple</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <Accordion type="multiple" collapsible>
+            <AccordionItem v-for="i in 4" :key="i" :value="`item-${i}`">
+              <AccordionTrigger>Item {{ i }}</AccordionTrigger>
+              <AccordionContent>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at aut cum dolorem mollitia praesentium quis quo! Id officia, veniam.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </CardContent>
+      </Card>
     </div>
   </div>
 </template>

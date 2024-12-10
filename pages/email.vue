@@ -3,9 +3,11 @@ import { accounts, mails } from '@/components/mail/data/mails'
 </script>
 
 <template>
-  <MailLayout
-    :accounts="accounts"
-    :mails="mails"
-    :nav-collapsed-size="4"
-  />
+  <div class="-m-4 lg:-m-6">
+    <MailLayout
+      :accounts="accounts"
+      :mails="mails"
+      :nav-collapsed-size="4"
+    />
+  </div>
 </template>
