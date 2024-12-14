@@ -3,8 +3,8 @@ import { Activity, ArrowUpRight, CreditCard, DollarSign, Users } from 'lucide-vu
 </script>
 
 <template>
-  <div class="w-full flex flex-col gap-4">
-    <div class="flex flex-wrap items-center justify-between gap-2">
+  <div class="flex flex-col gap-4 w-full">
+    <div class="flex flex-wrap gap-2 justify-between items-center">
       <h2 class="text-3xl font-bold tracking-tight">
         Dashboard
       </h2>
@@ -16,11 +16,11 @@ import { Activity, ArrowUpRight, CreditCard, DollarSign, Users } from 'lucide-vu
     <main class="flex flex-1 flex-col gap-4 md:gap-8">
       <div class="grid gap-4 lg:grid-cols-4 md:grid-cols-2 md:gap-8">
         <Card>
-          <CardHeader class="flex flex-row items-center justify-between pb-2 space-y-0">
+          <CardHeader class="pb-2 flex flex-row justify-between items-center space-y-0">
             <CardTitle class="text-sm font-medium">
               Total Revenue
             </CardTitle>
-            <DollarSign class="h-4 w-4 text-muted-foreground" />
+            <DollarSign class="text-muted-foreground h-4 w-4" />
           </CardHeader>
           <CardContent>
             <div class="text-2xl font-bold">
@@ -32,11 +32,11 @@ import { Activity, ArrowUpRight, CreditCard, DollarSign, Users } from 'lucide-vu
           </CardContent>
         </Card>
         <Card>
-          <CardHeader class="flex flex-row items-center justify-between pb-2 space-y-0">
+          <CardHeader class="pb-2 flex flex-row justify-between items-center space-y-0">
             <CardTitle class="text-sm font-medium">
               Subscriptions
             </CardTitle>
-            <Users class="h-4 w-4 text-muted-foreground" />
+            <Users class="text-muted-foreground h-4 w-4" />
           </CardHeader>
           <CardContent>
             <div class="text-2xl font-bold">
@@ -48,11 +48,11 @@ import { Activity, ArrowUpRight, CreditCard, DollarSign, Users } from 'lucide-vu
           </CardContent>
         </Card>
         <Card>
-          <CardHeader class="flex flex-row items-center justify-between pb-2 space-y-0">
+          <CardHeader class="pb-2 flex flex-row justify-between items-center space-y-0">
             <CardTitle class="text-sm font-medium">
               Sales
             </CardTitle>
-            <CreditCard class="h-4 w-4 text-muted-foreground" />
+            <CreditCard class="text-muted-foreground h-4 w-4" />
           </CardHeader>
           <CardContent>
             <div class="text-2xl font-bold">
@@ -64,11 +64,11 @@ import { Activity, ArrowUpRight, CreditCard, DollarSign, Users } from 'lucide-vu
           </CardContent>
         </Card>
         <Card>
-          <CardHeader class="flex flex-row items-center justify-between pb-2 space-y-0">
+          <CardHeader class="pb-2 flex flex-row justify-between items-center space-y-0">
             <CardTitle class="text-sm font-medium">
               Active Now
             </CardTitle>
-            <Activity class="h-4 w-4 text-muted-foreground" />
+            <Activity class="text-muted-foreground h-4 w-4" />
           </CardHeader>
           <CardContent>
             <div class="text-2xl font-bold">
@@ -245,7 +245,7 @@ import { Activity, ArrowUpRight, CreditCard, DollarSign, Users } from 'lucide-vu
             <CardTitle>Recent Sales</CardTitle>
           </CardHeader>
           <CardContent class="grid gap-8">
-            <div class="flex items-center gap-4">
+            <div class="flex gap-4 items-center">
               <Avatar class="hidden h-9 w-9 sm:flex">
                 <AvatarFallback>OM</AvatarFallback>
               </Avatar>
@@ -261,7 +261,7 @@ import { Activity, ArrowUpRight, CreditCard, DollarSign, Users } from 'lucide-vu
                 +$1,999.00
               </div>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex gap-4 items-center">
               <Avatar class="hidden h-9 w-9 sm:flex">
                 <AvatarFallback>JL</AvatarFallback>
               </Avatar>
@@ -277,7 +277,7 @@ import { Activity, ArrowUpRight, CreditCard, DollarSign, Users } from 'lucide-vu
                 +$39.00
               </div>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex gap-4 items-center">
               <Avatar class="hidden h-9 w-9 sm:flex">
                 <AvatarFallback>IN</AvatarFallback>
               </Avatar>
@@ -293,7 +293,7 @@ import { Activity, ArrowUpRight, CreditCard, DollarSign, Users } from 'lucide-vu
                 +$299.00
               </div>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex gap-4 items-center">
               <Avatar class="hidden h-9 w-9 sm:flex">
                 <AvatarFallback>WK</AvatarFallback>
               </Avatar>
@@ -309,7 +309,7 @@ import { Activity, ArrowUpRight, CreditCard, DollarSign, Users } from 'lucide-vu
                 +$99.00
               </div>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex gap-4 items-center">
               <Avatar class="hidden h-9 w-9 sm:flex">
                 <AvatarFallback>SD</AvatarFallback>
               </Avatar>

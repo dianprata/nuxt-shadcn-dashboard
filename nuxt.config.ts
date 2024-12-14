@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   modules: [
     '@unocss/nuxt',
     'shadcn-nuxt',
@@ -39,4 +40,6 @@ export default defineNuxtConfig({
       './lib',
     ],
   },
+
+  compatibilityDate: '2024-12-14',
 })

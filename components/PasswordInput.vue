@@ -8,7 +8,10 @@ const props = defineProps<{
   disabled?: boolean
   componentField?: ComponentFieldBindingObject<any>
   autocomplete?: string
+  modelValue?: string
 }>()
+
+const showModal = useModel(props, 'modelValue')
 
 const showPassword = ref(false)
 </script>
@@ -16,6 +19,7 @@ const showPassword = ref(false)
 <template>
   <div class="relative">
     <Input
+      v-model="showModal"
       :type="showPassword ? 'text' : 'password'"
       :class="cn('pr-10', props?.class)"
       placeholder="Enter your password"
@@ -27,7 +31,7 @@ const showPassword = ref(false)
       type="button"
       variant="ghost"
       size="icon"
-      class="absolute right-0 top-0 h-full px-2 py-2 hover:bg-transparent"
+      class="px-2 py-2 absolute h-full right-0 top-0 hover:bg-transparent"
       :disabled="props?.disabled"
       @click="showPassword = !showPassword"
     >

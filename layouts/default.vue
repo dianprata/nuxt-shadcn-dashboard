@@ -1,13 +1,5 @@
 <script setup lang="ts">
 const store = useNavbar()
-const { theme, radius } = useCustomize()
-
-useServerHead({
-  bodyAttrs: {
-    class: `theme-${theme.value}`,
-    style: `--radius: ${radius.value}rem;`,
-  },
-})
 
 const router = useRouter()
 
@@ -23,7 +15,7 @@ defineShortcuts({
     <LayoutAppSidebar />
     <SidebarInset>
       <LayoutHeader />
-      <div class="flex-1 p-4 lg:p-6">
+      <div class="p-4 flex-1 lg:p-6">
         <slot />
       </div>
     </SidebarInset>

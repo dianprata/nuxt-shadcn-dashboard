@@ -20,6 +20,15 @@ useHead({
   },
 })
 
+const { theme, radius } = useCustomize()
+
+useServerHead({
+  bodyAttrs: {
+    class: `theme-${theme.value}`,
+    style: `--radius: ${radius.value}rem;`,
+  },
+})
+
 const title = 'Nuxt Shadcn UI - Dashboard Template'
 const description = 'This dashboard, built with Nuxt, Shadcn UI, and UnoCSS. It includes a dark mode toggle and is optimized for performance and data efficiency.'
 

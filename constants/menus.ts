@@ -43,15 +43,36 @@ export const navMenu: NavMenu[] = [
             icon: 'i-lucide-circle',
             link: '/forgot-password',
           },
+        ],
+      },
+      {
+        title: 'Errors',
+        icon: 'i-lucide-triangle-alert',
+        children: [
           {
-            title: 'Reset Password',
+            title: '401 - Unauthorized',
             icon: 'i-lucide-circle',
-            link: '/reset-password',
+            link: '/401',
           },
           {
-            title: 'Lock Screen',
+            title: '403 - Forbidden',
             icon: 'i-lucide-circle',
-            link: '/lock-screen',
+            link: '/403',
+          },
+          {
+            title: '404 - Not Found',
+            icon: 'i-lucide-circle',
+            link: '/404',
+          },
+          {
+            title: '500 - Internal Server Error',
+            icon: 'i-lucide-circle',
+            link: '/500',
+          },
+          {
+            title: '503 - Service Unavailable',
+            icon: 'i-lucide-circle',
+            link: '/503',
           },
         ],
       },
