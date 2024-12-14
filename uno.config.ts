@@ -2,7 +2,6 @@ import {
   defineConfig,
   presetAttributify,
   presetIcons,
-  presetMini,
   presetTypography,
   presetUno,
   presetWebFonts,
@@ -43,7 +42,6 @@ export default defineConfig({
     },
   },
   presets: [
-    presetMini(),
     presetUno(),
     presetAttributify(),
     presetIcons({

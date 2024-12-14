@@ -18,7 +18,7 @@ const openCollapsible = ref(false)
       :key="item.title"
       v-model:open="openCollapsible"
       as-child
-      class="group"
+      class="group/collapsible"
     >
       <SidebarMenuItem>
         <CollapsibleTrigger as-child>
@@ -28,7 +28,7 @@ const openCollapsible = ref(false)
             <span v-if="item.new" class="px-1.5 py-0.5 bg-#adfa1d rounded-md text-xs text-black leading-none no-underline group-hover:no-underline">
               New
             </span>
-            <Icon name="i-lucide-chevron-right" class="ml-auto transition-transform duration-200 group-data-[state=open]:rotate-90" />
+            <Icon name="i-lucide-chevron-right" class="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
           </SidebarMenuButton>
         </CollapsibleTrigger>
         <CollapsibleContent>

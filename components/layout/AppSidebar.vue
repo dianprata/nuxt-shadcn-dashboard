@@ -40,10 +40,12 @@ const user: {
   email: 'm@example.com',
   avatar: '/avatars/shadcn.png',
 }
+
+const { sidebar } = useAppConfig()
 </script>
 
 <template>
-  <Sidebar collapsible="icon">
+  <Sidebar :collapsible="sidebar.collapsible" :side="sidebar.side" :variant="sidebar.variant">
     <SidebarHeader>
       <LayoutSidebarNavHeader :teams="teams" />
       <Search />
