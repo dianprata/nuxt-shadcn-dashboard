@@ -1,23 +1,8 @@
 <script setup lang="ts">
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Number Field',
-    href: '/components/number-field',
-  },
-])
 </script>
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Number Field
@@ -53,7 +38,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <NumberField id="age" :default-value="18" :min="0">
               <Label for="age">Age</Label>
               <NumberFieldContent>

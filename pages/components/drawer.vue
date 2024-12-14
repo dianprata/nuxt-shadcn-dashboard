@@ -1,21 +1,6 @@
 <script setup lang="ts">
 import { VisStackedBar, VisXYContainer } from '@unovis/vue'
 
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Drawer',
-    href: '/components/drawer',
-  },
-])
-
 const goal = ref(350)
 
 type Data = typeof data[number]
@@ -38,7 +23,6 @@ const data = [
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Dialog
@@ -74,7 +58,7 @@ const data = [
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <Drawer>
               <DrawerTrigger as-child>
                 <Button variant="outline">
@@ -88,18 +72,18 @@ const data = [
                     <DrawerDescription>Set your daily activity goal.</DrawerDescription>
                   </DrawerHeader>
                   <div class="p-4 pb-0">
-                    <div class="flex items-center justify-center space-x-2">
+                    <div class="flex justify-center items-center space-x-2">
                       <Button
                         variant="outline"
                         size="icon"
-                        class="h-8 w-8 shrink-0 rounded-full"
+                        class="rounded-full shrink-0 h-8 w-8"
                         :disabled="goal <= 200"
                         @click="goal -= 10"
                       >
                         <Icon name="radix-icons:minus" class="h-4 w-4" />
                         <span class="sr-only">Decrease</span>
                       </Button>
-                      <div class="flex-1 text-center">
+                      <div class="text-center flex-1">
                         <div class="text-7xl font-bold tracking-tighter">
                           {{ goal }}
                         </div>
@@ -110,7 +94,7 @@ const data = [
                       <Button
                         variant="outline"
                         size="icon"
-                        class="h-8 w-8 shrink-0 rounded-full"
+                        class="rounded-full shrink-0 h-8 w-8"
                         :disabled="goal >= 400"
                         @click="goal += 10"
                       >
@@ -118,7 +102,7 @@ const data = [
                         <span class="sr-only">Increase</span>
                       </Button>
                     </div>
-                    <div class="my-3 h-[120px] px-3">
+                    <div class="px-3 my-3 h-[120px]">
                       <VisXYContainer
                         :data="data"
                         class="h-[120px]"

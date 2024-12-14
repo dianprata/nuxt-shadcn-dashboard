@@ -1,19 +1,4 @@
 <script setup lang="ts">
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Scroll Area',
-    href: '/components/scroll-area',
-  },
-])
-
 const tags = Array.from({ length: 50 }).map(
   (_, i, a) => `v1.2.0-beta.${a.length - i}`,
 )
@@ -21,7 +6,6 @@ const tags = Array.from({ length: 50 }).map(
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Scroll-area
@@ -57,8 +41,8 @@ const tags = Array.from({ length: 50 }).map(
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
-            <ScrollArea class="h-72 w-48 border rounded-md">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
+            <ScrollArea class="border rounded-md h-72 w-48">
               <div class="p-4">
                 <h4 class="mb-4 text-sm font-medium leading-none">
                   Tags

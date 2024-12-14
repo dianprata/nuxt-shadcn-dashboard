@@ -1,21 +1,6 @@
 <script setup lang="ts">
 import { cn } from '@/lib/utils'
 
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Combobox',
-    href: '/components/combobox',
-  },
-])
-
 const frameworks = [
   { value: 'next.js', label: 'Next.js' },
   { value: 'sveltekit', label: 'SvelteKit' },
@@ -30,7 +15,6 @@ const value = ref('')
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Combobox
@@ -57,7 +41,7 @@ const value = ref('')
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <Popover v-model:open="open">
               <PopoverTrigger as-child>
                 <Button
@@ -69,10 +53,10 @@ const value = ref('')
                   {{ value
                     ? frameworks.find((framework) => framework.value === value)?.label
                     : "Select framework..." }}
-                  <Icon name="radix-icons:caret-sort" class="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                  <Icon name="radix-icons:caret-sort" class="ml-2 opacity-50 shrink-0 h-4 w-4" />
                 </Button>
               </PopoverTrigger>
-              <PopoverContent class="w-[200px] p-0">
+              <PopoverContent class="p-0 w-[200px]">
                 <Command>
                   <CommandInput class="h-9" placeholder="Search framework..." />
                   <CommandEmpty>No framework found.</CommandEmpty>
@@ -82,7 +66,7 @@ const value = ref('')
                         v-for="framework in frameworks"
                         :key="framework.value"
                         :value="framework.value"
-                        @select="(ev) => {
+                        @select="(ev: any) => {
                           if (typeof ev.detail.value === 'string') {
                             value = ev.detail.value
                           }

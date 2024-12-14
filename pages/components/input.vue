@@ -1,23 +1,8 @@
 <script setup lang="ts">
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Input',
-    href: '/components/input',
-  },
-])
 </script>
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Input
@@ -44,7 +29,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <Input type="email" placeholder="Email" class="max-w-sm" />
           </div>
         </CardContent>
@@ -54,8 +39,8 @@ const breadcrumbLinks = ref([
           <CardTitle>With Label</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
-            <div class="grid max-w-sm w-full items-center gap-1.5">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
+            <div class="grid gap-1.5 max-w-sm w-full items-center">
               <Label for="email">Email</Label>
               <Input id="email" type="email" placeholder="Email" />
             </div>

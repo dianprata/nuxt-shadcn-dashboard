@@ -4,21 +4,6 @@ import { toTypedSchema } from '@vee-validate/zod'
 import * as z from 'zod'
 import { toast } from 'vue-sonner'
 
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Form',
-    href: '/components/form',
-  },
-])
-
 const formSchema = toTypedSchema(z.object({
   username: z
     .string()
@@ -53,7 +38,6 @@ const onSubmit = handleSubmit((values) => {
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Form
@@ -89,7 +73,7 @@ const onSubmit = handleSubmit((values) => {
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <form class="w-full md:w-2/3 space-y-6" @submit="onSubmit">
               <FormField v-slot="{ componentField }" name="username" :validate-on-blur="!isFieldDirty">
                 <FormItem>
@@ -135,7 +119,7 @@ const onSubmit = handleSubmit((values) => {
                 </FormItem>
               </FormField>
               <FormField v-slot="{ value, handleChange }" type="checkbox" name="mobile">
-                <FormItem class="flex flex-row items-start gap-x-3 border rounded-md p-4 shadow space-y-0">
+                <FormItem class="p-4 border rounded-md shadow flex flex-row gap-x-3 items-start space-y-0">
                   <FormControl>
                     <Checkbox :checked="value" @update:checked="handleChange" />
                   </FormControl>
@@ -158,7 +142,7 @@ const onSubmit = handleSubmit((values) => {
                       class="flex flex-col space-y-1"
                       v-bind="componentField"
                     >
-                      <FormItem class="flex items-center gap-x-3 space-y-0">
+                      <FormItem class="flex gap-x-3 items-center space-y-0">
                         <FormControl>
                           <RadioGroupItem value="all" />
                         </FormControl>
@@ -166,7 +150,7 @@ const onSubmit = handleSubmit((values) => {
                           All new messages
                         </FormLabel>
                       </FormItem>
-                      <FormItem class="flex items-center gap-x-3 space-y-0">
+                      <FormItem class="flex gap-x-3 items-center space-y-0">
                         <FormControl>
                           <RadioGroupItem value="mentions" />
                         </FormControl>
@@ -174,7 +158,7 @@ const onSubmit = handleSubmit((values) => {
                           Direct messages and mentions
                         </FormLabel>
                       </FormItem>
-                      <FormItem class="flex items-center gap-x-3 space-y-0">
+                      <FormItem class="flex gap-x-3 items-center space-y-0">
                         <FormControl>
                           <RadioGroupItem value="none" />
                         </FormControl>

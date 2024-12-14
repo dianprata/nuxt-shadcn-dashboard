@@ -1,23 +1,8 @@
 <script setup lang="ts">
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Toggle',
-    href: '/components/toggle',
-  },
-])
 </script>
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Toggle
@@ -53,7 +38,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <Toggle aria-label="Toggle italic">
               <Icon name="i-radix-icons-font-bold" class="h-4 w-4" />
             </Toggle>
@@ -65,7 +50,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Outline</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <Toggle variant="outline" aria-label="Toggle italic">
               <Icon name="i-radix-icons-font-italic" class="h-4 w-4" />
             </Toggle>

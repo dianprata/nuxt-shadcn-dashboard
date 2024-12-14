@@ -3,21 +3,6 @@ import type { Ref } from 'vue'
 import { getLocalTimeZone, today } from '@internationalized/date'
 import type { DateRange } from 'radix-vue'
 
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Range Calendar',
-    href: '/components/range-calendar',
-  },
-])
-
 const start = today(getLocalTimeZone())
 const end = start.add({ days: 7 })
 
@@ -29,7 +14,6 @@ const value = ref({
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Range Calendar
@@ -65,7 +49,7 @@ const value = ref({
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <RangeCalendar v-model="value" class="border rounded-md" />
           </div>
         </CardContent>

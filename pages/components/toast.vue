@@ -1,27 +1,11 @@
 <script setup lang="ts">
 import { useToast } from '~/components/ui/toast'
 
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Toast',
-    href: '/components/toast',
-  },
-])
-
 const { toast } = useToast()
 </script>
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Toast
@@ -57,7 +41,7 @@ const { toast } = useToast()
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <Button
               variant="outline" @click="() => {
                 toast({

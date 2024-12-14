@@ -1,26 +1,8 @@
 <script setup lang="ts">
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Alert',
-    href: '/components/alert',
-  },
-])
-
-const { setBreadcrumb } = useBreadcrumb()
-setBreadcrumb(breadcrumbLinks.value)
 </script>
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Alert

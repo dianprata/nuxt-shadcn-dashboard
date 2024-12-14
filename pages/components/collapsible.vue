@@ -1,30 +1,8 @@
 <script setup lang="ts">
-import { ConfigProvider } from 'radix-vue'
-
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Collapsible',
-    href: '/components/collapsible',
-  },
-])
-
-// Solving Hydration Nuxt
-const useIdFunction = () => useId()
-
-const isOpen = ref(false)
 </script>
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Collapsible
@@ -60,36 +38,33 @@ const isOpen = ref(false)
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
-            <ConfigProvider :use-id="useIdFunction">
-              <Collapsible
-                v-model:open="isOpen"
-                class="w-full md:w-[350px] space-y-2"
-              >
-                <CollapsibleTrigger as-child>
-                  <div class="flex cursor-pointer items-center justify-between px-4 space-x-4">
-                    <h4 class="text-sm font-semibold">
-                      @peduarte starred 3 repositories
-                    </h4>
-                    <Button variant="ghost" size="sm" class="w-9 p-0">
-                      <Icon name="radix-icons:caret-sort" class="h-4 w-4" />
-                      <span class="sr-only">Toggle</span>
-                    </Button>
-                  </div>
-                </CollapsibleTrigger>
-                <div class="border rounded-md px-4 py-3 text-sm font-mono">
-                  @radix-ui/primitives
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
+            <Collapsible
+              class="w-full md:w-[350px] space-y-2"
+            >
+              <CollapsibleTrigger as-child>
+                <div class="px-4 flex cursor-pointer justify-between items-center space-x-4">
+                  <h4 class="text-sm font-semibold">
+                    @peduarte starred 3 repositories
+                  </h4>
+                  <Button variant="ghost" size="sm" class="p-0 w-9">
+                    <Icon name="radix-icons:caret-sort" class="h-4 w-4" />
+                    <span class="sr-only">Toggle</span>
+                  </Button>
                 </div>
-                <CollapsibleContent class="space-y-2">
-                  <div class="border rounded-md px-4 py-3 text-sm font-mono">
-                    @radix-ui/colors
-                  </div>
-                  <div class="border rounded-md px-4 py-3 text-sm font-mono">
-                    @stitches/react
-                  </div>
-                </CollapsibleContent>
-              </Collapsible>
-            </ConfigProvider>
+              </CollapsibleTrigger>
+              <div class="px-4 py-3 border rounded-md text-sm font-mono">
+                @radix-ui/primitives
+              </div>
+              <CollapsibleContent class="space-y-2">
+                <div class="px-4 py-3 border rounded-md text-sm font-mono">
+                  @radix-ui/colors
+                </div>
+                <div class="px-4 py-3 border rounded-md text-sm font-mono">
+                  @stitches/react
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
           </div>
         </CardContent>
       </Card>

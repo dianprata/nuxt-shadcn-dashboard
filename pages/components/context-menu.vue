@@ -1,23 +1,8 @@
 <script setup lang="ts">
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Context Menu',
-    href: '/components/context-menu',
-  },
-])
 </script>
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Context Menu
@@ -53,9 +38,9 @@ const breadcrumbLinks = ref([
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <ContextMenu>
-              <ContextMenuTrigger class="h-[150px] w-[300px] flex items-center justify-center border rounded-md border-dashed text-sm">
+              <ContextMenuTrigger class="border rounded-md border-dashed text-sm flex h-[150px] w-[300px] justify-center items-center">
                 Right click here
               </ContextMenuTrigger>
               <ContextMenuContent class="w-64">

@@ -1,23 +1,8 @@
 <script setup lang="ts">
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Sheet',
-    href: '/components/sheet',
-  },
-])
 </script>
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Sheet
@@ -53,7 +38,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <Sheet>
               <SheetTrigger as-child>
                 <Button variant="outline">
@@ -67,14 +52,14 @@ const breadcrumbLinks = ref([
                     Make changes to your profile here. Click save when you're done.
                   </SheetDescription>
                 </SheetHeader>
-                <div class="grid gap-4 py-4">
-                  <div class="grid grid-cols-4 items-center gap-4">
+                <div class="py-4 grid gap-4">
+                  <div class="grid grid-cols-4 gap-4 items-center">
                     <Label for="name" class="text-right">
                       Name
                     </Label>
                     <Input id="name" value="Pedro Duarte" class="col-span-3" />
                   </div>
-                  <div class="grid grid-cols-4 items-center gap-4">
+                  <div class="grid grid-cols-4 gap-4 items-center">
                     <Label for="username" class="text-right">
                       Username
                     </Label>

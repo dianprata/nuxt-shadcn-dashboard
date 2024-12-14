@@ -1,23 +1,8 @@
 <script setup lang="ts">
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Toggle Group',
-    href: '/components/toggle-group',
-  },
-])
 </script>
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Toggle Group
@@ -53,7 +38,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <ToggleGroup type="multiple">
               <ToggleGroupItem value="bold" aria-label="Toggle bold">
                 <Icon name="i-radix-icons-font-bold" class="h-4 w-4" />
@@ -73,7 +58,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Outline</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <ToggleGroup type="multiple" variant="outline">
               <ToggleGroupItem value="bold" aria-label="Toggle bold">
                 <Icon name="i-radix-icons-font-bold" class="h-4 w-4" />
@@ -93,7 +78,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Single</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <ToggleGroup type="single">
               <ToggleGroupItem value="bold" aria-label="Toggle bold">
                 <Icon name="i-radix-icons-font-bold" class="h-4 w-4" />

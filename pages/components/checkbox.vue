@@ -1,23 +1,8 @@
 <script setup lang="ts">
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Checkbox',
-    href: '/components/checkbox',
-  },
-])
 </script>
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Checkbox
@@ -53,12 +38,12 @@ const breadcrumbLinks = ref([
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <div class="flex items-center space-x-2">
               <Checkbox id="terms" />
               <label
                 for="terms"
-                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                class="text-sm font-medium leading-none peer-disabled:opacity-70 peer-disabled:cursor-not-allowed"
               >
                 Accept terms and conditions
               </label>
@@ -71,13 +56,13 @@ const breadcrumbLinks = ref([
           <CardTitle>With Text</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <div class="items-top flex gap-x-2">
               <Checkbox id="terms1" />
-              <div class="grid gap-1.5 leading-none">
+              <div class="leading-none grid gap-1.5">
                 <label
                   for="terms1"
-                  class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  class="text-sm font-medium leading-none peer-disabled:opacity-70 peer-disabled:cursor-not-allowed"
                 >
                   Accept terms and conditions
                 </label>

@@ -1,23 +1,8 @@
 <script setup lang="ts">
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Card',
-    href: '/components/card',
-  },
-])
 </script>
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Card
@@ -44,7 +29,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="w-full flex items-center justify-center gap-4 overflow-hidden">
+          <div class="flex gap-4 w-full overflow-hidden justify-center items-center">
             <Card class="w-full md:w-[350px]">
               <CardHeader>
                 <CardTitle>Create project</CardTitle>
@@ -52,7 +37,7 @@ const breadcrumbLinks = ref([
               </CardHeader>
               <CardContent>
                 <form>
-                  <div class="grid w-full items-center gap-4">
+                  <div class="grid gap-4 w-full items-center">
                     <div class="flex flex-col space-y-1.5">
                       <Label for="name">Name</Label>
                       <Input id="name" placeholder="Name of your project" />
@@ -82,7 +67,7 @@ const breadcrumbLinks = ref([
                   </div>
                 </form>
               </CardContent>
-              <CardFooter class="flex justify-between px-6 pb-6">
+              <CardFooter class="px-6 pb-6 flex justify-between">
                 <Button variant="outline">
                   Cancel
                 </Button>

@@ -1,21 +1,6 @@
 <script setup lang="ts">
 import { navigationMenuTriggerStyle } from '@/components/ui/navigation-menu'
 
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Navigation Menu',
-    href: '/components/navigation-menu',
-  },
-])
-
 const components: { title: string, href: string, description: string }[] = [
   {
     title: 'Alert Dialog',
@@ -57,7 +42,6 @@ const components: { title: string, href: string, description: string }[] = [
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Navigation Menu
@@ -93,17 +77,17 @@ const components: { title: string, href: string, description: string }[] = [
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul class="grid gap-3 p-6 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1fr)] lg:w-[500px] md:w-[400px]">
+                    <ul class="p-6 grid gap-3 lg:grid-cols-[minmax(0,.75fr)_minmax(0,1fr)] lg:w-[500px] md:w-[400px]">
                       <li class="row-span-3">
                         <NavigationMenuLink as-child>
                           <NuxtLink
-                            class="h-full w-full flex flex-col select-none justify-end rounded-md from-muted/50 to-muted bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md"
+                            class="p-6 rounded-md no-underline flex flex-col h-full w-full select-none outline-none justify-end from-muted/50 to-muted bg-gradient-to-b focus:shadow-md"
                             to="/"
                           >
                             <img src="https://www.radix-vue.com/logo.svg" class="h-6 w-6" alt="radix-logo">
@@ -132,7 +116,7 @@ const components: { title: string, href: string, description: string }[] = [
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Components</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul class="grid w-[400px] gap-3 p-4 md:grid-cols-2 lg:w-[600px] md:w-[500px]">
+                    <ul class="p-4 grid gap-3 w-[400px] md:grid-cols-2 lg:w-[600px] md:w-[500px]">
                       <NavigationMenuDemoItem
                         v-for="component in components"
                         :key="component.title"

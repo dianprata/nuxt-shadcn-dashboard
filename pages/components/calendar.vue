@@ -2,27 +2,11 @@
 import type { Ref } from 'vue'
 import { type DateValue, getLocalTimeZone, today } from '@internationalized/date'
 
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Calendar',
-    href: '/components/calendar',
-  },
-])
-
 const value = ref(today(getLocalTimeZone())) as Ref<DateValue>
 </script>
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Calendar
@@ -58,7 +42,7 @@ const value = ref(today(getLocalTimeZone())) as Ref<DateValue>
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="w-full flex items-center justify-center gap-4 overflow-hidden">
+          <div class="flex gap-4 w-full overflow-hidden justify-center items-center">
             <Calendar v-model="value" weekday-format="short" class="border rounded-md" />
           </div>
         </CardContent>

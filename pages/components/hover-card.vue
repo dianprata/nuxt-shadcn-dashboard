@@ -1,23 +1,8 @@
 <script setup lang="ts">
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Hover Card',
-    href: '/components/hover-card',
-  },
-])
 </script>
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Hover Card
@@ -53,7 +38,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <HoverCard>
               <HoverCardTrigger as-child>
                 <Button variant="link">
@@ -73,8 +58,8 @@ const breadcrumbLinks = ref([
                     <p class="text-sm">
                       Progressive JavaScript framework for building modern web interfaces.
                     </p>
-                    <div class="flex items-center pt-2">
-                      <Icon name="radix-icons:calendar" class="mr-2 h-4 w-4 opacity-70" />
+                    <div class="pt-2 flex items-center">
+                      <Icon name="radix-icons:calendar" class="mr-2 opacity-70 h-4 w-4" />
                       <span class="text-xs text-muted-foreground">
                         Joined January 2014
                       </span>

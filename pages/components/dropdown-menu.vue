@@ -1,21 +1,6 @@
 <script setup lang="ts">
 import type { DropdownMenuCheckboxItemProps } from 'radix-vue'
 
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Dropdown Menu',
-    href: '/components/dropdown-menu',
-  },
-])
-
 type Checked = DropdownMenuCheckboxItemProps['checked']
 
 const showStatusBar = ref<Checked>(true)
@@ -25,7 +10,6 @@ const showPanel = ref<Checked>(false)
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Dropdown Menu
@@ -61,7 +45,7 @@ const showPanel = ref<Checked>(false)
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <DropdownMenu>
               <DropdownMenuTrigger as-child>
                 <Button variant="outline">
@@ -104,7 +88,7 @@ const showPanel = ref<Checked>(false)
           <CardTitle>With Checkbox</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <DropdownMenu>
               <DropdownMenuTrigger as-child>
                 <Button variant="outline">

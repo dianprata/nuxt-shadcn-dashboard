@@ -1,23 +1,8 @@
 <script setup lang="ts">
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Separator',
-    href: '/components/separator',
-  },
-])
 </script>
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Separator
@@ -53,7 +38,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
             <div>
               <div class="space-y-1">
                 <h4 class="text-sm font-medium leading-none">
@@ -64,7 +49,7 @@ const breadcrumbLinks = ref([
                 </p>
               </div>
               <Separator class="my-4" />
-              <div class="h-5 flex items-center text-sm space-x-4">
+              <div class="text-sm flex h-5 items-center space-x-4">
                 <div>Blog</div>
                 <Separator orientation="vertical" />
                 <div>Docs</div>

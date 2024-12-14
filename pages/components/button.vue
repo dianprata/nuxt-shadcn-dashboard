@@ -1,25 +1,8 @@
 <script setup lang="ts">
-import { ChevronRight } from 'lucide-vue-next'
-
-const breadcrumbLinks = ref([
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'Components',
-    href: '#',
-  },
-  {
-    title: 'Button',
-    href: '/components/button',
-  },
-])
 </script>
 
 <template>
   <div class="flex flex-col gap-4">
-    <BaseBreadcrumbCustom :links="breadcrumbLinks" />
     <div class="grid gap-2">
       <h2 class="text-3xl font-bold tracking-tight">
         Button
@@ -46,7 +29,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Default</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
+          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
             <Button>Default</Button>
           </div>
         </CardContent>
@@ -56,7 +39,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Secondary</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
+          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
             <Button variant="secondary">
               Secondary
             </Button>
@@ -68,7 +51,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Outline</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
+          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
             <Button variant="outline">
               Outline
             </Button>
@@ -80,7 +63,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Destructive</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
+          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
             <Button variant="destructive">
               Destructive
             </Button>
@@ -92,7 +75,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Ghost</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
+          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
             <Button variant="ghost">
               Ghost
             </Button>
@@ -104,7 +87,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Link</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
+          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
             <Button variant="link">
               Link
             </Button>
@@ -116,7 +99,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Size</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="w-full flex flex-wrap items-center justify-center gap-4 overflow-hidden sm:h-200px">
+          <div class="flex flex-wrap gap-4 w-full overflow-hidden justify-center items-center sm:h-200px">
             <Button size="xs" variant="outline">
               Button xs
             </Button>
@@ -130,7 +113,7 @@ const breadcrumbLinks = ref([
               Button lg
             </Button>
             <Button size="icon" variant="outline">
-              <ChevronRight />
+              <Icon name="i-lucide-chevron-right" />
             </Button>
           </div>
         </CardContent>
