@@ -22,6 +22,7 @@ export const navMenu: NavMenu[] = [
       {
         title: 'Authentication',
         icon: 'i-lucide-lock-keyhole-open',
+        new: true,
         children: [
           {
             title: 'Login',
@@ -48,6 +49,7 @@ export const navMenu: NavMenu[] = [
       {
         title: 'Errors',
         icon: 'i-lucide-triangle-alert',
+        new: true,
         children: [
           {
             title: '401 - Unauthorized',
@@ -284,6 +286,12 @@ export const navMenu: NavMenu[] = [
             title: 'Sonner',
             icon: 'i-lucide-circle',
             link: '/components/sonner',
+          },
+          {
+            title: 'Stepper',
+            icon: 'i-lucide-circle',
+            link: '/components/stepper',
+            new: true,
           },
           {
             title: 'Switch',

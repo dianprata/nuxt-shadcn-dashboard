@@ -17,6 +17,9 @@ withDefaults(defineProps<{
         <NuxtLink :to="item.link">
           <Icon :name="item.icon || ''" />
           <span>{{ item.title }}</span>
+          <span v-if="item.new" class="px-1.5 py-0.5 bg-#adfa1d rounded-md text-xs text-black leading-none no-underline group-hover:no-underline">
+            New
+          </span>
         </NuxtLink>
       </SidebarMenuButton>
     </SidebarMenuItem>

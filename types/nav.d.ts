@@ -2,6 +2,7 @@ export interface NavLink {
   title: string
   link: string
   icon?: string
+  new?: boolean
 }
 
 export interface NavSectionTitle {
@@ -11,6 +12,7 @@ export interface NavSectionTitle {
 export interface NavGroup {
   title: string
   icon?: string
+  new?: boolean
   children: NavLink[]
 }
 
