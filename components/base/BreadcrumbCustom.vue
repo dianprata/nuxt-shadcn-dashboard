@@ -7,7 +7,7 @@ withDefaults(defineProps<{
   links: Links[]
   separator?: string
 }>(), {
-  separator: 'lucide:chevron-right',
+  separator: 'i-lucide-chevron-right',
 })
 </script>
 
