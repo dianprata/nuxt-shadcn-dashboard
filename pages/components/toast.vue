@@ -7,12 +7,14 @@ const { toast } = useToast()
 <template>
   <div class="flex flex-col gap-4">
     <div class="grid gap-2">
-      <h2 class="text-3xl font-bold tracking-tight">
-        Toast
-      </h2>
-      <p class="text-muted-foreground">
-        A succinct message that is displayed temporarily.
-      </p>
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">
+          Toast
+        </h2>
+        <p class="text-muted-foreground">
+          A succinct message that is displayed temporarily.
+        </p>
+      </div>
       <div class="flex gap-2">
         <Button size="xs" variant="outline" class="text-xs" as-child>
           <NuxtLink

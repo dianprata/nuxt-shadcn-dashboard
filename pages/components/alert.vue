@@ -4,12 +4,14 @@
 <template>
   <div class="flex flex-col gap-4">
     <div class="grid gap-2">
-      <h2 class="text-3xl font-bold tracking-tight">
-        Alert
-      </h2>
-      <p class="text-muted-foreground">
-        Displays a callout for user attention.
-      </p>
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">
+          Alert
+        </h2>
+        <p class="text-muted-foreground">
+          Displays a callout for user attention.
+        </p>
+      </div>
       <div class="flex gap-2">
         <Button size="xs" variant="outline" class="text-xs" as-child>
           <NuxtLink

@@ -7,12 +7,14 @@ const tags = Array.from({ length: 50 }).map(
 <template>
   <div class="flex flex-col gap-4">
     <div class="grid gap-2">
-      <h2 class="text-3xl font-bold tracking-tight">
-        Scroll-area
-      </h2>
-      <p class="text-muted-foreground">
-        Augments native scroll functionality for custom, cross-browser styling.
-      </p>
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">
+          Scroll-area
+        </h2>
+        <p class="text-muted-foreground">
+          Augments native scroll functionality for custom, cross-browser styling.
+        </p>
+      </div>
       <div class="flex gap-2">
         <Button size="xs" variant="outline" class="text-xs" as-child>
           <NuxtLink

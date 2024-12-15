@@ -5,12 +5,14 @@ const modelValue = ref(['Apple', 'Banana'])
 <template>
   <div class="flex flex-col gap-4">
     <div class="grid gap-2">
-      <h2 class="text-3xl font-bold tracking-tight">
-        Tags Input
-      </h2>
-      <p class="text-muted-foreground">
-        Tag inputs render tags inside an input, followed by an actual text input.
-      </p>
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">
+          Tags Input
+        </h2>
+        <p class="text-muted-foreground">
+          Tag inputs render tags inside an input, followed by an actual text input.
+        </p>
+      </div>
       <div class="flex gap-2">
         <Button size="xs" variant="outline" class="text-xs" as-child>
           <NuxtLink

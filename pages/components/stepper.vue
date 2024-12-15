@@ -43,12 +43,14 @@ const steps = [
 <template>
   <div class="flex flex-col gap-4">
     <div class="grid gap-2">
-      <h2 class="text-3xl font-bold tracking-tight">
-        Stepper
-      </h2>
-      <p class="text-muted-foreground">
-        A set of steps that are used to indicate progress through a multi-step process.
-      </p>
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">
+          Stepper
+        </h2>
+        <p class="text-muted-foreground">
+          A set of steps that are used to indicate progress through a multi-step process.
+        </p>
+      </div>
       <div class="flex gap-2">
         <Button size="xs" variant="outline" class="text-xs" as-child>
           <NuxtLink

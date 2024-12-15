@@ -5,7 +5,7 @@ import { Activity, ArrowUpRight, CreditCard, DollarSign, Users } from 'lucide-vu
 <template>
   <div class="flex flex-col gap-4 w-full">
     <div class="flex flex-wrap gap-2 justify-between items-center">
-      <h2 class="text-3xl font-bold tracking-tight">
+      <h2 class="text-2xl font-bold tracking-tight">
         Dashboard
       </h2>
       <div class="flex items-center space-x-2">

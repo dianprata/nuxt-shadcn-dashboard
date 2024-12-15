@@ -26,12 +26,14 @@ async function handleCopyLink() {
 <template>
   <div class="flex flex-col gap-4">
     <div class="grid gap-2">
-      <h2 class="text-3xl font-bold tracking-tight">
-        Dialog
-      </h2>
-      <p class="text-muted-foreground">
-        A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.
-      </p>
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">
+          Dialog
+        </h2>
+        <p class="text-muted-foreground">
+          A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.
+        </p>
+      </div>
       <div class="flex gap-2">
         <Button size="xs" variant="outline" class="text-xs" as-child>
           <NuxtLink

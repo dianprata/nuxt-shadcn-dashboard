@@ -4,12 +4,14 @@
 <template>
   <div class="flex flex-col gap-4">
     <div class="grid gap-2">
-      <h2 class="text-3xl font-bold tracking-tight">
-        Carousel
-      </h2>
-      <p class="text-muted-foreground">
-        A carousel with motion and swipe built using Embla.
-      </p>
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">
+          Carousel
+        </h2>
+        <p class="text-muted-foreground">
+          A carousel with motion and swipe built using Embla.
+        </p>
+      </div>
       <div class="flex gap-2">
         <Button size="xs" variant="outline" class="text-xs" as-child>
           <NuxtLink
@@ -74,7 +76,7 @@
                   <div class="p-1">
                     <Card>
                       <CardContent class="p-6 flex aspect-square justify-center items-center">
-                        <span class="text-3xl font-semibold">{{ index + 1 }}</span>
+                        <span class="text-2xl font-semibold">{{ index + 1 }}</span>
                       </CardContent>
                     </Card>
                   </div>
@@ -104,7 +106,7 @@
                   <div class="p-1">
                     <Card>
                       <CardContent class="p-6 flex justify-center items-center">
-                        <span class="text-3xl font-semibold">{{ index + 1 }}</span>
+                        <span class="text-2xl font-semibold">{{ index + 1 }}</span>
                       </CardContent>
                     </Card>
                   </div>

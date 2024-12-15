@@ -4,12 +4,14 @@
 <template>
   <div class="flex flex-col gap-4">
     <div class="grid gap-2">
-      <h2 class="text-3xl font-bold tracking-tight">
-        Avatar
-      </h2>
-      <p class="text-muted-foreground">
-        An image element with a fallback for representing the user.
-      </p>
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">
+          Avatar
+        </h2>
+        <p class="text-muted-foreground">
+          An image element with a fallback for representing the user.
+        </p>
+      </div>
       <div class="flex gap-2">
         <Button size="xs" variant="outline" class="text-xs" as-child>
           <NuxtLink
@@ -38,7 +40,7 @@
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
+          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
             <Avatar>
               <AvatarImage src="https://github.com/radix-vue.png" alt="@radix-vue" />
               <AvatarFallback>RV</AvatarFallback>

@@ -8,12 +8,14 @@ const value = ref(today(getLocalTimeZone())) as Ref<DateValue>
 <template>
   <div class="flex flex-col gap-4">
     <div class="grid gap-2">
-      <h2 class="text-3xl font-bold tracking-tight">
-        Calendar
-      </h2>
-      <p class="text-muted-foreground">
-        A date field component that allows users to enter and edit date.
-      </p>
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">
+          Calendar
+        </h2>
+        <p class="text-muted-foreground">
+          A date field component that allows users to enter and edit date.
+        </p>
+      </div>
       <div class="flex gap-2">
         <Button size="xs" variant="outline" class="text-xs" as-child>
           <NuxtLink

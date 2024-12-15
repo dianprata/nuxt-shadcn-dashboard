@@ -4,12 +4,14 @@
 <template>
   <div class="flex flex-col gap-4">
     <div class="grid gap-2">
-      <h2 class="text-3xl font-bold tracking-tight">
-        Badge
-      </h2>
-      <p class="text-muted-foreground">
-        Displays a badge or a component that looks like a badge.
-      </p>
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">
+          Badge
+        </h2>
+        <p class="text-muted-foreground">
+          Displays a badge or a component that looks like a badge.
+        </p>
+      </div>
       <div class="flex gap-2">
         <Button size="xs" variant="outline" class="text-xs" as-child>
           <NuxtLink
@@ -29,7 +31,7 @@
           <CardTitle>Default</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
+          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
             <Badge>Badge</Badge>
           </div>
         </CardContent>
@@ -39,7 +41,7 @@
           <CardTitle>Secondary</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
+          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
             <Badge variant="secondary">
               Badge
             </Badge>
@@ -51,7 +53,7 @@
           <CardTitle>Outline</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
+          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
             <Badge variant="outline">
               Badge
             </Badge>
@@ -63,7 +65,7 @@
           <CardTitle>Destructive</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
+          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
             <Badge variant="destructive">
               Badge
             </Badge>

@@ -11,12 +11,14 @@ const showPanel = ref<Checked>(false)
 <template>
   <div class="flex flex-col gap-4">
     <div class="grid gap-2">
-      <h2 class="text-3xl font-bold tracking-tight">
-        Dropdown Menu
-      </h2>
-      <p class="text-muted-foreground">
-        Displays a menu to the user — such as a set of actions or functions — triggered by a button.
-      </p>
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">
+          Dropdown Menu
+        </h2>
+        <p class="text-muted-foreground">
+          Displays a menu to the user — such as a set of actions or functions — triggered by a button.
+        </p>
+      </div>
       <div class="flex gap-2">
         <Button size="xs" variant="outline" class="text-xs" as-child>
           <NuxtLink
