@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { Search } from 'lucide-vue-next'
+import { useMediaQuery } from '@vueuse/core'
 import { ConfigProvider } from 'radix-vue'
 import type { Mail } from './data/mails'
 import { cn } from '~/lib/utils'
@@ -132,6 +133,12 @@ function onCollapse() {
 function onExpand() {
   isCollapsed.value = false
 }
+
+const defaultCollapse = useMediaQuery('(max-width: 768px)')
+
+watch(() => defaultCollapse.value, () => {
+  isCollapsed.value = defaultCollapse.value
+})
 </script>
 
 <template>
@@ -171,7 +178,7 @@ function onExpand() {
         <ResizablePanel id="resize-panel-2" :default-size="defaultLayout[1]" :min-size="30">
           <MailDisplay v-if="selectedMailData" :mail="selectedMailData" @close="selectedMail = ''" />
           <Tabs v-else default-value="all">
-            <div class="flex items-center px-4 py-2">
+            <div class="px-4 py-2 flex items-center">
               <h1 class="text-xl font-bold">
                 Inbox
               </h1>
@@ -185,10 +192,10 @@ function onExpand() {
               </TabsList>
             </div>
             <Separator />
-            <div class="bg-background/95 p-4 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+            <div class="p-4 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
               <form>
                 <div class="relative">
-                  <Search class="absolute left-2 top-2.5 size-4 text-muted-foreground" />
+                  <Search class="text-muted-foreground absolute size-4 left-2 top-2.5" />
                   <Input v-model="searchValue" placeholder="Search" class="pl-8" />
                 </div>
               </form>
