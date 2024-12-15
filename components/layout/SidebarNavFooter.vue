@@ -27,35 +27,35 @@ const showModalTheme = ref(false)
             size="lg"
             class="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
           >
-            <Avatar class="h-8 w-8 rounded-lg">
+            <Avatar class="rounded-lg h-8 w-8">
               <AvatarImage :src="user.avatar" :alt="user.name" />
               <AvatarFallback class="rounded-lg">
                 CN
               </AvatarFallback>
             </Avatar>
-            <div class="grid flex-1 text-left text-sm leading-tight">
-              <span class="truncate font-semibold">{{ user.name }}</span>
-              <span class="truncate text-xs">{{ user.email }}</span>
+            <div class="text-sm leading-tight text-left flex-1 grid">
+              <span class="font-semibold truncate">{{ user.name }}</span>
+              <span class="text-xs truncate">{{ user.email }}</span>
             </div>
             <Icon name="i-lucide-chevrons-up-down" class="ml-auto size-4" />
           </SidebarMenuButton>
         </DropdownMenuTrigger>
         <DropdownMenuContent
-          class="min-w-56 w-[--radix-dropdown-menu-trigger-width] rounded-lg"
+          class="rounded-lg min-w-56 w-[--radix-dropdown-menu-trigger-width]"
           :side="isMobile ? 'bottom' : 'right'"
           align="end"
         >
           <DropdownMenuLabel class="p-0 font-normal">
-            <div class="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
-              <Avatar class="h-8 w-8 rounded-lg">
+            <div class="px-1 py-1.5 text-sm text-left flex gap-2 items-center">
+              <Avatar class="rounded-lg h-8 w-8">
                 <AvatarImage :src="user.avatar" :alt="user.name" />
                 <AvatarFallback class="rounded-lg">
                   CN
                 </AvatarFallback>
               </Avatar>
-              <div class="grid flex-1 text-left text-sm leading-tight">
-                <span class="truncate font-semibold">{{ user.name }}</span>
-                <span class="truncate text-xs">{{ user.email }}</span>
+              <div class="text-sm leading-tight text-left flex-1 grid">
+                <span class="font-semibold truncate">{{ user.name }}</span>
+                <span class="text-xs truncate">{{ user.email }}</span>
               </div>
             </div>
           </DropdownMenuLabel>
@@ -87,24 +87,10 @@ const showModalTheme = ref(false)
                 Github Repository
               </NuxtLink>
             </DropdownMenuItem>
-            <!-- TODO: fix next -->
-            <Dialog v-model:open="showModalTheme">
-              <DialogTrigger as-child>
-                <DropdownMenuItem @click="showModalTheme = true">
-                  <Icon name="i-lucide-paintbrush" />
-                  Theme
-                </DropdownMenuItem>
-              </DialogTrigger>
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle>Customize</DialogTitle>
-                  <DialogDescription class="text-xs text-muted-foreground">
-                    Pick a style and color for your components.
-                  </DialogDescription>
-                </DialogHeader>
-                <ThemeCustomize />
-              </DialogContent>
-            </Dialog>
+            <DropdownMenuItem @click="showModalTheme = true">
+              <Icon name="i-lucide-paintbrush" />
+              Theme
+            </DropdownMenuItem>
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
           <DropdownMenuItem @click="handleLogout">
@@ -115,6 +101,18 @@ const showModalTheme = ref(false)
       </DropdownMenu>
     </SidebarMenuItem>
   </SidebarMenu>
+
+  <Dialog v-model:open="showModalTheme">
+    <DialogContent>
+      <DialogHeader>
+        <DialogTitle>Customize</DialogTitle>
+        <DialogDescription class="text-xs text-muted-foreground">
+          Pick a style and color for your components.
+        </DialogDescription>
+      </DialogHeader>
+      <ThemeCustomize />
+    </DialogContent>
+  </Dialog>
 </template>
 
 <style scoped>

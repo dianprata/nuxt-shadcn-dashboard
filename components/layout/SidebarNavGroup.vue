@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { NavGroup } from '~/types/nav'
-import type { SidebarMenuButtonVariants } from '~/components/ui/sidebar'
+import { type SidebarMenuButtonVariants, useSidebar } from '~/components/ui/sidebar'
 
 withDefaults(defineProps<{
   item: NavGroup
@@ -8,6 +8,8 @@ withDefaults(defineProps<{
 }>(), {
   size: 'default',
 })
+
+const { setOpenMobile } = useSidebar()
 
 const openCollapsible = ref(false)
 </script>
@@ -38,7 +40,7 @@ const openCollapsible = ref(false)
               :key="subItem.title"
             >
               <SidebarMenuSubButton as-child>
-                <NuxtLink :to="subItem.link">
+                <NuxtLink :to="subItem.link" @click="setOpenMobile(false)">
                   <span>{{ subItem.title }}</span>
                   <span v-if="subItem.new" class="px-1.5 py-0.5 bg-#adfa1d rounded-md text-xs text-black leading-none no-underline group-hover:no-underline">
                     New

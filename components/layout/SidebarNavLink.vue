@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { NavLink } from '~/types/nav'
-import type { SidebarMenuButtonVariants } from '~/components/ui/sidebar'
+import { type SidebarMenuButtonVariants, useSidebar } from '~/components/ui/sidebar'
 
 withDefaults(defineProps<{
   item: NavLink
@@ -8,13 +8,15 @@ withDefaults(defineProps<{
 }>(), {
   size: 'default',
 })
+
+const { setOpenMobile } = useSidebar()
 </script>
 
 <template>
   <SidebarMenu>
     <SidebarMenuItem>
       <SidebarMenuButton as-child :tooltip="item.title" :size="size">
-        <NuxtLink :to="item.link">
+        <NuxtLink :to="item.link" @click="setOpenMobile(false)">
           <Icon :name="item.icon || ''" />
           <span>{{ item.title }}</span>
           <span v-if="item.new" class="px-1.5 py-0.5 bg-#adfa1d rounded-md text-xs text-black leading-none no-underline group-hover:no-underline">
