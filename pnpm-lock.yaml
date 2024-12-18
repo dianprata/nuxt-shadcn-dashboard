@@ -14,6 +14,9 @@ importers:
       '@internationalized/date':
         specifier: ^3.5.4
         version: 3.6.0
+      '@tanstack/vue-table':
+        specifier: ^8.20.5
+        version: 8.20.5(vue@3.5.13(typescript@5.7.2))
       '@unovis/ts':
         specifier: ^1.4.1
         version: 1.5.0
@@ -1361,8 +1364,18 @@ packages:
   '@swc/helpers@0.5.15':
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
 
+  '@tanstack/table-core@8.20.5':
+    resolution: {integrity: sha512-P9dF7XbibHph2PFRz8gfBKEXEY/HJPOhym8CHmjF8y3q5mWpKx9xtZapXQUWCgkqvsK0R46Azuz+VaxD4Xl+Tg==}
+    engines: {node: '>=12'}
+
   '@tanstack/virtual-core@3.10.9':
     resolution: {integrity: sha512-kBknKOKzmeR7lN+vSadaKWXaLS0SZZG+oqpQ/k80Q6g9REn6zRHS/ZYdrIzHnpHgy/eWs00SujveUN/GJT2qTw==}
+
+  '@tanstack/vue-table@8.20.5':
+    resolution: {integrity: sha512-2xixT3BEgSDw+jOSqPt6ylO/eutDI107t2WdFMVYIZZ45UmTHLySqNriNs0+dMaKR56K5z3t+97P6VuVnI2L+Q==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      vue: '>=3.2'
 
   '@tanstack/vue-virtual@3.11.1':
     resolution: {integrity: sha512-HEmblQrCkbadvcuis8MBCHvlTy9iUTFlEWfXy5nTxvSrauWPZ4Pyv0yOzXrDhnTXUMxJtpdUrov05RCusrBQ3A==}
@@ -5383,7 +5396,7 @@ snapshots:
       '@clack/prompts': 0.7.0
       '@eslint-community/eslint-plugin-eslint-comments': 4.4.1(eslint@9.2.0)
       '@stylistic/eslint-plugin': 2.12.1(eslint@9.2.0)(typescript@5.7.2)
-      '@typescript-eslint/eslint-plugin': 8.18.0(@typescript-eslint/parser@7.18.0(eslint@9.2.0)(typescript@5.7.2))(eslint@9.2.0)(typescript@5.7.2)
+      '@typescript-eslint/eslint-plugin': 8.18.0(@typescript-eslint/parser@8.18.0(eslint@9.2.0)(typescript@5.7.2))(eslint@9.2.0)(typescript@5.7.2)
       '@typescript-eslint/parser': 8.18.0(eslint@9.2.0)(typescript@5.7.2)
       '@vitest/eslint-plugin': 1.1.16(@typescript-eslint/utils@8.18.0(eslint@9.2.0)(typescript@5.7.2))(eslint@9.2.0)(typescript@5.7.2)
       eslint: 9.2.0
@@ -6690,7 +6703,14 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
+  '@tanstack/table-core@8.20.5': {}
+
   '@tanstack/virtual-core@3.10.9': {}
+
+  '@tanstack/vue-table@8.20.5(vue@3.5.13(typescript@5.7.2))':
+    dependencies:
+      '@tanstack/table-core': 8.20.5
+      vue: 3.5.13(typescript@5.7.2)
 
   '@tanstack/vue-virtual@3.11.1(vue@3.5.13(typescript@5.7.2))':
     dependencies:
@@ -6940,10 +6960,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/eslint-plugin@8.18.0(@typescript-eslint/parser@7.18.0(eslint@9.2.0)(typescript@5.7.2))(eslint@9.2.0)(typescript@5.7.2)':
+  '@typescript-eslint/eslint-plugin@8.18.0(@typescript-eslint/parser@8.18.0(eslint@9.2.0)(typescript@5.7.2))(eslint@9.2.0)(typescript@5.7.2)':
     dependencies:
       '@eslint-community/regexpp': 4.12.1
-      '@typescript-eslint/parser': 7.18.0(eslint@9.2.0)(typescript@5.7.2)
+      '@typescript-eslint/parser': 8.18.0(eslint@9.2.0)(typescript@5.7.2)
       '@typescript-eslint/scope-manager': 8.18.0
       '@typescript-eslint/type-utils': 8.18.0(eslint@9.2.0)(typescript@5.7.2)
       '@typescript-eslint/utils': 8.18.0(eslint@9.2.0)(typescript@5.7.2)
@@ -8812,7 +8832,7 @@ snapshots:
     dependencies:
       eslint: 9.2.0
     optionalDependencies:
-      '@typescript-eslint/eslint-plugin': 8.18.0(@typescript-eslint/parser@7.18.0(eslint@9.2.0)(typescript@5.7.2))(eslint@9.2.0)(typescript@5.7.2)
+      '@typescript-eslint/eslint-plugin': 8.18.0(@typescript-eslint/parser@8.18.0(eslint@9.2.0)(typescript@5.7.2))(eslint@9.2.0)(typescript@5.7.2)
 
   eslint-plugin-vue@9.32.0(eslint@9.2.0):
     dependencies:

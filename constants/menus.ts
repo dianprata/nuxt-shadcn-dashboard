@@ -14,6 +14,11 @@ export const navMenu: NavMenu[] = [
         icon: 'i-lucide-mail',
         link: '/email',
       },
+      {
+        title: 'Tasks',
+        icon: 'i-lucide-calendar-check-2',
+        link: '/tasks',
+      },
     ],
   },
   {
