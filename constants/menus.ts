@@ -18,6 +18,7 @@ export const navMenu: NavMenu[] = [
         title: 'Tasks',
         icon: 'i-lucide-calendar-check-2',
         link: '/tasks',
+        new: true,
       },
     ],
   },
