@@ -72,9 +72,11 @@ const showModalTheme = ref(false)
               <Icon name="i-lucide-badge-check" />
               Account
             </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Icon name="i-lucide-credit-card" />
-              Billing
+            <DropdownMenuItem as-child>
+              <NuxtLink to="/settings">
+                <Icon name="i-lucide-settings" />
+                Settings
+              </NuxtLink>
             </DropdownMenuItem>
             <DropdownMenuItem>
               <Icon name="i-lucide-bell" />

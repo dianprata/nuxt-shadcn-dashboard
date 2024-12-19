@@ -36,9 +36,9 @@ const user: {
   email: string
   avatar: string
 } = {
-  name: 'shadcn',
-  email: 'm@example.com',
-  avatar: '/avatars/shadcn.png',
+  name: 'Dian Pratama',
+  email: 'dianpratama2@gmail.com',
+  avatar: '/avatars/avatartion.png',
 }
 
 const { sidebar } = useAppConfig()
