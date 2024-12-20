@@ -8,12 +8,12 @@ const router = useRouter()
 
 <template>
   <div class="h-svh">
-    <div class="m-auto flex flex-col gap-2 h-full w-full justify-center items-center">
+    <div class="m-auto h-full w-full flex flex-col items-center justify-center gap-2">
       <h1 class="text-[7rem] font-bold leading-tight">
         401
       </h1>
       <span class="font-medium">Unauthorized Access</span>
-      <p class="text-muted-foreground text-center">
+      <p class="text-center text-muted-foreground">
         Please log in with the appropriate credentials <br> to access this resource.
       </p>
       <div class="mt-6 flex gap-4">

@@ -40,7 +40,7 @@
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Avatar>
               <AvatarImage src="https://github.com/radix-vue.png" alt="@radix-vue" />
               <AvatarFallback>RV</AvatarFallback>

@@ -5,10 +5,10 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="p-6 bg-muted flex flex-col gap-6 justify-center items-center min-h-svh md:p-10">
-    <div class="flex flex-col gap-6 max-w-sm w-full">
-      <NuxtLink to="#" class="font-medium flex gap-2 items-center self-center">
-        <div class="bg-primary rounded-md text-primary-foreground flex h-6 w-6 justify-center items-center">
+  <div class="flex flex-col items-center justify-center gap-6 bg-muted p-6 min-h-svh md:p-10">
+    <div class="max-w-sm w-full flex flex-col gap-6">
+      <NuxtLink to="#" class="flex items-center self-center gap-2 font-medium">
+        <div class="h-6 w-6 flex items-center justify-center rounded-md bg-primary text-primary-foreground">
           <Icon name="i-lucide-gallery-vertical-end" class-name="size-4" />
         </div>
         Acme Inc.
@@ -23,9 +23,9 @@ definePageMeta({
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div class="mx-auto grid gap-6 max-w-sm">
+          <div class="grid mx-auto max-w-sm gap-6">
             <AuthForgotPassword />
-            <p class="text-sm text-muted-foreground text-center">
+            <p class="text-center text-sm text-muted-foreground">
               Already have an account?
               <NuxtLink
                 to="/login"

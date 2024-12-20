@@ -178,7 +178,7 @@ watch(() => defaultCollapse.value, () => {
         <ResizablePanel id="resize-panel-2" :default-size="defaultLayout[1]" :min-size="30">
           <MailDisplay v-if="selectedMailData" :mail="selectedMailData" @close="selectedMail = ''" />
           <Tabs v-else default-value="all">
-            <div class="px-4 py-2 flex items-center">
+            <div class="flex items-center px-4 py-2">
               <h1 class="text-xl font-bold">
                 Inbox
               </h1>
@@ -192,10 +192,10 @@ watch(() => defaultCollapse.value, () => {
               </TabsList>
             </div>
             <Separator />
-            <div class="p-4 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+            <div class="bg-background/95 p-4 backdrop-blur supports-[backdrop-filter]:bg-background/60">
               <form>
                 <div class="relative">
-                  <Search class="text-muted-foreground absolute size-4 left-2 top-2.5" />
+                  <Search class="absolute left-2 top-2.5 size-4 text-muted-foreground" />
                   <Input v-model="searchValue" placeholder="Search" class="pl-8" />
                 </div>
               </form>

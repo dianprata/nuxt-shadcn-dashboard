@@ -31,7 +31,7 @@ const showPassword = ref(false)
       type="button"
       variant="ghost"
       size="icon"
-      class="px-2 py-2 absolute h-full right-0 top-0 hover:bg-transparent"
+      class="absolute right-0 top-0 h-full px-2 py-2 hover:bg-transparent"
       :disabled="props?.disabled"
       @click="showPassword = !showPassword"
     >

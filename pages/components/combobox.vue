@@ -43,7 +43,7 @@ const value = ref('')
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
+          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
             <Popover v-model:open="open">
               <PopoverTrigger as-child>
                 <Button
@@ -55,10 +55,10 @@ const value = ref('')
                   {{ value
                     ? frameworks.find((framework) => framework.value === value)?.label
                     : "Select framework..." }}
-                  <Icon name="radix-icons:caret-sort" class="ml-2 opacity-50 shrink-0 h-4 w-4" />
+                  <Icon name="radix-icons:caret-sort" class="ml-2 h-4 w-4 shrink-0 opacity-50" />
                 </Button>
               </PopoverTrigger>
-              <PopoverContent class="p-0 w-[200px]">
+              <PopoverContent class="w-[200px] p-0">
                 <Command>
                   <CommandInput class="h-9" placeholder="Search framework..." />
                   <CommandEmpty>No framework found.</CommandEmpty>

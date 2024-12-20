@@ -31,9 +31,9 @@
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
+          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
             <div class="flex items-center space-x-4">
-              <Skeleton class="rounded-full h-12 w-12" />
+              <Skeleton class="h-12 w-12 rounded-full" />
               <div class="space-y-2">
                 <Skeleton class="h-4 w-[250px]" />
                 <Skeleton class="h-4 w-[200px]" />

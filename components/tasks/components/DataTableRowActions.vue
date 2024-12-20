@@ -18,7 +18,7 @@ const task = computed(() => taskSchema.parse(props.row.original))
     <DropdownMenuTrigger as-child>
       <Button
         variant="ghost"
-        class="p-0 flex h-8 w-8 data-[state=open]:bg-muted"
+        class="h-8 w-8 flex p-0 data-[state=open]:bg-muted"
       >
         <Icon name="i-radix-icons-dots-horizontal" class="h-4 w-4" />
         <span class="sr-only">Open menu</span>

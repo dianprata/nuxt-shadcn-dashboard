@@ -9,8 +9,8 @@ defineProps<DataTablePaginationProps>()
 </script>
 
 <template>
-  <div class="px-2 flex justify-between items-center">
-    <div class="text-sm text-muted-foreground flex-1">
+  <div class="flex items-center justify-between px-2">
+    <div class="flex-1 text-sm text-muted-foreground">
       {{ table.getFilteredSelectedRowModel().rows.length }} of
       {{ table.getFilteredRowModel().rows.length }} row(s) selected.
     </div>
@@ -33,14 +33,14 @@ defineProps<DataTablePaginationProps>()
           </SelectContent>
         </Select>
       </div>
-      <div class="text-sm font-medium flex w-[100px] justify-center items-center">
+      <div class="w-[100px] flex items-center justify-center text-sm font-medium">
         Page {{ table.getState().pagination.pageIndex + 1 }} of
         {{ table.getPageCount() }}
       </div>
       <div class="flex items-center space-x-2">
         <Button
           variant="outline"
-          class="p-0 hidden h-8 w-8 lg:flex"
+          class="hidden h-8 w-8 p-0 lg:flex"
           :disabled="!table.getCanPreviousPage()"
           @click="table.setPageIndex(0)"
         >
@@ -49,7 +49,7 @@ defineProps<DataTablePaginationProps>()
         </Button>
         <Button
           variant="outline"
-          class="p-0 h-8 w-8"
+          class="h-8 w-8 p-0"
           :disabled="!table.getCanPreviousPage()"
           @click="table.previousPage()"
         >
@@ -58,7 +58,7 @@ defineProps<DataTablePaginationProps>()
         </Button>
         <Button
           variant="outline"
-          class="p-0 h-8 w-8"
+          class="h-8 w-8 p-0"
           :disabled="!table.getCanNextPage()"
           @click="table.nextPage()"
         >
@@ -67,7 +67,7 @@ defineProps<DataTablePaginationProps>()
         </Button>
         <Button
           variant="outline"
-          class="p-0 hidden h-8 w-8 lg:flex"
+          class="hidden h-8 w-8 p-0 lg:flex"
           :disabled="!table.getCanNextPage()"
           @click="table.setPageIndex(table.getPageCount() - 1)"
         >

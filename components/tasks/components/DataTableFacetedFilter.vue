@@ -24,14 +24,14 @@ const selectedValues = computed(() => new Set(props.column?.getFilterValue() as 
 <template>
   <Popover>
     <PopoverTrigger as-child>
-      <Button variant="outline" size="sm" class="border-dashed h-8">
+      <Button variant="outline" size="sm" class="h-8 border-dashed">
         <Icon name="i-radix-icons-plus-circled" class="mr-2 h-4 w-4" />
         {{ title }}
         <template v-if="selectedValues.size > 0">
           <Separator orientation="vertical" class="mx-2 h-4" />
           <Badge
             variant="secondary"
-            class="px-1 rounded-sm font-normal lg:hidden"
+            class="rounded-sm px-1 font-normal lg:hidden"
           >
             {{ selectedValues.size }}
           </Badge>
@@ -39,7 +39,7 @@ const selectedValues = computed(() => new Set(props.column?.getFilterValue() as 
             <Badge
               v-if="selectedValues.size > 2"
               variant="secondary"
-              class="px-1 rounded-sm font-normal"
+              class="rounded-sm px-1 font-normal"
             >
               {{ selectedValues.size }} selected
             </Badge>
@@ -50,7 +50,7 @@ const selectedValues = computed(() => new Set(props.column?.getFilterValue() as 
                   .filter((option: any) => selectedValues.has(option.value))"
                 :key="item.value"
                 variant="secondary"
-                class="px-1 rounded-sm font-normal"
+                class="rounded-sm px-1 font-normal"
               >
                 {{ item.label }}
               </Badge>
@@ -59,7 +59,7 @@ const selectedValues = computed(() => new Set(props.column?.getFilterValue() as 
         </template>
       </Button>
     </PopoverTrigger>
-    <PopoverContent class="p-0 w-[200px]" align="start">
+    <PopoverContent class="w-[200px] p-0" align="start">
       <Command
         :filter-function="(list: DataTableFacetedFilter['options'], term: any) => list.filter(i => i.label.toLowerCase()?.includes(term)) "
       >
@@ -96,9 +96,9 @@ const selectedValues = computed(() => new Set(props.column?.getFilterValue() as 
               >
                 <Icon name="i-radix-icons-check" :class="cn('h-4 w-4')" />
               </div>
-              <component :is="option.icon" v-if="option.icon" class="mr-2 text-muted-foreground h-4 w-4" />
+              <component :is="option.icon" v-if="option.icon" class="mr-2 h-4 w-4 text-muted-foreground" />
               <span>{{ option.label }}</span>
-              <span v-if="facets?.get(option.value)" class="ml-auto text-xs font-mono flex h-4 w-4 justify-center items-center">
+              <span v-if="facets?.get(option.value)" class="ml-auto h-4 w-4 flex items-center justify-center text-xs font-mono">
                 {{ facets.get(option.value) }}
               </span>
             </CommandItem>
@@ -109,7 +109,7 @@ const selectedValues = computed(() => new Set(props.column?.getFilterValue() as 
             <CommandGroup>
               <CommandItem
                 :value="{ label: 'Clear filters' }"
-                class="text-center justify-center"
+                class="justify-center text-center"
                 @select="column?.setFilterValue(undefined)"
               >
                 Clear filters

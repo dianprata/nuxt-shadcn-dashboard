@@ -31,7 +31,7 @@
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
+          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
             <Input type="email" placeholder="Email" class="max-w-sm" />
           </div>
         </CardContent>
@@ -41,8 +41,8 @@
           <CardTitle>With Label</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
-            <div class="grid gap-1.5 max-w-sm w-full items-center">
+          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+            <div class="grid max-w-sm w-full items-center gap-1.5">
               <Label for="email">Email</Label>
               <Input id="email" type="email" placeholder="Email" />
             </div>

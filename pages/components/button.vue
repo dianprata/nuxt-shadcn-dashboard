@@ -31,7 +31,7 @@
           <CardTitle>Default</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Button>Default</Button>
           </div>
         </CardContent>
@@ -41,7 +41,7 @@
           <CardTitle>Secondary</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Button variant="secondary">
               Secondary
             </Button>
@@ -53,7 +53,7 @@
           <CardTitle>Outline</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Button variant="outline">
               Outline
             </Button>
@@ -65,7 +65,7 @@
           <CardTitle>Destructive</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Button variant="destructive">
               Destructive
             </Button>
@@ -77,7 +77,7 @@
           <CardTitle>Ghost</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Button variant="ghost">
               Ghost
             </Button>
@@ -89,7 +89,7 @@
           <CardTitle>Link</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Button variant="link">
               Link
             </Button>
@@ -101,7 +101,7 @@
           <CardTitle>Size</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex flex-wrap gap-4 w-full overflow-hidden justify-center items-center sm:h-200px">
+          <div class="w-full flex flex-wrap items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Button size="xs" variant="outline">
               Button xs
             </Button>

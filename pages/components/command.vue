@@ -51,8 +51,8 @@ function handleOpenChange() {
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
-            <Command class="border rounded-lg shadow-md max-w-[450px]">
+          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
+            <Command class="max-w-[450px] border rounded-lg shadow-md">
               <CommandInput placeholder="Type a command or search..." />
               <CommandList>
                 <CommandEmpty>No results found.</CommandEmpty>
@@ -98,9 +98,9 @@ function handleOpenChange() {
           <CardTitle>With Dialog</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
+          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
             <div>
-              <div class="flex flex-col gap-4 items-center">
+              <div class="flex flex-col items-center gap-4">
                 <p class="text-sm text-muted-foreground">
                   Press
                   <BaseKbd>{{ metaSymbol }}J</BaseKbd>

@@ -5,12 +5,14 @@ import { useDebounceFn, useEventListener } from '@vueuse/core'
 import { useShortcuts } from './useShortcuts'
 
 export interface ShortcutConfig {
+  // eslint-disable-next-line ts/no-unsafe-function-type
   handler: Function
   usingInput?: string | boolean
   whenever?: WatchSource<boolean>[]
 }
 
 export interface ShortcutsConfig {
+  // eslint-disable-next-line ts/no-unsafe-function-type
   [key: string]: ShortcutConfig | Function
 }
 
@@ -19,6 +21,7 @@ export interface ShortcutsOptions {
 }
 
 interface Shortcut {
+  // eslint-disable-next-line ts/no-unsafe-function-type
   handler: Function
   condition: ComputedRef<boolean>
   chained: boolean
@@ -32,8 +35,8 @@ interface Shortcut {
   // keyCode?: number
 }
 
-const chainedShortcutRegex = /^[^-]+(?:-.*)?-.*(?:[\n\r\u2028\u2029][^-]*|[^-\n\r\u2028\u2029])$/
-const combinedShortcutRegex = /^[^_]+(?:_.*)?_.*(?:[\n\r\u2028\u2029][^_]*|[^\n\r_\u2028\u2029])$/
+const chainedShortcutRegex = /^[^-]+(?:-[^-]+)*-.*(?:[\n\r\u2028\u2029][^-]*|[^-\n\r\u2028\u2029])$/
+const combinedShortcutRegex = /^[^_]+(?:_[^_]+)*_.*(?:[\n\r\u2028\u2029][^_]*|[^\n\r_\u2028\u2029])$/
 
 export function defineShortcuts(config: ShortcutsConfig, options: ShortcutsOptions = {}) {
   const { macOS, usingInput } = useShortcuts()
@@ -102,10 +105,12 @@ export function defineShortcuts(config: ShortcutsConfig, options: ShortcutsOptio
     let shortcut: Partial<Shortcut>
 
     if (key.includes('-') && key !== '-' && !key.match(chainedShortcutRegex)?.length) {
+      // eslint-disable-next-line no-console
       console.trace(`[Shortcut] Invalid key: "${key}"`)
     }
 
     if (key.includes('_') && key !== '_' && !key.match(combinedShortcutRegex)?.length) {
+      // eslint-disable-next-line no-console
       console.trace(`[Shortcut] Invalid key: "${key}"`)
     }
 
@@ -146,6 +151,7 @@ export function defineShortcuts(config: ShortcutsConfig, options: ShortcutsOptio
     }
 
     if (!shortcut.handler) {
+      // eslint-disable-next-line no-console
       console.trace('[Shortcut] Invalid value')
       return null
     }

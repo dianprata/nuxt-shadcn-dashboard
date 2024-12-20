@@ -40,7 +40,7 @@
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
+          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
             <Popover>
               <PopoverTrigger as-child>
                 <Button variant="outline">
@@ -58,7 +58,7 @@
                     </p>
                   </div>
                   <div class="grid gap-2">
-                    <div class="grid grid-cols-3 gap-4 items-center">
+                    <div class="grid grid-cols-3 items-center gap-4">
                       <Label for="width">Width</Label>
                       <Input
                         id="width"
@@ -67,7 +67,7 @@
                         class="col-span-2 h-8"
                       />
                     </div>
-                    <div class="grid grid-cols-3 gap-4 items-center">
+                    <div class="grid grid-cols-3 items-center gap-4">
                       <Label for="maxWidth">Max. width</Label>
                       <Input
                         id="maxWidth"
@@ -76,7 +76,7 @@
                         class="col-span-2 h-8"
                       />
                     </div>
-                    <div class="grid grid-cols-3 gap-4 items-center">
+                    <div class="grid grid-cols-3 items-center gap-4">
                       <Label for="height">Height</Label>
                       <Input
                         id="height"
@@ -85,7 +85,7 @@
                         class="col-span-2 h-8"
                       />
                     </div>
-                    <div class="grid grid-cols-3 gap-4 items-center">
+                    <div class="grid grid-cols-3 items-center gap-4">
                       <Label for="maxHeight">Max. height</Label>
                       <Input
                         id="maxHeight"

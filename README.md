@@ -20,6 +20,7 @@ pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 3. Use `pnpm run dev` to start dev server.
 
 ## Credits
+
 - [Nuxt.js](https://nuxtjs.org/)
 - [Shadcn Vue](https://shadcn-vue.com/)
 - [UnoCSS](https://unocss.com/)

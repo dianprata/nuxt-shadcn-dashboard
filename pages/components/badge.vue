@@ -31,7 +31,7 @@
           <CardTitle>Default</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Badge>Badge</Badge>
           </div>
         </CardContent>
@@ -41,7 +41,7 @@
           <CardTitle>Secondary</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Badge variant="secondary">
               Badge
             </Badge>
@@ -53,7 +53,7 @@
           <CardTitle>Outline</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Badge variant="outline">
               Badge
             </Badge>
@@ -65,7 +65,7 @@
           <CardTitle>Destructive</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Badge variant="destructive">
               Badge
             </Badge>

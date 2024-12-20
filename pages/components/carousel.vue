@@ -40,13 +40,13 @@
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 w-full justify-center items-center">
+          <div class="w-full flex items-center justify-center gap-4">
             <Carousel class="relative max-w-xs w-full">
               <CarouselContent>
                 <CarouselItem v-for="(_, index) in 5" :key="index">
                   <div class="p-1">
                     <Card>
-                      <CardContent class="p-6 flex aspect-square justify-center items-center">
+                      <CardContent class="aspect-square flex items-center justify-center p-6">
                         <span class="text-4xl font-semibold">{{ index + 1 }}</span>
                       </CardContent>
                     </Card>
@@ -64,7 +64,7 @@
           <CardTitle>Sizes</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-200px w-full justify-center items-center">
+          <div class="min-h-200px w-full flex items-center justify-center gap-4">
             <Carousel
               class="relative max-w-xs w-full"
               :opts="{
@@ -75,7 +75,7 @@
                 <CarouselItem v-for="(_, index) in 5" :key="index" class="lg:basis-1/3 md:basis-1/2">
                   <div class="p-1">
                     <Card>
-                      <CardContent class="p-6 flex aspect-square justify-center items-center">
+                      <CardContent class="aspect-square flex items-center justify-center p-6">
                         <span class="text-2xl font-semibold">{{ index + 1 }}</span>
                       </CardContent>
                     </Card>
@@ -93,7 +93,7 @@
           <CardTitle>Orientation Vertical</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-350px w-full justify-center items-center">
+          <div class="min-h-350px w-full flex items-center justify-center gap-4">
             <Carousel
               orientation="vertical"
               class="relative max-w-xs w-full"
@@ -105,7 +105,7 @@
                 <CarouselItem v-for="(_, index) in 5" :key="index" class="p-1 md:basis-1/2">
                   <div class="p-1">
                     <Card>
-                      <CardContent class="p-6 flex justify-center items-center">
+                      <CardContent class="flex items-center justify-center p-6">
                         <span class="text-2xl font-semibold">{{ index + 1 }}</span>
                       </CardContent>
                     </Card>

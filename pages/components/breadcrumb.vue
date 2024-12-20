@@ -47,7 +47,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
@@ -75,7 +75,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Custom Separator</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
@@ -107,7 +107,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Dropdown</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
@@ -120,7 +120,7 @@ const breadcrumbLinks = ref([
                 </BreadcrumbSeparator>
                 <BreadcrumbItem>
                   <DropdownMenu>
-                    <DropdownMenuTrigger class="flex gap-1 items-center">
+                    <DropdownMenuTrigger class="flex items-center gap-1">
                       Components
                       <ChevronDown class="h-4 w-4" />
                     </DropdownMenuTrigger>
@@ -147,7 +147,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Collapsed</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem>
@@ -183,7 +183,7 @@ const breadcrumbLinks = ref([
           <CardTitle>Breadcrumb Custom</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 h-100px w-full overflow-hidden justify-center items-center sm:h-200px">
+          <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <BaseBreadcrumbCustom :links="breadcrumbLinks" />
           </div>
         </CardContent>

@@ -41,7 +41,7 @@ import { toast } from 'vue-sonner'
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
+          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
             <Button
               variant="outline" @click="() => {
                 toast('Event has been created', {

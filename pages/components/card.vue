@@ -31,7 +31,7 @@
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 w-full overflow-hidden justify-center items-center">
+          <div class="w-full flex items-center justify-center gap-4 overflow-hidden">
             <Card class="w-full md:w-[350px]">
               <CardHeader>
                 <CardTitle>Create project</CardTitle>
@@ -39,7 +39,7 @@
               </CardHeader>
               <CardContent>
                 <form>
-                  <div class="grid gap-4 w-full items-center">
+                  <div class="grid w-full items-center gap-4">
                     <div class="flex flex-col space-y-1.5">
                       <Label for="name">Name</Label>
                       <Input id="name" placeholder="Name of your project" />
@@ -69,7 +69,7 @@
                   </div>
                 </form>
               </CardContent>
-              <CardFooter class="px-6 pb-6 flex justify-between">
+              <CardFooter class="flex justify-between px-6 pb-6">
                 <Button variant="outline">
                   Cancel
                 </Button>

@@ -40,9 +40,9 @@
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
+          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
             <ContextMenu>
-              <ContextMenuTrigger class="border rounded-md border-dashed text-sm flex h-[150px] w-[300px] justify-center items-center">
+              <ContextMenuTrigger class="h-[150px] w-[300px] flex items-center justify-center border rounded-md border-dashed text-sm">
                 Right click here
               </ContextMenuTrigger>
               <ContextMenuContent class="w-64">

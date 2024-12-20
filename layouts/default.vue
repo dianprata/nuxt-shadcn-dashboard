@@ -6,7 +6,7 @@
     <LayoutAppSidebar />
     <SidebarInset>
       <LayoutHeader />
-      <div class="p-4 flex-1 lg:p-6">
+      <div class="flex-1 p-4 lg:p-6">
         <slot />
       </div>
     </SidebarInset>

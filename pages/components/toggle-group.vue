@@ -40,7 +40,7 @@
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
+          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
             <ToggleGroup type="multiple">
               <ToggleGroupItem value="bold" aria-label="Toggle bold">
                 <Icon name="i-radix-icons-font-bold" class="h-4 w-4" />
@@ -60,7 +60,7 @@
           <CardTitle>Outline</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
+          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
             <ToggleGroup type="multiple" variant="outline">
               <ToggleGroupItem value="bold" aria-label="Toggle bold">
                 <Icon name="i-radix-icons-font-bold" class="h-4 w-4" />
@@ -80,7 +80,7 @@
           <CardTitle>Single</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
+          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
             <ToggleGroup type="single">
               <ToggleGroupItem value="bold" aria-label="Toggle bold">
                 <Icon name="i-radix-icons-font-bold" class="h-4 w-4" />

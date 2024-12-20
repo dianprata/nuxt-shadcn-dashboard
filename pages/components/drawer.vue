@@ -60,7 +60,7 @@ const data = [
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
+          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
             <Drawer>
               <DrawerTrigger as-child>
                 <Button variant="outline">
@@ -74,18 +74,18 @@ const data = [
                     <DrawerDescription>Set your daily activity goal.</DrawerDescription>
                   </DrawerHeader>
                   <div class="p-4 pb-0">
-                    <div class="flex justify-center items-center space-x-2">
+                    <div class="flex items-center justify-center space-x-2">
                       <Button
                         variant="outline"
                         size="icon"
-                        class="rounded-full shrink-0 h-8 w-8"
+                        class="h-8 w-8 shrink-0 rounded-full"
                         :disabled="goal <= 200"
                         @click="goal -= 10"
                       >
                         <Icon name="radix-icons:minus" class="h-4 w-4" />
                         <span class="sr-only">Decrease</span>
                       </Button>
-                      <div class="text-center flex-1">
+                      <div class="flex-1 text-center">
                         <div class="text-7xl font-bold tracking-tighter">
                           {{ goal }}
                         </div>
@@ -96,7 +96,7 @@ const data = [
                       <Button
                         variant="outline"
                         size="icon"
-                        class="rounded-full shrink-0 h-8 w-8"
+                        class="h-8 w-8 shrink-0 rounded-full"
                         :disabled="goal >= 400"
                         @click="goal += 10"
                       >
@@ -104,7 +104,7 @@ const data = [
                         <span class="sr-only">Increase</span>
                       </Button>
                     </div>
-                    <div class="px-3 my-3 h-[120px]">
+                    <div class="my-3 h-[120px] px-3">
                       <VisXYContainer
                         :data="data"
                         class="h-[120px]"

@@ -40,7 +40,7 @@
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
+          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
             <Sheet>
               <SheetTrigger as-child>
                 <Button variant="outline">
@@ -54,14 +54,14 @@
                     Make changes to your profile here. Click save when you're done.
                   </SheetDescription>
                 </SheetHeader>
-                <div class="py-4 grid gap-4">
-                  <div class="grid grid-cols-4 gap-4 items-center">
+                <div class="grid gap-4 py-4">
+                  <div class="grid grid-cols-4 items-center gap-4">
                     <Label for="name" class="text-right">
                       Name
                     </Label>
                     <Input id="name" value="Pedro Duarte" class="col-span-3" />
                   </div>
-                  <div class="grid grid-cols-4 gap-4 items-center">
+                  <div class="grid grid-cols-4 items-center gap-4">
                     <Label for="username" class="text-right">
                       Username
                     </Label>

@@ -40,7 +40,7 @@
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
+          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
             <div>
               <div class="space-y-1">
                 <h4 class="text-sm font-medium leading-none">
@@ -51,7 +51,7 @@
                 </p>
               </div>
               <Separator class="my-4" />
-              <div class="text-sm flex h-5 items-center space-x-4">
+              <div class="h-5 flex items-center text-sm space-x-4">
                 <div>Blog</div>
                 <Separator orientation="vertical" />
                 <div>Docs</div>

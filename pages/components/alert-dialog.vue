@@ -40,7 +40,7 @@
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex h-200px justify-center items-center">
+          <div class="h-200px flex items-center justify-center">
             <AlertDialog>
               <AlertDialogTrigger as-child>
                 <Button variant="outline">

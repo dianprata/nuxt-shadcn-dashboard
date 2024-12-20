@@ -40,7 +40,7 @@
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="flex gap-4 min-h-100px w-full justify-center items-center md:min-h-200px">
+          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
             <HoverCard>
               <HoverCardTrigger as-child>
                 <Button variant="link">
@@ -60,8 +60,8 @@
                     <p class="text-sm">
                       Progressive JavaScript framework for building modern web interfaces.
                     </p>
-                    <div class="pt-2 flex items-center">
-                      <Icon name="radix-icons:calendar" class="mr-2 opacity-70 h-4 w-4" />
+                    <div class="flex items-center pt-2">
+                      <Icon name="radix-icons:calendar" class="mr-2 h-4 w-4 opacity-70" />
                       <span class="text-xs text-muted-foreground">
                         Joined January 2014
                       </span>
