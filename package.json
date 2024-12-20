@@ -2,6 +2,37 @@
   "name": "nuxt-shadcn-dashboard",
   "type": "module",
   "version": "0.0.1",
+  "description": "Shadcn Dashboard built with Nuxt",
+  "author": "Dian Pratama <dianpratama2@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://dashboard.dianprata.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dianprata/nuxt-shadcn-dashboard.git"
+  },
+  "keywords": [
+    "dashboard",
+    "admin-dashboard",
+    "vue",
+    "nuxt",
+    "shadcn-vue",
+    "shadcn-nuxt",
+    "shadcn-dashboard",
+    "unocss"
+  ],
+  "main": "./nuxt.config.ts",
+  "files": [
+    "app.vue",
+    "components",
+    "components.json",
+    "composables",
+    "constants",
+    "layouts",
+    "lib",
+    "nuxt.config.ts",
+    "pages",
+    "types"
+  ],
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
