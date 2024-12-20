@@ -45,6 +45,13 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
 })
 
+const router = useRouter()
+
+defineShortcuts({
+  'G-H': () => router.push('/'),
+  'G-E': () => router.push('/email'),
+})
+
 const useIdFunction = () => useId()
 </script>
 
