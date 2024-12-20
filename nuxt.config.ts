@@ -33,6 +33,7 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/components': { redirect: '/components/accordion' },
+    '/settings': { redirect: '/settings/profile' },
   },
 
   imports: {
