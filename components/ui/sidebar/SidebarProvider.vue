@@ -2,8 +2,8 @@
 import { useEventListener, useMediaQuery, useVModel } from '@vueuse/core'
 import { TooltipProvider } from 'radix-vue'
 import { type HTMLAttributes, type Ref, computed, ref } from 'vue'
+import type { AppConfigInput } from 'nuxt/schema'
 import { SIDEBAR_COOKIE_MAX_AGE, SIDEBAR_COOKIE_NAME, SIDEBAR_KEYBOARD_SHORTCUT, SIDEBAR_WIDTH, SIDEBAR_WIDTH_ICON, provideSidebarContext } from './utils'
-import { cn } from '@/lib/utils'
 
 const props = withDefaults(defineProps<{
   defaultOpen?: boolean
@@ -53,7 +53,7 @@ useEventListener('keydown', (event: KeyboardEvent) => {
 // This makes it easier to style the sidebar with Tailwind classes.
 const state = computed(() => open.value ? 'expanded' : 'collapsed')
 
-const { sidebar } = useAppConfig()
+const sidebar = useAppConfig().sidebar as AppConfigInput['sidebar']
 
 provideSidebarContext({
   state,
@@ -73,7 +73,7 @@ provideSidebarContext({
         '--sidebar-width': SIDEBAR_WIDTH,
         '--sidebar-width-icon': SIDEBAR_WIDTH_ICON,
       }"
-      :class="cn('group/sidebar-wrapper flex min-h-svh w-full text-sidebar-foreground has-[[data-variant=inset]]:bg-sidebar', [props.class, sidebar.side === 'right' ? 'flex-row-reverse' : ''])"
+      :class="cn(`group/sidebar-wrapper flex min-h-svh w-full text-sidebar-foreground has-[[data-variant=inset]]:bg-sidebar`, [props.class, sidebar?.side === 'right' ? 'flex-row-reverse' : ''])"
     >
       <slot />
     </div>
