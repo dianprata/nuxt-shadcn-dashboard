@@ -14,9 +14,9 @@
     </div>
     <Separator class="my-6" />
     <div class="flex flex-col lg:flex-row space-y-8 lg:space-x-12 lg:space-y-0">
-      <aside class="-mx-4 lg:w-1/5">
+      <ScrollArea class="lg:w-1/6">
         <SettingsSidebarNav />
-      </aside>
+      </ScrollArea>
       <div class="flex-1 lg:max-w-2xl">
         <div class="space-y-6">
           <slot />

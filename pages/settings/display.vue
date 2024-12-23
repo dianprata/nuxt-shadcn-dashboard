@@ -4,7 +4,7 @@
 
 <template>
   <SettingsLayout>
-    Display settings
+    <SettingsDisplayForm />
   </SettingsLayout>
 </template>
 

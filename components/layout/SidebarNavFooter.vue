@@ -9,7 +9,7 @@ defineProps<{
   }
 }>()
 
-const { isMobile } = useSidebar()
+const { isMobile, setOpenMobile } = useSidebar()
 
 function handleLogout() {
   navigateTo('/login')
@@ -73,7 +73,7 @@ const showModalTheme = ref(false)
               Account
             </DropdownMenuItem>
             <DropdownMenuItem as-child>
-              <NuxtLink to="/settings">
+              <NuxtLink to="/settings" @click="setOpenMobile(false)">
                 <Icon name="i-lucide-settings" />
                 Settings
               </NuxtLink>

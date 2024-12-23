@@ -4,7 +4,7 @@
 
 <template>
   <SettingsLayout>
-    Profile settings
+    <SettingsProfileForm />
   </SettingsLayout>
 </template>
 

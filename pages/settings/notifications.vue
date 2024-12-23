@@ -4,7 +4,7 @@
 
 <template>
   <SettingsLayout>
-    Notifications settings
+    <SettingsNotificationsForm />
   </SettingsLayout>
 </template>
 

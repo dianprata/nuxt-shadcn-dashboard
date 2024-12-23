@@ -4,7 +4,7 @@
 
 <template>
   <SettingsLayout>
-    Appearance settings
+    <SettingsAppearanceForm />
   </SettingsLayout>
 </template>
 

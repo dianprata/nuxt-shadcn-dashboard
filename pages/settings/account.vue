@@ -4,7 +4,7 @@
 
 <template>
   <SettingsLayout>
-    Account settings
+    <SettingsAccountForm />
   </SettingsLayout>
 </template>
 
