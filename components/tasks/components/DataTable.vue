@@ -6,6 +6,8 @@ import type {
   VisibilityState,
 } from '@tanstack/vue-table'
 
+import type { Task } from '../data/schema'
+import { valueUpdater } from '@/lib/utils'
 import {
   FlexRender,
   getCoreRowModel,
@@ -16,10 +18,8 @@ import {
   getSortedRowModel,
   useVueTable,
 } from '@tanstack/vue-table'
-import type { Task } from '../data/schema'
 import DataTablePagination from './DataTablePagination.vue'
 import DataTableToolbar from './DataTableToolbar.vue'
-import { valueUpdater } from '@/lib/utils'
 
 interface DataTableProps {
   columns: ColumnDef<Task, any>[]

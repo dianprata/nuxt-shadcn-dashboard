@@ -1,7 +1,7 @@
-import { computed, ref } from 'vue'
 import type { ComputedRef, WatchSource } from 'vue'
-import { logicAnd, logicNot } from '@vueuse/math'
 import { useDebounceFn, useEventListener } from '@vueuse/core'
+import { logicAnd, logicNot } from '@vueuse/math'
+import { computed, ref } from 'vue'
 import { useShortcuts } from './useShortcuts'
 
 export interface ShortcutConfig {

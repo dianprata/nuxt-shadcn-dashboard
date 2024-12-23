@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { VisuallyHidden, useForwardPropsEmits } from 'radix-vue'
 import type { DialogRootEmits, DialogRootProps } from 'radix-vue'
+import { useForwardPropsEmits, VisuallyHidden } from 'radix-vue'
 import { Dialog, DialogContent } from '../dialog'
 import Command from './Command.vue'
 

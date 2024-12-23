@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { Search } from 'lucide-vue-next'
-import { useMediaQuery } from '@vueuse/core'
-import { ConfigProvider } from 'radix-vue'
 import type { Mail } from './data/mails'
-import { cn } from '~/lib/utils'
 import type { LinkProp } from '~/components/mail/Nav.vue'
+import { useMediaQuery } from '@vueuse/core'
+import { Search } from 'lucide-vue-next'
+import { ConfigProvider } from 'radix-vue'
+import { cn } from '~/lib/utils'
 
 const props = withDefaults(defineProps<MailProps>(), {
   defaultCollapsed: false,

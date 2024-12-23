@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ConfigProvider } from 'radix-vue'
 import { Sonner } from '@/components/ui/sonner'
+import { ConfigProvider } from 'radix-vue'
 
 const colorMode = useColorMode()
 

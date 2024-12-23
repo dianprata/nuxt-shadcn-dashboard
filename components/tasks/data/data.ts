@@ -1,5 +1,5 @@
-import { h } from 'vue'
 import { Icon } from '#components'
+import { h } from 'vue'
 
 export const labels = [
   {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { navMenu } from '@/constants/menus'
 import type { NavGroup, NavMenu } from '~/types/nav'
+import { navMenu } from '@/constants/menus'
 
 const { metaSymbol } = useShortcuts()
 

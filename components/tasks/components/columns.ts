@@ -1,12 +1,12 @@
 import type { ColumnDef } from '@tanstack/vue-table'
 
-import { h } from 'vue'
 import type { Task } from '../data/schema'
+import { Badge } from '@/components/ui/badge'
+import { Checkbox } from '@/components/ui/checkbox'
+import { h } from 'vue'
 import { labels, priorities, statuses } from '../data/data'
 import DataTableColumnHeader from './DataTableColumnHeader.vue'
 import DataTableRowActions from './DataTableRowActions.vue'
-import { Checkbox } from '@/components/ui/checkbox'
-import { Badge } from '@/components/ui/badge'
 
 export const columns: ColumnDef<Task>[] = [
   {

@@ -1,8 +1,8 @@
 <script lang="ts" setup>
+import type { Mail } from './data/mails'
+import { addDays, addHours, format, nextSaturday } from 'date-fns'
 import { Archive, ArchiveX, ArrowLeft, Clock, Forward, MoreVertical, Reply, ReplyAll, Trash2 } from 'lucide-vue-next'
 import { computed } from 'vue'
-import { addDays, addHours, format, nextSaturday } from 'date-fns'
-import type { Mail } from './data/mails'
 
 interface MailDisplayProps {
   mail: Mail | undefined

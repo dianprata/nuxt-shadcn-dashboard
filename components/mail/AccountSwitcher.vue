@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
-
 import { cn } from '@/lib/utils'
+
+import { computed, ref } from 'vue'
 
 interface AccountSwitcherProps {
   isCollapsed: boolean

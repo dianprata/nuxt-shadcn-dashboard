@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Loader2 } from 'lucide-vue-next'
 import { cn } from '@/lib/utils'
+import { Loader2 } from 'lucide-vue-next'
 import PasswordInput from '~/components/PasswordInput.vue'
 
 const isLoading = ref(false)

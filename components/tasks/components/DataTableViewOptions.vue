@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Table } from '@tanstack/vue-table'
-import { computed } from 'vue'
 import type { Task } from '../data/schema'
+import { computed } from 'vue'
 
 interface DataTableViewOptionsProps {
   table: Table<Task>

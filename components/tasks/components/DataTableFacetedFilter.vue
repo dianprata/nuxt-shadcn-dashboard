@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { Column } from '@tanstack/vue-table'
 import type { Component } from 'vue'
-import { computed } from 'vue'
 import type { Task } from '../data/schema'
 import { cn } from '@/lib/utils'
+import { computed } from 'vue'
 
 interface DataTableFacetedFilter {
   column?: Column<Task, any>

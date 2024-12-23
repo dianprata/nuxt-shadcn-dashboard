@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { Calendar as CalendarIcon } from 'lucide-vue-next'
 import type { DateRange } from 'radix-vue'
-import { CalendarDate, DateFormatter, getLocalTimeZone } from '@internationalized/date'
-
 import type { Ref } from 'vue'
 import { cn } from '@/lib/utils'
+
+import { CalendarDate, DateFormatter, getLocalTimeZone } from '@internationalized/date'
+import { Calendar as CalendarIcon } from 'lucide-vue-next'
 
 const df = new DateFormatter('en-US', {
   dateStyle: 'medium',

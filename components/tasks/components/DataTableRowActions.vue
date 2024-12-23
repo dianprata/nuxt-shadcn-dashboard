@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Row } from '@tanstack/vue-table'
-import { computed } from 'vue'
 import type { Task } from '../data/schema'
+import { computed } from 'vue'
 import { labels } from '../data/data'
 import { taskSchema } from '../data/schema'
 
