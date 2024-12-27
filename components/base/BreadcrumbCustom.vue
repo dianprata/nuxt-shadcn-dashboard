@@ -26,7 +26,7 @@ withDefaults(defineProps<{
           </BreadcrumbPage>
         </BreadcrumbItem>
         <BreadcrumbSeparator v-if="index < links.length - 1">
-          <Icon :name="separator" />
+          <Icon :name="separator" mode="svg" />
         </BreadcrumbSeparator>
       </template>
     </BreadcrumbList>

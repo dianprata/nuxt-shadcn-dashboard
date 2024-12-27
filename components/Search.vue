@@ -62,9 +62,10 @@ function handleSelectLink(link: string) {
           v-for="nav in componentsNav?.children"
           :key="nav.title"
           :value="nav.title"
+          class="gap-2"
           @select="handleSelectLink(nav.link)"
         >
-          <Icon name="i-radix-icons-circle" pr-2 />
+          <Icon name="i-radix-icons-circle" />
           {{ nav.title }}
         </CommandItem>
       </CommandGroup>
