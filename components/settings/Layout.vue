@@ -13,10 +13,10 @@
       </p>
     </div>
     <Separator class="my-6" />
-    <div class="flex flex-col lg:flex-row space-y-8 lg:space-x-12 lg:space-y-0">
-      <ScrollArea class="lg:w-1/6">
+    <div class="flex flex-col lg:flex-row space-y-6 lg:space-x-12 lg:space-y-0">
+      <div class="w-full overflow-x-auto pb-2 lg:w-1/6 lg:pb-0">
         <SettingsSidebarNav />
-      </ScrollArea>
+      </div>
       <div class="flex-1 lg:max-w-2xl">
         <div class="space-y-6">
           <slot />
