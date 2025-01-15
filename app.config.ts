@@ -1,6 +1,6 @@
 export default defineAppConfig({
-  nuxtIcon: {
-    size: '16px', // default <Icon> size applied
+  icon: {
+    size: '1rem', // default <Icon> size applied
     class: '', // default <Icon> class applied
   },
   sidebar: {
