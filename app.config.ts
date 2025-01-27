@@ -1,6 +1,6 @@
 export default defineAppConfig({
   icon: {
-    size: '1rem', // default <Icon> size applied
+    size: '', // default <Icon> size applied
     class: '', // default <Icon> class applied
   },
   sidebar: {

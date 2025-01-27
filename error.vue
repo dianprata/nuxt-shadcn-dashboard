@@ -1,6 +1,11 @@
 <script setup>
-definePageMeta({
-  layout: 'blank',
+const { theme, radius } = useCustomize()
+
+useServerHead({
+  bodyAttrs: {
+    class: `theme-${theme.value}`,
+    style: `--radius: ${radius.value}rem;`,
+  },
 })
 
 const router = useRouter()

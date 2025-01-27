@@ -40,6 +40,17 @@ export default defineConfig({
       'sidebar-border': 'hsl(var(--sidebar-border))',
       'sidebar-ring': 'hsl(var(--sidebar-ring))',
     },
+    animation: {
+      keyframes: {
+        'spin-slow': '{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}',
+      },
+      counts: {
+        'spin-slow': 'infinite',
+      },
+      durations: {
+        'spin-slow': '3s',
+      },
+    },
   },
   presets: [
     presetUno(),

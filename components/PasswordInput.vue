@@ -9,6 +9,7 @@ const props = defineProps<{
   componentField?: ComponentFieldBindingObject<any>
   autocomplete?: string
   modelValue?: string
+  placeholder?: string
 }>()
 
 const showModal = useModel(props, 'modelValue')
@@ -22,7 +23,7 @@ const showPassword = ref(false)
       v-model="showModal"
       :type="showPassword ? 'text' : 'password'"
       :class="cn('pr-10', props?.class)"
-      placeholder="Enter your password"
+      :placeholder="props?.placeholder ? props.placeholder : 'Enter your password'"
       :disabled="props?.disabled"
       :autocomplete="props?.autocomplete"
       v-bind="props?.componentField"

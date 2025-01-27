@@ -57,10 +57,12 @@ const useIdFunction = () => useId()
 
 <template>
   <ConfigProvider :use-id="useIdFunction">
-    <div vaul-drawer-wrapper>
+    <div vaul-drawer-wrapper class="relative">
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
+
+      <AppSettings />
     </div>
 
     <Toaster />
