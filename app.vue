@@ -6,6 +6,8 @@ const colorMode = useColorMode()
 
 const color = computed(() => colorMode.value === 'dark' ? '#09090b' : '#ffffff')
 
+const { theme, radius } = useCustomize()
+
 useHead({
   meta: [
     { charset: 'utf-8' },
@@ -18,14 +20,9 @@ useHead({
   htmlAttrs: {
     lang: 'en',
   },
-})
-
-const { theme, radius } = useCustomize()
-
-useServerHead({
   bodyAttrs: {
-    class: `theme-${theme.value}`,
-    style: `--radius: ${radius.value}rem;`,
+    class: computed(() => `theme-${theme.value}`),
+    style: computed(() => `--radius: ${radius.value}rem;`),
   },
 })
 
