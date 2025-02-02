@@ -1,10 +1,10 @@
 <script setup>
 const { theme, radius } = useCustomize()
 
-useServerHead({
+useHead({
   bodyAttrs: {
-    class: `theme-${theme.value}`,
-    style: `--radius: ${radius.value}rem;`,
+    class: computed(() => `theme-${theme.value}`),
+    style: computed(() => `--radius: ${radius.value}rem;`),
   },
 })
 
