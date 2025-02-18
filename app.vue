@@ -50,10 +50,13 @@ defineShortcuts({
 })
 
 const useIdFunction = () => useId()
+
+const textDirection = useTextDirection({ initialValue: 'rtl' })
+const dir = computed(() => textDirection.value === 'rtl' ? 'rtl' : 'ltr')
 </script>
 
 <template>
-  <ConfigProvider :use-id="useIdFunction">
+  <ConfigProvider :use-id="useIdFunction" :dir="dir">
     <div vaul-drawer-wrapper class="relative">
       <NuxtLayout>
         <NuxtPage />

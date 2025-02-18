@@ -41,7 +41,7 @@ const user: {
   avatar: '/avatars/avatartion.png',
 }
 
-const { sidebar } = useAppConfig()
+const { sidebar } = useAppSettings()
 </script>
 
 <template>

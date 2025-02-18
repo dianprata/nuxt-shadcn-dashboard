@@ -4,7 +4,7 @@ export default defineAppConfig({
     class: '', // default <Icon> class applied
   },
   sidebar: {
-    collapsible: 'icon', // 'offcanvas' | 'icon' | 'none'
+    collapsible: 'offcanvas', // 'offcanvas' | 'icon' | 'none'
     side: 'left', // 'left' | 'right'
     variant: 'sidebar', // 'sidebar' | 'floating' | 'inset'
   },
