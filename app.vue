@@ -51,7 +51,7 @@ defineShortcuts({
 
 const useIdFunction = () => useId()
 
-const textDirection = useTextDirection({ initialValue: 'rtl' })
+const textDirection = useTextDirection({ initialValue: 'ltr' })
 const dir = computed(() => textDirection.value === 'rtl' ? 'rtl' : 'ltr')
 </script>
 
