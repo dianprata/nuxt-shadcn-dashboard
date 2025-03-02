@@ -5,7 +5,10 @@ function setLinks() {
   if (route.fullPath === '/') {
     return [{ title: 'Home', href: '/' }]
   }
-  return route.fullPath.split('/').map((item, index) => {
+
+  const segments = route.fullPath.split('/').filter(item => item !== '')
+
+  const breadcrumbs = segments.map((item, index) => {
     const str = item.replace(/-/g, ' ')
     const title = str
       .split(' ')
@@ -13,10 +16,12 @@ function setLinks() {
       .join(' ')
 
     return {
-      title: index > 0 ? title : 'Home',
-      href: index > 0 ? `/${item}` : '/',
+      title,
+      href: `/${segments.slice(0, index + 1).join('/')}`,
     }
   })
+
+  return [{ title: 'Home', href: '/' }, ...breadcrumbs]
 }
 
 const links = ref<{
