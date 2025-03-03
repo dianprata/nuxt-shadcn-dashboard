@@ -1,60 +1,3 @@
-<script setup lang="ts">
-import NumberFlow from '@number-flow/vue'
-import { Activity, CreditCard, DollarSign, Users } from 'lucide-vue-next'
-
-const dataCard = ref({
-  totalRevenue: 0,
-  totalRevenueDesc: 0,
-  subscriptions: 0,
-  subscriptionsDesc: 0,
-  sales: 0,
-  salesDesc: 0,
-  activeNow: 0,
-  activeNowDesc: 0,
-})
-
-const dataRecentSales = [
-  {
-    name: 'Olivia Martin',
-    email: 'olivia.martin@email.com',
-    amount: 1999,
-  },
-  {
-    name: 'Jackson Lee',
-    email: 'jackson.lee@email.com',
-    amount: 39,
-  },
-  {
-    name: 'Isabella Nguyen',
-    email: 'isabella.nguyen@email.com',
-    amount: 299,
-  },
-  {
-    name: 'William Kim',
-    email: 'will@email.com',
-    amount: 99,
-  },
-  {
-    name: 'Sofia Davis',
-    email: 'sofia.davis@email.com',
-    amount: 39,
-  },
-]
-
-onMounted(() => {
-  dataCard.value = {
-    totalRevenue: 45231.89,
-    totalRevenueDesc: 20.1 / 100,
-    subscriptions: 2350,
-    subscriptionsDesc: 180.5 / 100,
-    sales: 12234,
-    salesDesc: 45 / 100,
-    activeNow: 573,
-    activeNowDesc: 201,
-  }
-})
-</script>
-
 <template>
   <div class="w-full flex flex-col gap-4">
     <div class="flex flex-wrap items-center justify-between gap-2">
@@ -204,3 +147,61 @@ onMounted(() => {
     </main>
   </div>
 </template>
+
+<script setup lang="ts">
+import NumberFlow from '@number-flow/vue'
+import { ref, onMounted } from 'vue'
+import { Activity, CreditCard, DollarSign, Users } from 'lucide-vue-next'
+
+const dataCard = ref({
+  totalRevenue: 0,
+  totalRevenueDesc: 0,
+  subscriptions: 0,
+  subscriptionsDesc: 0,
+  sales: 0,
+  salesDesc: 0,
+  activeNow: 0,
+  activeNowDesc: 0,
+})
+
+const dataRecentSales = [
+  {
+    name: 'Olivia Martin',
+    email: 'olivia.martin@email.com',
+    amount: 1999,
+  },
+  {
+    name: 'Jackson Lee',
+    email: 'jackson.lee@email.com',
+    amount: 39,
+  },
+  {
+    name: 'Isabella Nguyen',
+    email: 'isabella.nguyen@email.com',
+    amount: 299,
+  },
+  {
+    name: 'William Kim',
+    email: 'will@email.com',
+    amount: 99,
+  },
+  {
+    name: 'Sofia Davis',
+    email: 'sofia.davis@email.com',
+    amount: 39,
+  },
+]
+
+onMounted(() => {
+  dataCard.value = {
+    totalRevenue: 45231.89,
+    totalRevenueDesc: 20.1 / 100,
+    subscriptions: 2350,
+    subscriptionsDesc: 180.5 / 100,
+    sales: 12234,
+    salesDesc: 45 / 100,
+    activeNow: 573,
+    activeNowDesc: 201,
+  }
+})
+</script>
