@@ -45,14 +45,13 @@
   },
   "dependencies": {
     "@internationalized/date": "^3.6.0",
-    "@number-flow/vue": "^0.4.3",
+    "@number-flow/vue": "^1.0.0",
     "@tanstack/vue-table": "^8.20.5",
     "@unovis/ts": "^1.5.0",
     "@unovis/vue": "^1.5.0",
     "embla-carousel": "^8.5.1",
-    "embla-carousel-vue": "^8.5.1"
-    "@number-flow/vue": "^1.0.0",
-    "lucide-vue-next": "^1.0.0",
+    "embla-carousel-vue": "^8.5.1",
+    "lucide-vue-next": "^1.0.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.12.0",
