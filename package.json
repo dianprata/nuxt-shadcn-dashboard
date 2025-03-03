@@ -51,6 +51,8 @@
     "@unovis/vue": "^1.5.0",
     "embla-carousel": "^8.5.1",
     "embla-carousel-vue": "^8.5.1"
+    "@number-flow/vue": "^1.0.0",
+    "lucide-vue-next": "^1.0.0",
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.12.0",
