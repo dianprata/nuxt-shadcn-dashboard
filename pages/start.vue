@@ -5,18 +5,24 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-const showApp = ref(false)
+const showApp = ref<boolean>(false)
 
-onMounted(() => {
-  setTimeout(() => {
+function redirectToHome() {
+  try {
     showApp.value = true
     router.push('/')
-  }, 3000) // 3 seconds delay
+  } catch (error) {
+    console.error('Failed to redirect:', error)
+  }
+}
+
+onMounted(() => {
+  setTimeout(redirectToHome, 3000) // 3 seconds delay
 })
 </script>
 
@@ -31,13 +37,13 @@ onMounted(() => {
 }
 
 .logo {
-  width: 200px;
+  width: var(--logo-width, 200px);
   animation: fadeIn 2s;
 }
 
 h1 {
   margin-top: 20px;
-  font-size: 24px;
+  font-size: var(--font-size, 24px);
 }
 
 @keyframes fadeIn {
