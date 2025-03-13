@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@iconify-json/lucide':
+        specifier: ^1.2.29
+        version: 1.2.29
+      '@iconify-json/radix-icons':
+        specifier: ^1.2.2
+        version: 1.2.2
       '@internationalized/date':
         specifier: ^3.6.0
         version: 3.6.0
@@ -917,6 +923,12 @@ packages:
   '@humanwhocodes/retry@0.4.1':
     resolution: {integrity: sha512-c7hNEllBlenFTHBky65mhq8WD2kbN9Q6gk0bTk8lSBvc554jpXSkST1iePudpt7+A/AQvuHs9EMqjHDXMY1lrA==}
     engines: {node: '>=18.18'}
+
+  '@iconify-json/lucide@1.2.29':
+    resolution: {integrity: sha512-bMrbX2zNnm+i601Yd5i7EClpOS4dWCe3q2B9k+f3RUFLOknQP1oj3D9upEN7ATbCJ/AmkKnFW5ND17ppX/Be8Q==}
+
+  '@iconify-json/radix-icons@1.2.2':
+    resolution: {integrity: sha512-+PPmKWDP7pfJMcEc9Ty1zyo/zzq+9rfKW4EGb2HSZcPu1VUhothDLFzWvBqQNoFIOYCJ2nm0Vmf8kVyYhq9G0Q==}
 
   '@iconify/collections@1.0.499':
     resolution: {integrity: sha512-sCw5tWeBOrtq0d/KZIVepRYe5lD5sITWhza0XUxqKuOG5XU9rr30DixqbSvnA532ruJBTS2wHS7u+Z/m3b/GPw==}
@@ -6159,6 +6171,14 @@ snapshots:
   '@humanwhocodes/retry@0.3.1': {}
 
   '@humanwhocodes/retry@0.4.1': {}
+
+  '@iconify-json/lucide@1.2.29':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/radix-icons@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify/collections@1.0.499':
     dependencies:

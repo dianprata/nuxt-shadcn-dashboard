@@ -129,7 +129,7 @@ const onSubmit = handleSubmit((values) => {
                   <Input type="url" v-bind="componentField" />
                 </FormControl>
                 <button type="button" class="absolute end-0 py-2 pe-3 text-muted-foreground" @click="remove(index)">
-                  <Icon name="i-radix-icons-cross1" class="w-3" />
+                  <Icon name="i-radix-icons-cross-1" class="w-3" />
                 </button>
               </div>
               <FormMessage />
