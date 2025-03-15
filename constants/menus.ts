@@ -384,11 +384,11 @@ export const navMenuBottom: NavMenuItems = [
   {
     title: 'Help & Support',
     icon: 'i-lucide-circle-help',
-    link: '/support',
+    link: 'https://github.com/dianprata/nuxt-shadcn-dashboard',
   },
   {
     title: 'Feedback',
     icon: 'i-lucide-send',
-    link: '/feedback',
+    link: 'https://github.com/dianprata/nuxt-shadcn-dashboard',
   },
 ]

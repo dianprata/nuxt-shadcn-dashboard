@@ -3,8 +3,8 @@ import {
   presetAttributify,
   presetIcons,
   presetTypography,
-  presetUno,
   presetWebFonts,
+  presetWind3,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
@@ -30,16 +30,6 @@ export default defineConfig({
     },
   ],
   theme: {
-    colors: {
-      'sidebar': 'hsl(var(--sidebar-background))',
-      'sidebar-foreground': 'hsl(var(--sidebar-foreground))',
-      'sidebar-primary': 'hsl(var(--sidebar-primary))',
-      'sidebar-primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-      'sidebar-accent': 'hsl(var(--sidebar-accent))',
-      'sidebar-accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-      'sidebar-border': 'hsl(var(--sidebar-border))',
-      'sidebar-ring': 'hsl(var(--sidebar-ring))',
-    },
     animation: {
       keyframes: {
         'spin-slow': '{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}',
@@ -53,7 +43,7 @@ export default defineConfig({
     },
   },
   presets: [
-    presetUno(),
+    presetWind3(),
     presetAttributify(),
     presetIcons({
       scale: 1.2,
@@ -86,17 +76,6 @@ export default defineConfig({
     {
       getCSS: () => `
         :root {
-          --vis-tooltip-background-color: none !important;
-          --vis-tooltip-border-color: none !important;
-          --vis-tooltip-text-color: none !important;
-          --vis-tooltip-shadow-color: none !important;
-          --vis-tooltip-backdrop-filter: none !important;
-          --vis-tooltip-padding: none !important;
-          
-          --vis-primary-color: var(--primary);
-          --vis-secondary-color: 160 81% 40%;
-          --vis-text-color: var(--muted-foreground);
-          
           --sidebar-background: 0 0% 98%;
           --sidebar-foreground: 240 5.3% 26.1%;
           --sidebar-primary: 240 5.9% 10%;
@@ -106,7 +85,7 @@ export default defineConfig({
           --sidebar-border: 220 13% 91%;
           --sidebar-ring: 217.2 91.2% 59.8%;
         }
-        
+
         .dark {
           --sidebar-background: 240 5.9% 10%;
           --sidebar-foreground: 240 4.8% 95.9%;
