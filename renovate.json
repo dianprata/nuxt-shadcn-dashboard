@@ -6,7 +6,8 @@
     "enabled": true
   },
   "ignoreDeps": [
-    "vue-tsc"
+    "vue-tsc",
+    "shadcn-nuxt"
   ],
   "baseBranches": ["main"],
   "packageRules": [],
