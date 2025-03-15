@@ -94,8 +94,8 @@ importers:
         specifier: ^1.9.17
         version: 1.9.17(vue@3.5.13(typescript@5.8.2))
       shadcn-nuxt:
-        specifier: ^0.11.4
-        version: 0.11.4(magicast@0.3.5)
+        specifier: ^0.10.4
+        version: 0.10.4(magicast@0.3.5)
       tailwind-merge:
         specifier: ^2.6.0
         version: 2.6.0
@@ -906,14 +906,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@oxc-parser/wasm@0.50.0':
-    resolution: {integrity: sha512-be/QsKqtXQbKhnIRzezPrV385L6EVaX1GNAGeaQaT+HX6Lny/SfmFetCrEZCRqn2/cAqo+P5rGDNJzv06dY/vw==}
+  '@oxc-parser/wasm@0.1.0':
+    resolution: {integrity: sha512-oA7XhTbg9rRBJhIzxCNhJwYmON/9LFAH4GBQxl7HWmGSS6HTrb2t6Peq82nxY0W7knguH52neh9T7zs27FVvsQ==}
 
   '@oxc-parser/wasm@0.56.5':
     resolution: {integrity: sha512-9vtn56ok7PHS0elihFP+Q+alveQuGR0vnF6OeZesxkKWLJr8mCk0kZJx5ZxLjibaPA/sxWTmOyn31UMM9jg9fg==}
-
-  '@oxc-project/types@0.50.0':
-    resolution: {integrity: sha512-VGV87PmDCGv1D+57iEmIuDoso3ig8d8D4VIK9AS0H7h2aNiRwFoCpVyp01+3jvIuHjPcEM2wbo3NG5EKyfx6Jw==}
 
   '@oxc-project/types@0.56.5':
     resolution: {integrity: sha512-skY3kOJwp22W4RkaadH1hZ3hqFHjkRrIIE0uQ4VUg+/Chvbl+2pF+B55IrIk2dgsKXS57YEUsJuN6I6s4rgFjA==}
@@ -4506,8 +4503,8 @@ packages:
   setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
 
-  shadcn-nuxt@0.11.4:
-    resolution: {integrity: sha512-9c5ZWUywJBJyRFxsPHP9FLaw3ZOVM2YfZc6FJ4ZEUVds6ynOCxOhn70JF+r0Fo0MsVAiGeKjL8lsRlG3Dg7XsA==}
+  shadcn-nuxt@0.10.4:
+    resolution: {integrity: sha512-WhSGzjaSMi1D2xb9Aflpwl8G8Qvlb0g4OuJLPO4YyRhduQDuscU6Pr1HdF7T4700foLLglgFnz7m8E2DDLLHJA==}
 
   shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
@@ -4804,11 +4801,6 @@ packages:
   type-fest@4.37.0:
     resolution: {integrity: sha512-S/5/0kFftkq27FPNye0XM1e2NsnoD/3FS+pBmbjmmtLT6I+i344KoOf7pvXreaFsDamWeaJX55nczA1m5PsBDg==}
     engines: {node: '>=16'}
-
-  typescript@5.6.3:
-    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
-    engines: {node: '>=14.17'}
-    hasBin: true
 
   typescript@5.8.2:
     resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
@@ -6362,15 +6354,11 @@ snapshots:
   '@oxc-parser/binding-win32-x64-msvc@0.56.5':
     optional: true
 
-  '@oxc-parser/wasm@0.50.0':
-    dependencies:
-      '@oxc-project/types': 0.50.0
+  '@oxc-parser/wasm@0.1.0': {}
 
   '@oxc-parser/wasm@0.56.5':
     dependencies:
       '@oxc-project/types': 0.56.5
-
-  '@oxc-project/types@0.50.0': {}
 
   '@oxc-project/types@0.56.5': {}
 
@@ -10684,11 +10672,10 @@ snapshots:
 
   setprototypeof@1.2.0: {}
 
-  shadcn-nuxt@0.11.4(magicast@0.3.5):
+  shadcn-nuxt@0.10.4(magicast@0.3.5):
     dependencies:
       '@nuxt/kit': 3.16.0(magicast@0.3.5)
-      '@oxc-parser/wasm': 0.50.0
-      typescript: 5.6.3
+      '@oxc-parser/wasm': 0.1.0
     transitivePeerDependencies:
       - magicast
 
@@ -10966,8 +10953,6 @@ snapshots:
       prelude-ls: 1.2.1
 
   type-fest@4.37.0: {}
-
-  typescript@5.6.3: {}
 
   typescript@5.8.2: {}
 

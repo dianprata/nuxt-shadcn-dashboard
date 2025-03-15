@@ -74,7 +74,7 @@
     "lucide-vue-next": "^0.482.0",
     "nuxt": "^3.16.0",
     "radix-vue": "^1.9.17",
-    "shadcn-nuxt": "^0.11.4",
+    "shadcn-nuxt": "^0.10.4",
     "tailwind-merge": "^2.6.0",
     "typescript": "^5.8.2",
     "unocss": "^0.65.4",
