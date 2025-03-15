@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 import type { StepperRootEmits, StepperRootProps } from 'radix-vue'
-import { cn } from '@/lib/utils'
+import type { HTMLAttributes } from 'vue'
 
+import { cn } from '@/lib/utils'
 import { StepperRoot, useForwardPropsEmits } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+import { computed } from 'vue'
 
 const props = defineProps<StepperRootProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<StepperRootEmits>()

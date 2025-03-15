@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import type { PaginationEllipsisProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
-import { PaginationEllipsis, type PaginationEllipsisProps } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+import { PaginationEllipsis } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = defineProps<PaginationEllipsisProps & { class?: HTMLAttributes['class'] }>()
 

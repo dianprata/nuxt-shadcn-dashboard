@@ -1,10 +1,12 @@
 <script setup lang="ts">
+import type { PaginationFirstProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 import {
   Button,
 } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { PaginationFirst, type PaginationFirstProps } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+import { PaginationFirst } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = withDefaults(defineProps<PaginationFirstProps & { class?: HTMLAttributes['class'] }>(), {
   asChild: true,

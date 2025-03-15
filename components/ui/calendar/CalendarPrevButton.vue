@@ -1,7 +1,9 @@
 <script lang="ts" setup>
+import type { CalendarPrevProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
-import { CalendarPrev, type CalendarPrevProps, useForwardProps } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+import { CalendarPrev, useForwardProps } from 'radix-vue'
+import { computed } from 'vue'
 import { buttonVariants } from '../button'
 
 const props = defineProps<CalendarPrevProps & { class?: HTMLAttributes['class'] }>()

@@ -1,6 +1,7 @@
 <script setup lang="ts">
+import type { SidebarMenuButtonVariants } from '~/components/ui/sidebar'
 import type { NavGroup } from '~/types/nav'
-import { type SidebarMenuButtonVariants, useSidebar } from '~/components/ui/sidebar'
+import { useSidebar } from '~/components/ui/sidebar'
 
 withDefaults(defineProps<{
   item: NavGroup

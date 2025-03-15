@@ -1,10 +1,12 @@
 <script setup lang="ts">
+import type { PaginationNextProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 import {
   Button,
 } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
-import { PaginationNext, type PaginationNextProps } from 'radix-vue'
-import { computed, type HTMLAttributes } from 'vue'
+import { PaginationNext } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = withDefaults(defineProps<PaginationNextProps & { class?: HTMLAttributes['class'] }>(), {
   asChild: true,
