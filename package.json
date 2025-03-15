@@ -55,7 +55,7 @@
     "embla-carousel-vue": "^8.5.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.16.0",
+    "@antfu/eslint-config": "^4.10.1",
     "@nuxt/eslint": "^0.7.6",
     "@nuxt/icon": "^1.11.0",
     "@nuxtjs/color-mode": "^3.5.2",
