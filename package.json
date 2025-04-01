@@ -72,7 +72,7 @@
     "eslint": "^9.22.0",
     "eslint-plugin-format": "^1.0.1",
     "lucide-vue-next": "^0.482.0",
-    "nuxt": "^3.16.0",
+    "nuxt": "^3.16.2",
     "radix-vue": "^1.9.17",
     "shadcn-nuxt": "^0.10.4",
     "tailwind-merge": "^2.6.0",
