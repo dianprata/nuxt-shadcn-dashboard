@@ -1,6 +1,6 @@
 ![nuxt-shadcn-dashboard-social-card](https://nuxt-shadcn-dashboard.vercel.app/social-card.png)
 
-# Nuxt Shadcn UnoCSS - Dashboard
+# Nuxt 4 Shadcn Vue TailwindCSS 4 - Dashboard
 
 [![built with nuxt][nuxt-src]][nuxt-href]
 
@@ -25,7 +25,7 @@ pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 
 - [Nuxt.js](https://nuxtjs.org/)
 - [Shadcn Vue](https://shadcn-vue.com/)
-- [UnoCSS](https://unocss.com/)
+- [TailwindCSS](https://tailwindcss.com/)
 
 ## License
 

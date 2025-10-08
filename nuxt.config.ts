@@ -1,9 +1,23 @@
+import tailwindcss from '@tailwindcss/vite'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  css: ['~/assets/css/tailwind.css'],
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
+
+  components: [
+    {
+      path: '~/components',
+      extensions: ['.vue'],
+    },
+  ],
+
   modules: [
-    '@unocss/nuxt',
     'shadcn-nuxt',
     '@vueuse/nuxt',
     '@nuxt/eslint',
@@ -12,17 +26,20 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
   ],
 
-  css: [
-    '@unocss/reset/tailwind.css',
-  ],
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "~/components/ui"
+     */
+    componentDir: '~/components/ui',
+  },
 
   colorMode: {
     classSuffix: '',
-  },
-
-  features: {
-    // For UnoCSS
-    inlineStyles: false,
   },
 
   eslint: {
