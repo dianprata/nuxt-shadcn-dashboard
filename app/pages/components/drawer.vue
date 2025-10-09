@@ -33,7 +33,7 @@ const data = [
         </p>
       </div>
       <div class="flex gap-2">
-        <Button size="xs" variant="outline" class="text-xs" as-child>
+        <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
             to="https://www.shadcn-vue.com/docs/components/drawer"
             external
@@ -43,7 +43,7 @@ const data = [
             Component Source
           </NuxtLink>
         </Button>
-        <Button size="xs" variant="outline" class="text-xs" as-child>
+        <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
             to="https://github.com/radix-vue/vaul-vue"
             external
@@ -110,7 +110,7 @@ const data = [
                         class="h-[120px]"
                         :style="{
                           'opacity': 0.9,
-                          '--theme-primary': `hsl(var(--foreground))`,
+                          '--theme-primary': `var(--foreground)`,
                         }"
                       >
                         <VisStackedBar

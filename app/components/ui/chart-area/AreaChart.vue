@@ -118,7 +118,7 @@ function handleLegendItemClick(d: BulletLegendItemInterface, i: number) {
         :tick-format="xFormatter ?? ((v: number) => data[v]?.[index])"
         :grid-line="false"
         :tick-line="false"
-        tick-text-color="hsl(var(--vis-text-color))"
+        tick-text-color="var(--vis-text-color)"
       />
       <VisAxis
         v-if="showYAxis"
@@ -132,7 +132,7 @@ function handleLegendItemClick(d: BulletLegendItemInterface, i: number) {
             class: 'text-muted',
           },
         }"
-        tick-text-color="hsl(var(--vis-text-color))"
+        tick-text-color="var(--vis-text-color)"
       />
 
       <slot />

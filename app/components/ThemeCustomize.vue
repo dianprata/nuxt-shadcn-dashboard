@@ -1,37 +1,10 @@
-<!-- <script setup lang="ts">
-import { themes } from '@/lib/registry/themes'
+<script setup lang="ts">
+import type { ThemeColor } from '@/constants/themes'
+import { THEME_COLORS } from '@/constants/themes'
 
 const { theme, radius, setTheme, setRadius } = useCustomize()
 
-type Color
-  = | 'zinc'
-    | 'slate'
-    | 'stone'
-    | 'gray'
-    | 'neutral'
-    | 'red'
-    | 'rose'
-    | 'orange'
-    | 'green'
-    | 'blue'
-    | 'yellow'
-    | 'violet'
-
-// Create an array of color values
-const allColors: Color[] = [
-  'zinc',
-  'rose',
-  'blue',
-  'green',
-  'orange',
-  'red',
-  'slate',
-  'stone',
-  'gray',
-  'neutral',
-  'yellow',
-  'violet',
-]
+const allColors: ThemeColor[] = THEME_COLORS.map(color => color.name)
 
 const RADII = [0, 0.25, 0.5, 0.75, 1]
 
@@ -46,19 +19,19 @@ watch(radius, () => {
 })
 
 function setClassTheme() {
-  document.body.classList.remove(
+  document.documentElement.classList.remove(
     ...allColors.map(color => `theme-${color}`),
   )
-  document.body.classList.add(`theme-${theme.value}`)
+  document.documentElement.classList.add(`theme-${theme.value}`)
 }
 
 function setStyleRadius() {
-  document.body.style.setProperty('--radius', `${radius.value}rem`)
+  document.documentElement.style.setProperty('--radius', `${radius.value}rem`)
 }
 
-function backgroundColor(color: Color) {
-  const bg = themes.find(theme => theme.name === color)
-  return `hsl(${bg?.activeColor.light})`
+function backgroundColor(color: ThemeColor) {
+  const bg = THEME_COLORS.find(theme => theme.name === color)
+  return bg?.value
 }
 
 const colorMode = useColorMode()
@@ -136,4 +109,4 @@ const colorMode = useColorMode()
 
 <style scoped>
 
-</style> -->
+</style>

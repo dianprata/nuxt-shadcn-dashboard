@@ -30,7 +30,7 @@ function handleChangeDirection(dir: 'ltr' | 'rtl') {
         <div class="flex flex-col gap-6 px-6">
           <div class="space-y-3">
             <Badge>Theming</Badge>
-          <!-- <ThemeCustomize /> -->
+            <ThemeCustomize />
           </div>
           <Separator />
           <div class="space-y-3">
@@ -99,7 +99,7 @@ function handleChangeDirection(dir: 'ltr' | 'rtl') {
         <div class="mx-auto max-w-md w-full overflow-auto overflow-y-auto px-4 pb-6 space-y-6">
           <div class="space-y-3">
             <Badge>Theming</Badge>
-          <!-- <ThemeCustomize /> -->
+            <ThemeCustomize />
           </div>
           <Separator />
           <div class="space-y-3">

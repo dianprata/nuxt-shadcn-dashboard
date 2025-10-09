@@ -12,13 +12,13 @@ defineProps<{
 </script>
 
 <template>
-  <Card class="text-sm">
-    <CardHeader v-if="title" class="p-3 border-b">
+  <Card class="text-sm py-2 gap-2">
+    <CardHeader v-if="title" class="border-b [.border-b]:pb-1 px-2">
       <CardTitle>
         {{ title }}
       </CardTitle>
     </CardHeader>
-    <CardContent class="p-3 min-w-[180px] flex flex-col gap-1">
+    <CardContent class="min-w-[180px] flex flex-col gap-1 px-2">
       <div v-for="(item, key) in data" :key="key" class="flex justify-between">
         <div class="flex items-center">
           <span class="w-2.5 h-2.5 mr-2">

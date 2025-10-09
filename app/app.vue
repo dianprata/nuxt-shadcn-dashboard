@@ -4,10 +4,8 @@ import { Toaster } from '@/components/ui/sonner'
 import 'vue-sonner/style.css'
 
 const colorMode = useColorMode()
-
 const color = computed(() => colorMode.value === 'dark' ? '#09090b' : '#ffffff')
-
-// const { theme, radius } = useCustomize()
+const { activeTheme, radiusTheme } = useCustomize()
 
 useHead({
   meta: [
@@ -20,11 +18,9 @@ useHead({
   ],
   htmlAttrs: {
     lang: 'en',
+    class: computed(() => `theme-${activeTheme.value}`),
+    style: computed(() => `--radius: ${radiusTheme.value}rem;`),
   },
-  // bodyAttrs: {
-  //   class: computed(() => `theme-${theme.value}`),
-  //   style: computed(() => `--radius: ${radius.value}rem;`),
-  // },
 })
 
 const title = 'Nuxt 4 Shadcn Vue TailwindCSS 4 - Dashboard Template'
@@ -55,15 +51,22 @@ const dir = computed(() => textDirection.value === 'rtl' ? 'rtl' : 'ltr')
 </script>
 
 <template>
-  <ConfigProvider :dir="dir">
-    <div id="app" vaul-drawer-wrapper class="relative">
-      <NuxtLayout>
-        <NuxtPage />
-      </NuxtLayout>
+  <Html
+    :class="activeTheme ? `theme-${activeTheme}` : ''"
+    :style="radiusTheme ? `--radius: ${radiusTheme}rem` : ''"
+  >
+    <Body class="overscroll-none font-sans antialiased">
+      <ConfigProvider :dir="dir">
+        <div id="app" vaul-drawer-wrapper class="relative">
+          <NuxtLayout name="default">
+            <NuxtPage />
+          </NuxtLayout>
 
-      <AppSettings />
-    </div>
+          <AppSettings />
+        </div>
 
-    <Toaster :theme="colorMode.preference as any || 'system'" />
-  </ConfigProvider>
+        <Toaster :theme="colorMode.preference as any || 'system'" />
+      </ConfigProvider>
+    </Body>
+  </Html>
 </template>

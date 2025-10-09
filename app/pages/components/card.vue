@@ -13,7 +13,7 @@
         </p>
       </div>
       <div class="flex gap-2">
-        <Button size="xs" variant="outline" class="text-xs" as-child>
+        <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
             to="https://www.shadcn-vue.com/docs/components/card"
             external
@@ -69,7 +69,7 @@
                   </div>
                 </form>
               </CardContent>
-              <CardFooter class="flex justify-between px-6 pb-6">
+              <CardFooter class="flex justify-between">
                 <Button variant="outline">
                   Cancel
                 </Button>
