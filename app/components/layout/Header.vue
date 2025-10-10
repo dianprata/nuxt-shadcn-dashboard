@@ -38,9 +38,9 @@ watch(() => route.fullPath, (val) => {
 
 <template>
   <header class="sticky top-0 z-10 h-(--header-height) flex items-center gap-4 border-b bg-background px-4 md:px-6">
-    <div class="w-full flex items-center gap-4">
+    <div class="w-full flex items-center gap-4 h-4">
       <SidebarTrigger />
-      <Separator orientation="vertical" class="h-4" />
+      <Separator orientation="vertical" />
       <BaseBreadcrumbCustom :links="links" />
     </div>
     <div class="ml-auto">

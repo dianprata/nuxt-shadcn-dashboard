@@ -51,22 +51,21 @@ const dir = computed(() => textDirection.value === 'rtl' ? 'rtl' : 'ltr')
 </script>
 
 <template>
-  <Html
+  <Body
+    class="overscroll-none font-sans antialiased"
     :class="activeTheme ? `theme-${activeTheme}` : ''"
     :style="radiusTheme ? `--radius: ${radiusTheme}rem` : ''"
   >
-    <Body class="overscroll-none font-sans antialiased">
-      <ConfigProvider :dir="dir">
-        <div id="app" vaul-drawer-wrapper class="relative">
-          <NuxtLayout name="default">
-            <NuxtPage />
-          </NuxtLayout>
+    <ConfigProvider :dir="dir">
+      <div id="app" vaul-drawer-wrapper class="relative">
+        <NuxtLayout name="default">
+          <NuxtPage />
+        </NuxtLayout>
 
-          <AppSettings />
-        </div>
+        <AppSettings />
+      </div>
 
-        <Toaster :theme="colorMode.preference as any || 'system'" />
-      </ConfigProvider>
-    </Body>
-  </Html>
+      <Toaster :theme="colorMode.preference as any || 'system'" />
+    </ConfigProvider>
+  </Body>
 </template>

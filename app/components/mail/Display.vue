@@ -62,7 +62,7 @@ const today = new Date()
           </TooltipTrigger>
           <TooltipContent>Move to trash</TooltipContent>
         </Tooltip>
-        <Separator orientation="vertical" class="mx-1 h-6" />
+        <Separator orientation="vertical" class="mx-1 !h-6" />
         <Tooltip>
           <Popover>
             <PopoverTrigger as-child>
@@ -154,7 +154,7 @@ const today = new Date()
           <TooltipContent>Forward</TooltipContent>
         </Tooltip>
       </div>
-      <Separator orientation="vertical" class="mx-2 h-6" />
+      <Separator orientation="vertical" class="mx-2 !h-6" />
       <DropdownMenu>
         <DropdownMenuTrigger as-child>
           <Button variant="ghost" size="icon" :disabled="!mail">

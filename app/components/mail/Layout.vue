@@ -160,7 +160,7 @@ watch(() => defaultCollapse.value, () => {
           @expand="onExpand"
           @collapse="onCollapse"
         >
-          <div :class="cn('flex h-[56px] items-center justify-center', isCollapsed ? 'h-[56px]' : 'px-2')">
+          <div :class="cn('flex h-[56px] items-center', isCollapsed ? 'h-[56px]' : 'px-2')">
             <MailAccountSwitcher :is-collapsed="isCollapsed" :accounts="accounts" />
           </div>
           <Separator />

@@ -72,11 +72,6 @@
   --vis-tooltip-shadow-color: none !important;
   --vis-tooltip-backdrop-filter: none !important;
   --vis-tooltip-padding: none !important;
-
-  --vis-primary-color: var(--primary);
-  /* change to any hsl value you want */
-  --vis-secondary-color: 160 81% 40%;
-  --vis-text-color: var(--muted-foreground);
 }
 
 .dark {
@@ -86,11 +81,6 @@
   --vis-tooltip-shadow-color: none !important;
   --vis-tooltip-backdrop-filter: none !important;
   --vis-tooltip-padding: none !important;
-
-  --vis-primary-color: var(--primary);
-  /* change to any hsl value you want */
-  --vis-secondary-color: 160 81% 40%;
-  --vis-text-color: var(--muted-foreground);
 }
 
 
