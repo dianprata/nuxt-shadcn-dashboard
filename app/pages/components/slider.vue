@@ -14,7 +14,7 @@ const modelValue = ref([50])
         </p>
       </div>
       <div class="flex gap-2">
-        <Button size="xs" variant="outline" class="text-xs" as-child>
+        <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
             to="https://www.shadcn-vue.com/docs/components/slider"
             external
@@ -24,7 +24,7 @@ const modelValue = ref([50])
             Component Source
           </NuxtLink>
         </Button>
-        <Button size="xs" variant="outline" class="text-xs" as-child>
+        <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
             to="https://www.radix-vue.com/components/slider"
             external

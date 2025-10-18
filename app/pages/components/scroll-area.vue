@@ -16,7 +16,7 @@ const tags = Array.from({ length: 50 }).map(
         </p>
       </div>
       <div class="flex gap-2">
-        <Button size="xs" variant="outline" class="text-xs" as-child>
+        <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
             to="https://www.shadcn-vue.com/docs/components/scroll-area"
             external
@@ -26,7 +26,7 @@ const tags = Array.from({ length: 50 }).map(
             Component Source
           </NuxtLink>
         </Button>
-        <Button size="xs" variant="outline" class="text-xs" as-child>
+        <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
             to="https://www.radix-vue.com/components/scroll-area"
             external

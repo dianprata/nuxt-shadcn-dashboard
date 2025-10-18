@@ -18,7 +18,7 @@ const value = ref(today(getLocalTimeZone())) as Ref<DateValue>
         </p>
       </div>
       <div class="flex gap-2">
-        <Button size="xs" variant="outline" class="text-xs" as-child>
+        <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
             to="https://www.shadcn-vue.com/docs/components/calendar"
             external
@@ -28,7 +28,7 @@ const value = ref(today(getLocalTimeZone())) as Ref<DateValue>
             Component Source
           </NuxtLink>
         </Button>
-        <Button size="xs" variant="outline" class="text-xs" as-child>
+        <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
             to="https://www.radix-vue.com/components/calendar"
             external
