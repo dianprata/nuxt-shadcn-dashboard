@@ -1,10 +1,9 @@
 <script setup>
-const { activeTheme, radiusTheme } = useCustomize()
+const { color, type } = useCustomize()
 
 useHead({
   bodyAttrs: {
-    class: computed(() => `theme-${activeTheme.value}`),
-    style: computed(() => `--radius: ${radiusTheme.value}rem;`),
+    class: computed(() => `color-${color.value} theme-${type.value}`),
   },
 })
 

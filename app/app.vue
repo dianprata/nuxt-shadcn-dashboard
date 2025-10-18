@@ -5,7 +5,7 @@ import 'vue-sonner/style.css'
 
 const colorMode = useColorMode()
 const color = computed(() => colorMode.value === 'dark' ? '#09090b' : '#ffffff')
-const { activeTheme, radiusTheme } = useCustomize()
+const { color: activeColor, type } = useCustomize()
 
 useHead({
   meta: [
@@ -20,8 +20,7 @@ useHead({
     lang: 'en',
   },
   bodyAttrs: {
-    class: computed(() => `theme-${activeTheme.value}`),
-    style: computed(() => `--radius: ${radiusTheme.value}rem;`),
+    class: computed(() => `color-${activeColor.value} theme-${type.value}`),
   },
 })
 
@@ -53,10 +52,10 @@ const dir = computed(() => textDirection.value === 'rtl' ? 'rtl' : 'ltr')
 </script>
 
 <template>
-  <Body class="overscroll-none font-sans antialiased bg-background text-foreground">
+  <Body class="overscroll-none antialiased bg-background text-foreground">
     <ConfigProvider :dir="dir">
       <div id="app" vaul-drawer-wrapper class="relative">
-        <NuxtLayout name="default">
+        <NuxtLayout>
           <NuxtPage />
         </NuxtLayout>
 

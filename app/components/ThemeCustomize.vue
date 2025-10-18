@@ -1,32 +1,32 @@
 <script setup lang="ts">
-import type { ThemeColor } from '@/constants/themes'
-import { THEME_COLORS } from '@/constants/themes'
+import type { ThemeColor, ThemeType } from '@/constants/themes'
+import { THEME_COLORS, THEME_TYPE } from '@/constants/themes'
 
-const { theme, radius, setTheme, setRadius } = useCustomize()
+const { color, setColor, type, setThemeType } = useCustomize()
 
 const allColors: ThemeColor[] = THEME_COLORS.map(color => color.name)
+const allTypes: ThemeType[] = THEME_TYPE
 
-const RADII = [0, 0.25, 0.5, 0.75, 1]
-
-// Whenever the theme value changes, update the document class list
-watch(theme, () => {
-  setClassTheme()
+watch(color, () => {
+  setClassColor()
 })
 
-// Whenever the radius value changes, update the document style
-watch(radius, () => {
-  setStyleRadius()
-})
-
-function setClassTheme() {
+function setClassColor() {
   document.body.classList.remove(
-    ...allColors.map(color => `theme-${color}`),
+    ...allColors.map(color => `color-${color}`),
   )
-  document.body.classList.add(`theme-${theme.value}`)
+  document.body.classList.add(`color-${color.value}`)
 }
 
-function setStyleRadius() {
-  document.body.style.setProperty('--radius', `${radius.value}rem`)
+watch(type, () => {
+  setClassType()
+})
+
+function setClassType() {
+  document.body.classList.remove(
+    ...allTypes.map(type => `theme-${type}`),
+  )
+  document.body.classList.add(`theme-${type.value}`)
 }
 
 function backgroundColor(color: ThemeColor) {
@@ -42,32 +42,32 @@ const colorMode = useColorMode()
     <div class="space-y-1.5">
       <Label>Color</Label>
       <div class="grid grid-cols-3 gap-2">
-        <template v-for="color in allColors" :key="color">
+        <template v-for="col in allColors" :key="col">
           <Button
             class="justify-start gap-2"
             variant="outline"
-            :class="{ '!border-primary border-2 !bg-primary/10': theme === color }"
-            @click="setTheme(color)"
+            :class="{ '!border-primary border-2 !bg-primary/10': color === col }"
+            @click="setColor(col)"
           >
-            <span class="h-5 w-5 flex items-center justify-center rounded-full border border-white" :style="{ backgroundColor: backgroundColor(color) }">
-              <Icon v-if="theme === color" name="i-radix-icons-check" size="16" class="text-white" />
+            <span class="h-5 w-5 flex items-center justify-center rounded-full border border-white" :style="{ backgroundColor: backgroundColor(col) }">
+              <Icon v-if="col === color" name="i-radix-icons-check" size="16" class="text-white" />
             </span>
-            <span class="text-xs capitalize">{{ color }}</span>
+            <span class="text-xs capitalize">{{ col }}</span>
           </Button>
         </template>
       </div>
     </div>
     <div class="space-y-1.5">
-      <Label>Radius</Label>
-      <div class="grid grid-cols-5 gap-2">
-        <template v-for="r in RADII" :key="r">
+      <Label>Type</Label>
+      <div class="grid grid-cols-3 gap-2">
+        <template v-for="themeType in allTypes" :key="themeType">
           <Button
             class="justify-center gap-2"
             variant="outline"
-            :class="{ '!border-primary border-2 !bg-primary/10': radius === r }"
-            @click="setRadius(r)"
+            :class="{ '!border-primary border-2 !bg-primary/10': themeType === type }"
+            @click="setThemeType(themeType)"
           >
-            <span class="text-xs capitalize">{{ r }}</span>
+            <span class="text-xs capitalize">{{ themeType }}</span>
           </Button>
         </template>
       </div>

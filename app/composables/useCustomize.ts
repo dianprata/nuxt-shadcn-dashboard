@@ -1,46 +1,53 @@
-import type { ThemeColor } from '@/constants/themes'
+import type { ThemeColor, ThemeType } from '@/constants/themes'
 
 interface Config {
-  theme?: ThemeColor
-  radius: number
+  color?: ThemeColor
+  type?: ThemeType
+  radius?: number
 }
 
 export function useCustomize() {
   const config = useCookie<Config>('config', {
     default: () => ({
-      theme: 'zinc',
+      color: 'default',
+      type: 'default',
       radius: 0.5,
     }),
   })
-  const activeTheme = useCookie<string>('active_theme', {
+  const type = useCookie<string>('theme_type', {
     default: () => 'default',
   })
-  const radiusTheme = useCookie<number>('radius', {
+  const color = useCookie<string>('theme_color', {
+    default: () => 'default',
+  })
+  const radius = useCookie<number>('radius', {
     default: () => 0.5,
   })
 
-  const themeClass = computed(() => `theme-${config.value.theme}`)
+  const colorClass = computed(() => `theme-${config.value.color}`)
 
-  const theme = computed(() => config.value.theme)
-  const radius = computed(() => config.value.radius)
+  function setColor(colorName: ThemeColor) {
+    config.value.color = colorName
+    color.value = colorName
+  }
 
-  function setTheme(themeName: ThemeColor) {
-    config.value.theme = themeName
-    activeTheme.value = themeName
+  function setThemeType(themeType: ThemeType) {
+    config.value.type = themeType
+    type.value = themeType
   }
 
   function setRadius(newRadius: number) {
     config.value.radius = newRadius
-    radiusTheme.value = newRadius
+    radius.value = newRadius
   }
 
   return {
-    themeClass,
-    theme,
-    activeTheme: readonly(activeTheme),
-    radiusTheme: readonly(radiusTheme),
-    setTheme,
-    radius,
+    colorClass,
+    setColor,
+    setThemeType,
     setRadius,
+    type: readonly(type),
+    color: readonly(color),
+    radius: readonly(radius),
   }
 }
