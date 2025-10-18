@@ -112,7 +112,7 @@ const showModalTheme = ref(false)
           Customize & Preview in Real Time
         </DialogDescription>
       </DialogHeader>
-      <!-- <ThemeCustomize /> -->
+      <ThemeCustomize />
     </DialogContent>
   </Dialog>
 </template>

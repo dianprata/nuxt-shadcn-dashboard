@@ -1,6 +1,6 @@
 ![nuxt-shadcn-dashboard-social-card](https://nuxt-shadcn-dashboard.vercel.app/social-card.png)
 
-# Nuxt 4 Shadcn Vue TailwindCSS 4 - Dashboard
+# Nuxt Shadcn Vue TailwindCSS 4 - Dashboard
 
 [![built with nuxt][nuxt-src]][nuxt-href]
 

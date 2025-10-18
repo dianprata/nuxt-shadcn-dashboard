@@ -18,12 +18,14 @@ useHead({
   ],
   htmlAttrs: {
     lang: 'en',
+  },
+  bodyAttrs: {
     class: computed(() => `theme-${activeTheme.value}`),
     style: computed(() => `--radius: ${radiusTheme.value}rem;`),
   },
 })
 
-const title = 'Nuxt 4 Shadcn Vue TailwindCSS 4 - Dashboard Template'
+const title = 'Nuxt Shadcn-Vue TailwindCSS 4 - Dashboard Template'
 const description = 'This dashboard, built with Nuxt, Shadcn Vue, and TailwindCSS. It includes a dark mode toggle and is optimized for performance and data efficiency.'
 
 useSeoMeta({
@@ -51,11 +53,7 @@ const dir = computed(() => textDirection.value === 'rtl' ? 'rtl' : 'ltr')
 </script>
 
 <template>
-  <Body
-    class="overscroll-none font-sans antialiased"
-    :class="activeTheme ? `theme-${activeTheme}` : ''"
-    :style="radiusTheme ? `--radius: ${radiusTheme}rem` : ''"
-  >
+  <Body class="overscroll-none font-sans antialiased bg-background text-foreground">
     <ConfigProvider :dir="dir">
       <div id="app" vaul-drawer-wrapper class="relative">
         <NuxtLayout name="default">

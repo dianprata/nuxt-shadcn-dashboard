@@ -1,11 +1,11 @@
 <script setup>
-// const { theme, radius } = useCustomize()
+const { activeTheme, radiusTheme } = useCustomize()
 
 useHead({
-  // bodyAttrs: {
-  //   class: computed(() => `theme-${theme.value}`),
-  //   style: computed(() => `--radius: ${radius.value}rem;`),
-  // },
+  bodyAttrs: {
+    class: computed(() => `theme-${activeTheme.value}`),
+    style: computed(() => `--radius: ${radiusTheme.value}rem;`),
+  },
 })
 
 const router = useRouter()

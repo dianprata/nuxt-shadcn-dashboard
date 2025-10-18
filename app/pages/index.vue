@@ -1,58 +1,34 @@
 <script setup lang="ts">
 import NumberFlow from '@number-flow/vue'
-import { Activity, CreditCard, DollarSign, Users } from 'lucide-vue-next'
+import { TrendingDown, TrendingUp, TrendingUpIcon } from 'lucide-vue-next'
 
 const dataCard = ref({
   totalRevenue: 0,
-  totalRevenueDesc: 0,
-  subscriptions: 0,
-  subscriptionsDesc: 0,
-  sales: 0,
-  salesDesc: 0,
-  activeNow: 0,
-  activeNowDesc: 0,
+  newCustomers: 0,
+  activeAccount: 0,
+  growthRate: 0,
 })
-
-const dataRecentSales = [
-  {
-    name: 'Olivia Martin',
-    email: 'olivia.martin@email.com',
-    amount: 1999,
-  },
-  {
-    name: 'Jackson Lee',
-    email: 'jackson.lee@email.com',
-    amount: 39,
-  },
-  {
-    name: 'Isabella Nguyen',
-    email: 'isabella.nguyen@email.com',
-    amount: 299,
-  },
-  {
-    name: 'William Kim',
-    email: 'will@email.com',
-    amount: 99,
-  },
-  {
-    name: 'Sofia Davis',
-    email: 'sofia.davis@email.com',
-    amount: 39,
-  },
-]
 
 onMounted(() => {
   dataCard.value = {
-    totalRevenue: 45231.89,
-    totalRevenueDesc: 20.1 / 100,
-    subscriptions: 2350,
-    subscriptionsDesc: 180.5 / 100,
-    sales: 12234,
-    salesDesc: 45 / 100,
-    activeNow: 573,
-    activeNowDesc: 201,
+    totalRevenue: 1250.44,
+    newCustomers: 1234,
+    activeAccount: 45678,
+    growthRate: 4.5,
   }
 })
+
+const timeRange = ref('30d')
+
+const isDesktop = useMediaQuery('(min-width: 768px)')
+watch(isDesktop, () => {
+  if (isDesktop.value) {
+    timeRange.value = '30d'
+  }
+  else {
+    timeRange.value = '7d'
+  }
+}, { immediate: true })
 </script>
 
 <template>
@@ -66,141 +42,159 @@ onMounted(() => {
         <Button>Download</Button>
       </div>
     </div>
-    <main class="flex flex-1 flex-col gap-4 md:gap-8">
-      <div class="grid gap-4 lg:grid-cols-4 md:grid-cols-2 md:gap-8">
-        <Card>
-          <CardHeader class="flex flex-row items-center justify-between pb-2 space-y-0">
-            <CardTitle class="text-sm font-medium">
-              Total Revenue
-            </CardTitle>
-            <DollarSign class="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div class="text-2xl font-bold">
+    <main class="@container/main flex flex-1 flex-col gap-4 md:gap-8">
+      <div class="grid grid-cols-1 gap-4 *:data-[slot=card]:bg-gradient-to-t *:data-[slot=card]:shadow-xs @xl/main:grid-cols-2 @5xl/main:grid-cols-4">
+        <Card class="@container/card">
+          <CardHeader>
+            <CardDescription>Total Revenue</CardDescription>
+            <CardTitle class="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
               <NumberFlow
                 :value="dataCard.totalRevenue"
                 :format="{ style: 'currency', currency: 'USD', trailingZeroDisplay: 'stripIfInteger' }"
               />
-            </div>
-            <p class="text-xs text-muted-foreground">
-              <NumberFlow
-                :value="dataCard.totalRevenueDesc"
-                prefix="+"
-                :format="{ style: 'percent', minimumFractionDigits: 1 }"
-              />
-              from last month
-            </p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader class="flex flex-row items-center justify-between pb-2 space-y-0">
-            <CardTitle class="text-sm font-medium">
-              Subscriptions
             </CardTitle>
-            <Users class="h-4 w-4 text-muted-foreground" />
+            <CardAction>
+              <Badge variant="outline">
+                <TrendingUpIcon />
+                +12.5%
+              </Badge>
+            </CardAction>
           </CardHeader>
-          <CardContent>
-            <div class="text-2xl font-bold">
-              <NumberFlow
-                :value="dataCard.subscriptions"
-                prefix="+"
-              />
+          <CardFooter class="flex-col items-start gap-1.5 text-sm">
+            <div class="line-clamp-1 flex gap-2 font-medium">
+              Trending up this month <TrendingUp class="size-4" />
             </div>
-            <p class="text-xs text-muted-foreground">
-              <NumberFlow
-                :value="dataCard.subscriptionsDesc"
-                prefix="+"
-                :format="{ style: 'percent', minimumFractionDigits: 1 }"
-              /> from last month
-            </p>
-          </CardContent>
+            <div class="text-muted-foreground">
+              Visitors for the last 6 months
+            </div>
+          </CardFooter>
         </Card>
-        <Card>
-          <CardHeader class="flex flex-row items-center justify-between pb-2 space-y-0">
-            <CardTitle class="text-sm font-medium">
-              Sales
-            </CardTitle>
-            <CreditCard class="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div class="text-2xl font-bold">
+        <Card class="@container/card">
+          <CardHeader>
+            <CardDescription>New Customers</CardDescription>
+            <CardTitle class="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
               <NumberFlow
-                :value="dataCard.sales"
-                prefix="+"
+                :value="dataCard.newCustomers"
               />
+            </CardTitle>
+            <CardAction>
+              <Badge variant="outline">
+                <TrendingDown />
+                -20%
+              </Badge>
+            </CardAction>
+          </CardHeader>
+          <CardFooter class="flex-col items-start gap-1.5 text-sm">
+            <div class="line-clamp-1 flex gap-2 font-medium">
+              Down 20% this period <TrendingDown class="size-4" />
             </div>
-            <p class="text-xs text-muted-foreground">
-              <NumberFlow
-                :value="dataCard.salesDesc"
-                prefix="+"
-                :format="{ style: 'percent', minimumFractionDigits: 1 }"
-              /> from last month
-            </p>
-          </CardContent>
+            <div class="text-muted-foreground">
+              Acquisition needs attention
+            </div>
+          </CardFooter>
         </Card>
-        <Card>
-          <CardHeader class="flex flex-row items-center justify-between pb-2 space-y-0">
-            <CardTitle class="text-sm font-medium">
-              Active Now
-            </CardTitle>
-            <Activity class="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div class="text-2xl font-bold">
+        <Card class="@container/card">
+          <CardHeader>
+            <CardDescription>Active Accounts</CardDescription>
+            <CardTitle class="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
               <NumberFlow
-                :value="dataCard.activeNow"
-                prefix="+"
+                :value="dataCard.activeAccount"
               />
+            </CardTitle>
+            <CardAction>
+              <Badge variant="outline">
+                <TrendingUp />
+                +12.5%
+              </Badge>
+            </CardAction>
+          </CardHeader>
+          <CardFooter class="flex-col items-start gap-1.5 text-sm">
+            <div class="line-clamp-1 flex gap-2 font-medium">
+              Strong user retention <TrendingUp class="size-4" />
             </div>
-            <p class="text-xs text-muted-foreground">
+            <div class="text-muted-foreground">
+              Engagement exceed targets
+            </div>
+          </CardFooter>
+        </Card>
+        <Card class="@container/card">
+          <CardHeader>
+            <CardDescription>Growth Rate</CardDescription>
+            <CardTitle class="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
               <NumberFlow
-                :value="dataCard.activeNowDesc"
-                prefix="+"
-              /> since last hour
-            </p>
-          </CardContent>
+                :value="dataCard.growthRate"
+                suffix="%"
+              />
+            </CardTitle>
+            <CardAction>
+              <Badge variant="outline">
+                <TrendingUp />
+                +4.5%
+              </Badge>
+            </CardAction>
+          </CardHeader>
+          <CardFooter class="flex-col items-start gap-1.5 text-sm">
+            <div class="line-clamp-1 flex gap-2 font-medium">
+              Steady performance increase <TrendingUp class="size-4" />
+            </div>
+            <div class="text-muted-foreground">
+              Meets growth projections
+            </div>
+          </CardFooter>
         </Card>
       </div>
-      <div class="grid gap-4 lg:grid-cols-2 xl:grid-cols-3 md:gap-8">
-        <Card class="xl:col-span-2">
-          <CardHeader>
-            <CardTitle>Overview</CardTitle>
-          </CardHeader>
-          <CardContent class="pl-2">
-            <DashboardOverview />
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>Recent Sales</CardTitle>
-          </CardHeader>
-          <CardContent class="grid gap-8">
-            <div
-              v-for="recentSales in dataRecentSales" :key="recentSales.name"
-              class="flex items-center gap-4"
+      <Card class="@container/card">
+        <CardHeader>
+          <CardTitle>Total Visitors</CardTitle>
+          <CardDescription>
+            <span className="hidden @[540px]/card:block">
+              Total for the last 3 months
+            </span>
+            <span className="@[540px]/card:hidden">Last 3 months</span>
+          </CardDescription>
+          <CardAction>
+            <ToggleGroup
+              v-model="timeRange"
+              type="single"
+              variant="outline"
+              class="hidden *:data-[slot=toggle-group-item]:!px-4 @[767px]/card:flex"
             >
-              <Avatar class="hidden h-9 w-9 sm:flex">
-                <AvatarFallback>{{ recentSales.name.split(' ').map((n) => n[0]).join('') }}</AvatarFallback>
-              </Avatar>
-              <div class="grid gap-1">
-                <p class="text-sm font-medium leading-none">
-                  {{ recentSales.name }}
-                </p>
-                <p class="text-sm text-muted-foreground">
-                  {{ recentSales.email }}
-                </p>
-              </div>
-              <div class="ml-auto font-medium">
-                <NumberFlow
-                  :value="recentSales.amount"
-                  :format="{ style: 'currency', currency: 'USD', trailingZeroDisplay: 'stripIfInteger' }"
-                  prefix="+"
-                />
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+              <ToggleGroupItem value="90d">
+                Last 3 months
+              </ToggleGroupItem>
+              <ToggleGroupItem value="30d">
+                Last 30 days
+              </ToggleGroupItem>
+              <ToggleGroupItem value="7d">
+                Last 7 days
+              </ToggleGroupItem>
+            </ToggleGroup>
+            <Select v-model="timeRange">
+              <SelectTrigger
+                class="flex w-40 **:data-[slot=select-value]:block **:data-[slot=select-value]:truncate @[767px]/card:hidden"
+                size="sm"
+                aria-label="Select a value"
+              >
+                <SelectValue placeholder="Last 3 months" />
+              </SelectTrigger>
+              <SelectContent class="rounded-xl">
+                <SelectItem value="90d" class="rounded-lg">
+                  Last 3 months
+                </SelectItem>
+                <SelectItem value="30d" class="rounded-lg">
+                  Last 30 days
+                </SelectItem>
+                <SelectItem value="7d" class="rounded-lg">
+                  Last 7 days
+                </SelectItem>
+              </SelectContent>
+            </Select>
+          </CardAction>
+        </CardHeader>
+        <CardContent>
+          <DashboardTotalVisitors :time-range="timeRange" />
+        </CardContent>
+      </Card>
     </main>
   </div>
 </template>

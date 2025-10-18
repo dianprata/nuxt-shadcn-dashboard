@@ -30,8 +30,8 @@ function handleSelectLink(link: string) {
       <Icon name="i-lucide-search" />
       <span class="font-normal group-data-[collapsible=icon]:hidden">Search documentation</span>
       <div class="ml-auto flex items-center space-x-0.5 group-data-[collapsible=icon]:hidden">
-        <BaseKbd>{{ metaSymbol }}</BaseKbd>
-        <BaseKbd>K</BaseKbd>
+        <Kbd>{{ metaSymbol }}</Kbd>
+        <Kbd>K</Kbd>
       </div>
     </Button>
   </SidebarMenuButton>
@@ -44,15 +44,15 @@ function handleSelectLink(link: string) {
         <CommandItem value="Home" @select="handleSelectLink('/')">
           Home
           <CommandShortcut>
-            <BaseKbd>G</BaseKbd>
-            <BaseKbd>H</BaseKbd>
+            <Kbd>G</Kbd>
+            <Kbd>H</Kbd>
           </CommandShortcut>
         </CommandItem>
         <CommandItem value="email" @select="handleSelectLink('/email')">
           Email
           <CommandShortcut>
-            <BaseKbd>G</BaseKbd>
-            <BaseKbd>E</BaseKbd>
+            <Kbd>G</Kbd>
+            <Kbd>E</Kbd>
           </CommandShortcut>
         </CommandItem>
       </CommandGroup>

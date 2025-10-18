@@ -13,7 +13,7 @@
         </p>
       </div>
       <div class="flex gap-2">
-        <Button size="xs" variant="outline" class="text-xs" as-child>
+        <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
             to="https://www.shadcn-vue.com/docs/components/tabs"
             external
@@ -23,7 +23,7 @@
             Component Source
           </NuxtLink>
         </Button>
-        <Button size="xs" variant="outline" class="text-xs" as-child>
+        <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
             to="https://www.radix-vue.com/components/tabs"
             external
@@ -40,9 +40,9 @@
           <CardTitle>Basic</CardTitle>
         </CardHeader>
         <CardContent>
-          <div class="min-h-100px w-full flex items-center justify-center gap-4 md:min-h-200px">
-            <Tabs default-value="account" class="w-[400px]">
-              <TabsList class="grid grid-cols-2 w-full">
+          <div class="flex w-full max-w-sm flex-col gap-4 mx-auto">
+            <Tabs default-value="account">
+              <TabsList class="grid grid-cols-2">
                 <TabsTrigger value="account">
                   Account
                 </TabsTrigger>

@@ -31,6 +31,10 @@ export const THEME_COLORS = [
     name: 'yellow',
     value: 'oklch(0.795 0.184 86.047)',
   },
+  {
+    name: 'teal',
+    value: 'oklch(0.60 0.118 184.704)',
+  },
 ]
 
 export type ThemeColor = (typeof THEME_COLORS)[number]['value']

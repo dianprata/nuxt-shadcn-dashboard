@@ -72,7 +72,6 @@ const selectedValues = computed(() => new Set(props.column?.getFilterValue() as 
               :key="option.value"
               :value="option"
               @select="(e: any) => {
-                console.log(e.detail.value)
                 const isSelected = selectedValues.has(option.value)
                 if (isSelected) {
                   selectedValues.delete(option.value)

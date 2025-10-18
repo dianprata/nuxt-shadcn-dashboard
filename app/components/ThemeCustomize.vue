@@ -46,7 +46,7 @@ const colorMode = useColorMode()
           <Button
             class="justify-start gap-2"
             variant="outline"
-            :class="{ '!border-primary border-2': theme === color }"
+            :class="{ '!border-primary border-2 !bg-primary/10': theme === color }"
             @click="setTheme(color)"
           >
             <span class="h-5 w-5 flex items-center justify-center rounded-full border border-white" :style="{ backgroundColor: backgroundColor(color) }">
@@ -64,7 +64,7 @@ const colorMode = useColorMode()
           <Button
             class="justify-center gap-2"
             variant="outline"
-            :class="{ '!border-primary border-2': radius === r }"
+            :class="{ '!border-primary border-2 !bg-primary/10': radius === r }"
             @click="setRadius(r)"
           >
             <span class="text-xs capitalize">{{ r }}</span>
@@ -78,7 +78,7 @@ const colorMode = useColorMode()
         <Button
           class="justify-center gap-2"
           variant="outline"
-          :class="{ '!border-primary border-2': colorMode.preference === 'light' }"
+          :class="{ '!border-primary border-2 !bg-primary/10': colorMode.preference === 'light' }"
           @click="colorMode.preference = 'light'"
         >
           <Icon name="i-ph-sun-dim-duotone" size="16" />
@@ -87,7 +87,7 @@ const colorMode = useColorMode()
         <Button
           class="justify-center gap-2"
           variant="outline"
-          :class="{ '!border-primary border-2': colorMode.preference === 'dark' }"
+          :class="{ '!border-primary border-2 !bg-primary/10': colorMode.preference === 'dark' }"
           @click="colorMode.preference = 'dark'"
         >
           <Icon name="i-ph-moon-stars-duotone" size="16" />
@@ -96,7 +96,7 @@ const colorMode = useColorMode()
         <Button
           class="justify-center gap-2"
           variant="outline"
-          :class="{ '!border-primary border-2': colorMode.preference === 'system' }"
+          :class="{ '!border-primary border-2 !bg-primary/10': colorMode.preference === 'system' }"
           @click="colorMode.preference = 'system'"
         >
           <Icon name="i-lucide-monitor" size="16" />

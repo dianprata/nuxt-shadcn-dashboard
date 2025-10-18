@@ -103,7 +103,7 @@ function handleOpenChange() {
               <div class="flex flex-col items-center gap-4">
                 <p class="text-sm text-muted-foreground">
                   Press
-                  <BaseKbd>{{ metaSymbol }}J</BaseKbd>
+                  <Kbd>{{ metaSymbol }}J</Kbd>
                 </p>
                 <span class="text-sm text-muted-foreground">or</span>
                 <Button size="sm" @click="handleOpenChange">
