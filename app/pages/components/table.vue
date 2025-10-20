@@ -57,16 +57,16 @@ const invoices = [
         </p>
       </div>
       <div class="flex gap-2">
-        <Button size="sm" variant="outline" class="text-xs" as-child>
+        <Badge variant="secondary" class="rounded-full" as-child>
           <NuxtLink
             to="https://www.shadcn-vue.com/docs/components/table"
             external
             target="_blank"
           >
-            <span class="i-radix-icons-code mr-2" />
             Component Source
+            <Icon name="tabler:arrow-up-right" />
           </NuxtLink>
-        </Button>
+        </Badge>
       </div>
     </div>
     <div class="grid gap-4 md:grid-cols-2">

@@ -52,25 +52,26 @@ const steps = [
         </p>
       </div>
       <div class="flex gap-2">
-        <Button size="sm" variant="outline" class="text-xs" as-child>
+        <Badge variant="secondary" class="rounded-full" as-child>
           <NuxtLink
             to="https://www.shadcn-vue.com/docs/components/stepper"
             external
             target="_blank"
           >
-            <span class="i-radix-icons-code mr-2" />
             Component Source
+            <Icon name="tabler:arrow-up-right" />
           </NuxtLink>
-        </Button>
-        <Button size="sm" variant="outline" class="text-xs" as-child>
+        </Badge>
+        <Badge variant="secondary" class="rounded-full" as-child>
           <NuxtLink
             to="https://www.reka-ui.com/docs/components/stepper"
             external
             target="_blank"
           >
-            Primitive API Reference
+            API Reference
+            <Icon name="tabler:arrow-up-right" />
           </NuxtLink>
-        </Button>
+        </Badge>
       </div>
     </div>
     <div class="grid gap-4 md:grid-cols-2">
@@ -101,7 +102,7 @@ const steps = [
                   </div>
                 </StepperTrigger>
                 <StepperSeparator
-                  v-if="item.step !== stepsBasic[stepsBasic.length - 1].step"
+                  v-if="item.step !== stepsBasic[stepsBasic.length - 1]!.step"
                   class="h-px w-full"
                 />
               </StepperItem>
@@ -124,7 +125,7 @@ const steps = [
                 :step="step.step"
               >
                 <StepperSeparator
-                  v-if="step.step !== steps[steps.length - 1].step"
+                  v-if="step.step !== steps[steps.length - 1]!.step"
                   class="absolute left-[calc(50%+20px)] right-[calc(-50%+10px)] top-5 block h-0.5 shrink-0 rounded-full bg-muted group-data-[state=completed]:bg-primary"
                 />
 
@@ -175,7 +176,7 @@ const steps = [
                 :step="step.step"
               >
                 <StepperSeparator
-                  v-if="step.step !== steps[steps.length - 1].step"
+                  v-if="step.step !== steps[steps.length - 1]!.step"
                   class="absolute left-[18px] top-[38px] block h-[105%] w-0.5 shrink-0 rounded-full bg-muted group-data-[state=completed]:bg-primary"
                 />
 

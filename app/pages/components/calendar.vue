@@ -18,25 +18,26 @@ const value = ref(today(getLocalTimeZone())) as Ref<DateValue>
         </p>
       </div>
       <div class="flex gap-2">
-        <Button size="sm" variant="outline" class="text-xs" as-child>
+        <Badge variant="secondary" class="rounded-full" as-child>
           <NuxtLink
             to="https://www.shadcn-vue.com/docs/components/calendar"
             external
             target="_blank"
           >
-            <span class="i-radix-icons-code mr-2" />
             Component Source
+            <Icon name="tabler:arrow-up-right" />
           </NuxtLink>
-        </Button>
-        <Button size="sm" variant="outline" class="text-xs" as-child>
+        </Badge>
+        <Badge variant="secondary" class="rounded-full" as-child>
           <NuxtLink
             to="https://www.reka-ui.com/docs/components/calendar"
             external
             target="_blank"
           >
-            Primitive API Reference
+            API Reference
+            <Icon name="tabler:arrow-up-right" />
           </NuxtLink>
-        </Button>
+        </Badge>
       </div>
     </div>
     <div class="flex flex-col gap-4 md:flex-row">
