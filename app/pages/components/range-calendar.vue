@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { DateRange } from 'radix-vue'
+import type { DateRange } from 'reka-ui'
 import type { Ref } from 'vue'
 import { getLocalTimeZone, today } from '@internationalized/date'
 
@@ -36,7 +36,7 @@ const value = ref({
         </Button>
         <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
-            to="https://www.radix-vue.com/components/range-calendar"
+            to="https://www.reka-ui.com/docs/components/range-calendar"
             external
             target="_blank"
           >

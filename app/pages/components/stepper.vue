@@ -64,7 +64,7 @@ const steps = [
         </Button>
         <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
-            to="https://www.radix-vue.com/components/stepper"
+            to="https://www.reka-ui.com/docs/components/stepper"
             external
             target="_blank"
           >

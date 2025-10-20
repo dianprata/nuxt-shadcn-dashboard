@@ -25,7 +25,7 @@
         </Button>
         <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
-            to="https://www.radix-vue.com/components/avatar"
+            to="https://www.reka-ui.com/docs/components/avatar"
             external
             target="_blank"
           >
@@ -42,8 +42,8 @@
         <CardContent>
           <div class="h-100px w-full flex items-center justify-center gap-4 overflow-hidden sm:h-200px">
             <Avatar>
-              <AvatarImage src="https://github.com/radix-vue.png" alt="@radix-vue" />
-              <AvatarFallback>RV</AvatarFallback>
+              <AvatarImage src="https://github.com/unovue.png" alt="@unovue" />
+              <AvatarFallback>UV</AvatarFallback>
             </Avatar>
             <Avatar>
               <AvatarImage src="https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80" alt="Colm Tuite" />

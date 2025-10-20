@@ -25,7 +25,7 @@
         </Button>
         <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
-            to="https://www.radix-vue.com/components/switch"
+            to="https://www.reka-ui.com/docs/components/switch"
             external
             target="_blank"
           >

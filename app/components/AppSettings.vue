@@ -18,49 +18,51 @@ function handleChangeDirection(dir: 'ltr' | 'rtl') {
   <DefineTemplate>
     <div class="space-y-3">
       <Badge>Layout</Badge>
-      <div class="space-y-1.5">
-        <Label>Navbar Type</Label>
-        <div class="grid grid-cols-3 gap-2">
-          <Button
-            variant="outline"
-            :class="{ '!border-primary border-2 !bg-primary/10': sidebar.variant === 'sidebar' }"
-            @click="sidebar.variant = 'sidebar'"
-          >
-            Sidebar
-          </Button>
-          <Button
-            variant="outline"
-            :class="{ '!border-primary border-2 !bg-primary/10': sidebar.variant === 'floating' }"
-            @click="sidebar.variant = 'floating'"
-          >
-            Floating
-          </Button>
-          <Button
-            variant="outline"
-            :class="{ '!border-primary border-2 !bg-primary/10': sidebar.variant === 'inset' }"
-            @click="sidebar.variant = 'inset'"
-          >
-            Inset
-          </Button>
+      <div class="grid gap-6">
+        <div class="space-y-1.5">
+          <Label>Navbar Type</Label>
+          <div class="grid grid-cols-3 gap-2">
+            <Button
+              variant="outline"
+              :class="{ '!border-primary border-2 !bg-primary/10': sidebar.variant === 'sidebar' }"
+              @click="sidebar.variant = 'sidebar'"
+            >
+              Sidebar
+            </Button>
+            <Button
+              variant="outline"
+              :class="{ '!border-primary border-2 !bg-primary/10': sidebar.variant === 'floating' }"
+              @click="sidebar.variant = 'floating'"
+            >
+              Floating
+            </Button>
+            <Button
+              variant="outline"
+              :class="{ '!border-primary border-2 !bg-primary/10': sidebar.variant === 'inset' }"
+              @click="sidebar.variant = 'inset'"
+            >
+              Inset
+            </Button>
+          </div>
         </div>
-      </div>
-      <div class="space-y-1.5">
-        <Label>Direction</Label>
-        <div class="grid grid-cols-2 gap-2">
-          <Button
-            variant="outline"
-            :class="{ '!border-primary border-2 !bg-primary/10': direction === 'ltr' }"
-            @click="handleChangeDirection('ltr')"
-          >
-            LTR
-          </Button>
-          <Button
-            variant="outline"
-            :class="{ '!border-primary border-2 !bg-primary/10': direction === 'rtl' }"
-            @click="handleChangeDirection('rtl')"
-          >
-            RTL
-          </Button>
+        <div class="space-y-1.5">
+          <Label>Direction</Label>
+          <div class="grid grid-cols-2 gap-2">
+            <Button
+              variant="outline"
+              :class="{ '!border-primary border-2 !bg-primary/10': direction === 'ltr' }"
+              @click="handleChangeDirection('ltr')"
+            >
+              LTR
+            </Button>
+            <Button
+              variant="outline"
+              :class="{ '!border-primary border-2 !bg-primary/10': direction === 'rtl' }"
+              @click="handleChangeDirection('rtl')"
+            >
+              RTL
+            </Button>
+          </div>
         </div>
       </div>
     </div>

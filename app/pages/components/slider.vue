@@ -26,7 +26,7 @@ const modelValue = ref([50])
         </Button>
         <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
-            to="https://www.radix-vue.com/components/slider"
+            to="https://www.reka-ui.com/docs/components/slider"
             external
             target="_blank"
           >

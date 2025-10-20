@@ -32,7 +32,7 @@ const showPanel = ref<Checked>(false)
         </Button>
         <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
-            to="https://www.radix-vue.com/components/dropdown-menu"
+            to="https://www.reka-ui.com/docs/components/dropdown-menu"
             external
             target="_blank"
           >

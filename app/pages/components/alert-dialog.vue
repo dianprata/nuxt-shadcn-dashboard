@@ -25,7 +25,7 @@
         </Button>
         <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
-            to="https://www.radix-vue.com/components/alert-dialog"
+            to="https://www.reka-ui.com/docs/components/alert-dialog"
             external
             target="_blank"
           >

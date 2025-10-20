@@ -25,7 +25,7 @@
         </Button>
         <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
-            to="https://www.radix-vue.com/components/radio-group"
+            to="https://www.reka-ui.com/docs/components/radio-group"
             external
             target="_blank"
           >

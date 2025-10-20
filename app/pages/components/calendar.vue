@@ -30,7 +30,7 @@ const value = ref(today(getLocalTimeZone())) as Ref<DateValue>
         </Button>
         <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
-            to="https://www.radix-vue.com/components/calendar"
+            to="https://www.reka-ui.com/docs/components/calendar"
             external
             target="_blank"
           >

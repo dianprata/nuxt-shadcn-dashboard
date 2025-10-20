@@ -26,7 +26,7 @@ const modelValue = ref(['Apple', 'Banana'])
         </Button>
         <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
-            to="https://www.radix-vue.com/components/tags-input"
+            to="https://www.reka-ui.com/docs/components/tags-input"
             external
             target="_blank"
           >

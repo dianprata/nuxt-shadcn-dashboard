@@ -64,7 +64,7 @@ const components: { title: string, href: string, description: string }[] = [
         </Button>
         <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
-            to="https://www.radix-vue.com/components/navigation-menu"
+            to="https://www.reka-ui.com/docs/components/navigation-menu"
             external
             target="_blank"
           >
@@ -92,7 +92,7 @@ const components: { title: string, href: string, description: string }[] = [
                             class="h-full w-full flex flex-col select-none justify-end rounded-md from-muted/50 to-muted bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md"
                             to="/"
                           >
-                            <img src="https://www.radix-vue.com/logo.svg" class="h-6 w-6" alt="radix-logo">
+                            <img src="https://github.com/unovue.png" class="h-6 w-6" alt="unovue-logo">
                             <div class="mb-2 mt-4 text-lg font-medium">
                               shadcn/ui
                             </div>

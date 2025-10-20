@@ -25,7 +25,7 @@
         </Button>
         <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
-            to="https://www.radix-vue.com/components/popover"
+            to="https://www.reka-ui.com/docs/components/popover"
             external
             target="_blank"
           >

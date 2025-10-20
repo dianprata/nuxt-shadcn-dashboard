@@ -28,7 +28,7 @@ const tags = Array.from({ length: 50 }).map(
         </Button>
         <Button size="sm" variant="outline" class="text-xs" as-child>
           <NuxtLink
-            to="https://www.radix-vue.com/components/scroll-area"
+            to="https://www.reka-ui.com/docs/components/scroll-area"
             external
             target="_blank"
           >
