@@ -18,7 +18,6 @@ export const navMenu: NavMenu[] = [
         title: 'Tasks',
         icon: 'i-lucide-calendar-check-2',
         link: '/tasks',
-        new: true,
       },
     ],
   },
@@ -234,6 +233,18 @@ export const navMenu: NavMenu[] = [
             link: '/components/input',
           },
           {
+            title: 'Item',
+            icon: 'i-lucide-circle',
+            link: '/components/item',
+            new: true,
+          },
+          {
+            title: 'kbd',
+            icon: 'i-lucide-circle',
+            link: '/components/kbd',
+            new: true,
+          },
+          {
             title: 'Label',
             icon: 'i-lucide-circle',
             link: '/components/label',
@@ -327,7 +338,6 @@ export const navMenu: NavMenu[] = [
             title: 'Stepper',
             icon: 'i-lucide-circle',
             link: '/components/stepper',
-            new: true,
           },
           {
             title: 'Switch',
