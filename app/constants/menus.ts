@@ -48,6 +48,21 @@ export const navMenu: NavMenu[] = [
             icon: 'i-lucide-circle',
             link: '/forgot-password',
           },
+          {
+            title: 'OTP',
+            icon: 'i-lucide-circle',
+            link: '/otp',
+          },
+          {
+            title: 'OTP 1',
+            icon: 'i-lucide-circle',
+            link: '/otp-1',
+          },
+          {
+            title: 'OTP 2',
+            icon: 'i-lucide-circle',
+            link: '/otp-2',
+          },
         ],
       },
       {
