@@ -18,7 +18,7 @@ pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 ## App Settings
 You can change the app settings in `app.config.ts` file.
 If you want to change app settings, you have to clear cookie 'app_settings' first.
-```json [app.config.ts]
+```
 export default defineAppConfig({
   appSettings: {
     sidebar: {
