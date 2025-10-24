@@ -1,9 +1,9 @@
 <script setup>
-const { color, type } = useCustomize()
+const { theme } = useAppSettings()
 
 useHead({
   bodyAttrs: {
-    class: computed(() => `color-${color.value} theme-${type.value}`),
+    class: computed(() => `color-${theme.value?.color || 'default'} theme-${theme.value?.type || 'default'}`),
   },
 })
 

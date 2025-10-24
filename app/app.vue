@@ -5,7 +5,7 @@ import 'vue-sonner/style.css'
 
 const colorMode = useColorMode()
 const color = computed(() => colorMode.value === 'dark' ? '#09090b' : '#ffffff')
-const { color: activeColor, type } = useCustomize()
+const { theme } = useAppSettings()
 
 useHead({
   meta: [
@@ -20,7 +20,7 @@ useHead({
     lang: 'en',
   },
   bodyAttrs: {
-    class: computed(() => `color-${activeColor.value} theme-${type.value}`),
+    class: computed(() => `color-${theme.value?.color || 'default'} theme-${theme.value?.type || 'default'}`),
   },
 })
 

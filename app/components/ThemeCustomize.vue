@@ -2,12 +2,12 @@
 import type { ThemeColor, ThemeType } from '@/constants/themes'
 import { THEME_COLORS, THEME_TYPE } from '@/constants/themes'
 
-const { color, setColor, type, setThemeType } = useCustomize()
+const { theme, updateAppSettings } = useAppSettings()
 
 const allColors: ThemeColor[] = THEME_COLORS.map(color => color.name)
 const allTypes: ThemeType[] = THEME_TYPE
 
-watch(color, () => {
+watch(() => theme.value?.color, () => {
   setClassColor()
 })
 
@@ -15,10 +15,10 @@ function setClassColor() {
   document.body.classList.remove(
     ...allColors.map(color => `color-${color}`),
   )
-  document.body.classList.add(`color-${color.value}`)
+  document.body.classList.add(`color-${theme.value?.color || 'default'}`)
 }
 
-watch(type, () => {
+watch(() => theme.value?.type, () => {
   setClassType()
 })
 
@@ -26,7 +26,7 @@ function setClassType() {
   document.body.classList.remove(
     ...allTypes.map(type => `theme-${type}`),
   )
-  document.body.classList.add(`theme-${type.value}`)
+  document.body.classList.add(`theme-${theme.value?.type || 'default'}`)
 }
 
 function backgroundColor(color: ThemeColor) {
@@ -46,11 +46,11 @@ const colorMode = useColorMode()
           <Button
             class="justify-start gap-2"
             variant="outline"
-            :class="{ '!border-primary border-2 !bg-primary/10': color === col }"
-            @click="setColor(col)"
+            :class="{ '!border-primary border-2 !bg-primary/10': theme?.color === col }"
+            @click="updateAppSettings({ theme: { color: col } })"
           >
             <span class="h-5 w-5 flex items-center justify-center rounded-full border border-white" :style="{ backgroundColor: backgroundColor(col) }">
-              <Icon v-if="col === color" name="i-radix-icons-check" size="16" class="text-white" />
+              <Icon v-if="col === theme?.color" name="i-radix-icons-check" size="16" class="text-white" />
             </span>
             <span class="text-xs capitalize">{{ col }}</span>
           </Button>
@@ -64,8 +64,8 @@ const colorMode = useColorMode()
           <Button
             class="justify-center gap-2"
             variant="outline"
-            :class="{ '!border-primary border-2 !bg-primary/10': themeType === type }"
-            @click="setThemeType(themeType)"
+            :class="{ '!border-primary border-2 !bg-primary/10': theme?.type === themeType }"
+            @click="updateAppSettings({ theme: { type: themeType } })"
           >
             <span class="text-xs capitalize">{{ themeType }}</span>
           </Button>

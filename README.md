@@ -10,9 +10,28 @@
 ## Quick Start
 
 ```bash [Terminal]
-npx degit dianprata/nuxt-shadcn-dashboard my-dashboard-app
+npx nuxi@latest init -t github:dianprata/nuxt-shadcn-dashboard my-dashboard-app
 cd my-dashboard-app
 pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
+```
+
+## App Settings
+You can change the app settings in `app.config.ts` file.
+If you want to change app settings, you have to clear cookie 'app_settings' first.
+```json [app.config.ts]
+export default defineAppConfig({
+  appSettings: {
+    sidebar: {
+      collapsible: 'offcanvas', // 'offcanvas' | 'icon' | 'none'
+      side: 'left', // 'left' | 'right'
+      variant: 'inset', // 'sidebar' | 'floating' | 'inset'
+    },
+    theme: {
+      color: 'default', // 'default' | 'blue' | 'green' | 'orange' | 'purple' | 'red' | 'teal' | 'yellow' | 'rose'
+      type: 'scaled', // 'default' | 'mono' | 'scaled'
+    }
+  },
+})
 ```
 
 ## Contributing

@@ -45,7 +45,7 @@ const { sidebar } = useAppSettings()
 </script>
 
 <template>
-  <Sidebar :collapsible="sidebar.collapsible" :side="sidebar.side" :variant="sidebar.variant">
+  <Sidebar :collapsible="sidebar?.collapsible" :side="sidebar?.side" :variant="sidebar?.variant">
     <SidebarHeader>
       <LayoutSidebarNavHeader :teams="teams" />
       <Search />
