@@ -1,9 +1,26 @@
-import type { BoardState, Column, Task } from '~/types/kanban'
-import { nanoid } from 'nanoid'
+import type { BoardState, Column, NewTask, Task } from '~/types/kanban'
 
 const isClient = import.meta.client
 
 const STORAGE_KEY = 'kanban.board.v1'
+const TASK_KEY_ID = 'TASK'
+
+function generateTaskId() {
+  const key = 'kanban.task.counter'
+  let counter = 1
+
+  if (import.meta.client) {
+    const saved = localStorage.getItem(key)
+    counter = saved ? Number.parseInt(saved) + 1 : 1
+    localStorage.setItem(key, counter.toString())
+  }
+
+  return `${TASK_KEY_ID}-${counter.toString().padStart(3, '0')}`
+}
+
+function generateColumnId(title: string) {
+  return title.toLowerCase().replace(/\s+/g, '-')
+}
 
 const defaultBoard: BoardState = {
   columns: [
@@ -38,7 +55,7 @@ export function useKanban() {
   }
 
   function addColumn(title: string) {
-    const newCol: Column = { id: nanoid(6), title, tasks: [] }
+    const newCol: Column = { id: generateColumnId(title), title, tasks: [] }
     board.value.columns.push(newCol)
     persist()
   }
@@ -56,11 +73,11 @@ export function useKanban() {
     persist()
   }
 
-  function addTask(columnId: string, payload: Pick<Task, 'title' | 'description' | 'badge'>) {
+  function addTask(columnId: string, payload: NewTask) {
     const col = board.value.columns.find(c => c.id === columnId)
     if (!col)
       return
-    col.tasks.unshift({ id: nanoid(8), createdAt: Date.now(), ...payload })
+    col.tasks.unshift({ id: generateTaskId(), createdAt: new Date(), ...payload })
     persist()
   }
 

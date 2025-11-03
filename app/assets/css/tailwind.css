@@ -24,6 +24,8 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
@@ -51,18 +53,21 @@
   @keyframes accordion-down {
     from {
       height: 0;
-      }
+    }
+
     to {
       height: var(--reka-accordion-content-height);
-      }
+    }
   }
+
   @keyframes accordion-up {
     from {
       height: var(--reka-accordion-content-height);
-      }
+    }
+
     to {
       height: 0;
-      }
+    }
   }
 }
 
@@ -79,6 +84,8 @@
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
+  --warning: oklch(85.2% 0.199 91.936);
+  --warning-foreground: oklch(42.1% 0.095 57.708);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
@@ -126,6 +133,8 @@
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
+  --warning: oklch(79.5% 0.184 86.047);
+  --warning-foreground: oklch(42.1% 0.095 57.708);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
   --accent: oklch(0.371 0 0);
@@ -162,15 +171,18 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     font-family: var(--font-sans);
     font-synthesis-weight: none;
     text-rendering: optimizeLegibility;
   }
+
   html {
     @apply scroll-smooth;
   }
-   @supports (font: -apple-system-body) and (-webkit-appearance: none) {
+
+  @supports (font: -apple-system-body) and (-webkit-appearance: none) {
     [data-wrapper] {
       @apply min-[1800px]:border-t;
     }
@@ -194,12 +206,16 @@
 html {
   color-scheme: light dark;
 }
+
 html.dark {
   color-scheme: dark;
 }
+
 html.light {
   color-scheme: light;
 }
-button, [type="button"] {
+
+button,
+[type="button"] {
   @apply cursor-pointer;
 }
