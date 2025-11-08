@@ -1,7 +1,7 @@
 {
   "name": "nuxt-shadcn-dashboard",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "packageManager": "pnpm@10.10.0",
   "description": "Shadcn Dashboard built with Nuxt",
   "author": "Dian Pratama <dianpratama2@gmail.com>",
