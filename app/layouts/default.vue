@@ -4,10 +4,12 @@
 <template>
   <SidebarProvider>
     <LayoutAppSidebar />
-    <SidebarInset class="overflow-hidden">
+    <SidebarInset>
       <LayoutHeader />
-      <div class="min-w-0 w-full flex-1 overflow-x-auto p-4 lg:p-6">
-        <slot />
+      <div class="flex flex-col flex-1">
+        <div class="@container/main p-4 lg:p-6 grow">
+          <slot />
+        </div>
       </div>
     </SidebarInset>
   </SidebarProvider>

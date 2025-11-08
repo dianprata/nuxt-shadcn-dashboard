@@ -24,21 +24,21 @@ function handleChangeDirection(dir: 'ltr' | 'rtl') {
           <div class="grid grid-cols-3 gap-2">
             <Button
               variant="outline"
-              :class="{ '!border-primary border-2 !bg-primary/10': sidebar?.variant === 'sidebar' }"
+              :class="{ 'border-primary! border-2 bg-primary/10!': sidebar?.variant === 'sidebar' }"
               @click="updateAppSettings({ sidebar: { variant: 'sidebar' } })"
             >
               Sidebar
             </Button>
             <Button
               variant="outline"
-              :class="{ '!border-primary border-2 !bg-primary/10': sidebar?.variant === 'floating' }"
+              :class="{ 'border-primary! border-2 bg-primary/10!': sidebar?.variant === 'floating' }"
               @click="updateAppSettings({ sidebar: { variant: 'floating' } })"
             >
               Floating
             </Button>
             <Button
               variant="outline"
-              :class="{ '!border-primary border-2 !bg-primary/10': sidebar?.variant === 'inset' }"
+              :class="{ 'border-primary! border-2 bg-primary/10!': sidebar?.variant === 'inset' }"
               @click="updateAppSettings({ sidebar: { variant: 'inset' } })"
             >
               Inset
@@ -50,14 +50,14 @@ function handleChangeDirection(dir: 'ltr' | 'rtl') {
           <div class="grid grid-cols-2 gap-2">
             <Button
               variant="outline"
-              :class="{ '!border-primary border-2 !bg-primary/10': direction === 'ltr' }"
+              :class="{ 'border-primary! border-2 bg-primary/10!': direction === 'ltr' }"
               @click="handleChangeDirection('ltr')"
             >
               LTR
             </Button>
             <Button
               variant="outline"
-              :class="{ '!border-primary border-2 !bg-primary/10': direction === 'rtl' }"
+              :class="{ 'border-primary! border-2 bg-primary/10!': direction === 'rtl' }"
               @click="handleChangeDirection('rtl')"
             >
               RTL

@@ -22,6 +22,17 @@ export const navMenu: NavMenu[] = [
     ],
   },
   {
+    heading: 'Apps',
+    items: [
+      {
+        title: 'Kanban Board',
+        icon: 'i-lucide-kanban',
+        link: '/kanban',
+        new: true,
+      },
+    ],
+  },
+  {
     heading: 'Pages',
     items: [
       {
