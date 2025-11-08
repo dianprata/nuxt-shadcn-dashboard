@@ -18,7 +18,7 @@ const df = new DateFormatter('en-US', {
   dateStyle: 'medium',
 })
 const dueDate = ref<DateValue | undefined>()
-const dueTime = ref<string | undefined>()
+const dueTime = ref<string | undefined>('00:00')
 
 watch(() => dueTime.value, (newVal) => {
   if (!newVal)
@@ -51,7 +51,7 @@ const newTask = reactive<NewTask>({
 })
 function resetData() {
   dueDate.value = undefined
-  dueTime.value = undefined
+  dueTime.value = '00:00'
 }
 watch(() => showModalTask.value.open, (newVal) => {
   if (!newVal)
@@ -101,8 +101,11 @@ function showEditTask(colId: string, taskId: string) {
   newTask.title = task.title
   newTask.description = task.description
   newTask.priority = task.priority
+  if (typeof task.dueDate === 'object') {
+    task.dueDate = task.dueDate.toISOString()
+  }
   dueDate.value = parseAbsoluteToLocal(task.dueDate as string)
-  dueTime.value = `${dueDate.value.hour}:${dueDate.value.minute}`
+  dueTime.value = `${dueDate.value.hour < 10 ? `0${dueDate.value?.hour}` : dueDate.value?.hour}:${dueDate.value.minute < 10 ? `0${dueDate.value?.minute}` : dueDate.value?.minute}`
   newTask.status = task.status
   newTask.labels = task.labels
   showModalTask.value = { type: 'edit', open: true, columnId: colId, taskId }
