@@ -65,7 +65,7 @@ async function onSubmit(event: Event) {
       </div>
     </form>
     <Separator label="Or continue with" />
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-4 flex-col">
       <Button variant="outline" class="w-full gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-4">
           <path
