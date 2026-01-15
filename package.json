@@ -58,6 +58,7 @@
     "@tanstack/vue-table": "^8.21.3",
     "@unovis/ts": "^1.6.1",
     "@unovis/vue": "^1.6.1",
+    "@vercel/analytics": "^1.6.1",
     "embla-carousel": "^8.6.0",
     "embla-carousel-vue": "^8.6.0",
     "nanoid": "^5.1.6",
