@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Analytics } from '@vercel/analytics/nuxt'
 import { ConfigProvider } from 'reka-ui'
 import { Toaster } from '@/components/ui/sonner'
 import 'vue-sonner/style.css'
@@ -65,7 +64,5 @@ const dir = computed(() => textDirection.value === 'rtl' ? 'rtl' : 'ltr')
 
       <Toaster :theme="colorMode.preference as any || 'system'" />
     </ConfigProvider>
-
-    <Analytics />
   </Body>
 </template>

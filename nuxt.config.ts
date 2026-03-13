@@ -25,6 +25,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@nuxt/fonts',
+    '@nuxthub/core',
   ],
 
   shadcn: {
