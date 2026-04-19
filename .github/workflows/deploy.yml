@@ -9,14 +9,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - run: corepack enable
 
       - name: Set node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           registry-url: https://registry.npmjs.org/
-          node-version: lts/*
+          node-version: 22
       - run: pnpm install
       - run: npx nuxt build --preset github_pages
       - name: Upload artifact
