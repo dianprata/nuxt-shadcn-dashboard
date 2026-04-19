@@ -75,5 +75,8 @@ export default defineNuxtConfig({
         '/docs'
       ]
     }
+  },
+  app: {
+    baseURL: '/nuxt-shadcn-dashboard/'
   }
 });
